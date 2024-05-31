@@ -224,8 +224,11 @@ class AddScheduleItem extends GetView<ScheduleController> {
               },
               style: const ButtonStyle(
                   backgroundColor:
-                      WidgetStatePropertyAll(Color.fromARGB(255, 17, 67, 230))),
-              child: const Text("Add Event"),
+                      WidgetStatePropertyAll(Color.fromARGB(255, 39, 92, 157))),
+              child: const Text(
+                "Add Event",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           )
         ],
