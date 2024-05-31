@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:io';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'modal.dart';
@@ -12,9 +12,8 @@ class ScheduleController extends GetxController {
   void onInit() async {
     super.onInit();
     items.clear();
-    String rawJson =
-        await File("res/json/homepage_upcoming_schedule_items.json")
-            .readAsString();
+    String rawJson = await rootBundle
+        .loadString("res/json/homepage_upcoming_schedule_items.json");
     for (Map<String, dynamic> i in jsonDecode(rawJson)) {
       items.add(ScheduleItem.fromJson(i));
     }
