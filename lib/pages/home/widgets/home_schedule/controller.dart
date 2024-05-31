@@ -12,8 +12,9 @@ class ScheduleController extends GetxController {
   void onInit() async {
     super.onInit();
     items.clear();
-    String rawJson = await File("res/json/HomepageUpcomingScheduleItems.json")
-        .readAsString();
+    String rawJson =
+        await File("res/json/homepage_upcoming_schedule_items.json")
+            .readAsString();
     for (Map<String, dynamic> i in jsonDecode(rawJson)) {
       items.add(ScheduleItem.fromJson(i));
     }

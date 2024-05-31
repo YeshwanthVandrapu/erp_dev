@@ -1,0 +1,38 @@
+[
+    {
+        "icon": "Icons.school_outlined",
+        "title": "University Policies",
+        "text": "Access the universities official policies",
+        "link": ""
+      },
+      {
+        "icon": "Icons.school_outlined",
+        "title": "Life At Krea",
+        "text": "Embrace the life at Krea! Click here to know more.",
+        "link": ""
+      },
+      {
+        "icon": "Icons.school_outlined",
+        "title": "Krea Connect",
+        "text": "Answers to all your questions and queries at one place!",
+        "link": ""
+      },
+      {
+        "icon": "Icons.school_outlined",
+        "title": "Krea Connect",
+        "text": "Answers to all your questions and queries at one place!",
+        "link": ""
+      },
+      {
+        "icon": "Icons.school_outlined",
+        "title": "Krea Connect",
+        "text": "Answers to all your questions and queries at one place!",
+        "link": ""
+      },
+      {
+        "icon": "Icons.school_outlined",
+        "title": "Krea Connect",
+        "text": "Answers to all your questions and queries at one place!",
+        "link": ""
+      }
+]

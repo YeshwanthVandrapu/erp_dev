@@ -1,0 +1,1015 @@
+{
+    "data": {
+      "academic_years": [
+        {
+          "acc_year": "2021-2022",
+          "ay_id": 1,
+          "cur_year": 0
+        },
+        {
+          "acc_year": "2022-2023",
+          "ay_id": 2,
+          "cur_year": 0
+        },
+        {
+          "acc_year": "2023-2024",
+          "ay_id": 3,
+          "cur_year": 1
+        },
+        {
+          "acc_year": "2024-2025",
+          "ay_id": 4,
+          "cur_year": 2
+        },
+        {
+          "acc_year": "2019-2020",
+          "ay_id": 5,
+          "cur_year": 0
+        },
+        {
+          "acc_year": "2020-2021",
+          "ay_id": 6,
+          "cur_year": 0
+        },
+        {
+          "acc_year": "2025-2026",
+          "ay_id": 7,
+          "cur_year": 2
+        }
+      ],
+      "default": 1,
+      "menu": [
+        {
+          "parent_id": 0,
+          "resource_icon": "home",
+          "resource_id": 1,
+          "resource_name": "Home"
+        },
+        {
+          "parent_id": 65,
+          "resource_icon": "store",
+          "resource_id": 7,
+          "resource_name": "University Master"
+        },
+        {
+          "parent_id": 67,
+          "resource_icon": "link",
+          "resource_id": 17,
+          "resource_name": "Employee Type Master"
+        },
+        {
+          "parent_id": 66,
+          "resource_icon": "link",
+          "resource_id": 20,
+          "resource_name": "Program Level Master"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 28,
+          "resource_name": "Course Master"
+        },
+        {
+          "parent_id": 31,
+          "resource_icon": "psychology",
+          "resource_id": 32,
+          "resource_name": "Profile View"
+        },
+        {
+          "parent_id": 4,
+          "resource_icon": "update",
+          "resource_id": 35,
+          "resource_name": "Profile Update"
+        },
+        {
+          "parent_id": 37,
+          "resource_icon": "file_download",
+          "resource_id": 38,
+          "resource_name": "Download Data"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "business",
+          "resource_id": 41,
+          "resource_name": "Building Master"
+        },
+        {
+          "parent_id": 49,
+          "resource_icon": "format_size",
+          "resource_id": 50,
+          "resource_name": "Grade Type Master"
+        },
+        {
+          "parent_id": 30,
+          "resource_icon": "update",
+          "resource_id": 31,
+          "resource_name": "Profile"
+        },
+        {
+          "parent_id": 6,
+          "resource_icon": "settings_suggest",
+          "resource_id": 65,
+          "resource_name": "Master Config"
+        },
+        {
+          "parent_id": 4,
+          "resource_icon": "person_add",
+          "resource_id": 3,
+          "resource_name": "Profile Add"
+        },
+        {
+          "parent_id": 61,
+          "resource_icon": "link",
+          "resource_id": 64,
+          "resource_name": "Role Master"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "blur_on",
+          "resource_id": 70,
+          "resource_name": "Slot Master"
+        },
+        {
+          "parent_id": 77,
+          "resource_icon": "dns",
+          "resource_id": 78,
+          "resource_name": "Feedback Master"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 79,
+          "resource_name": "OAA Files & Links"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "person",
+          "resource_id": 88,
+          "resource_name": "My Profile"
+        },
+        {
+          "parent_id": 93,
+          "resource_icon": "usb",
+          "resource_id": 94,
+          "resource_name": "Device Master"
+        },
+        {
+          "parent_id": 98,
+          "resource_icon": "delete",
+          "resource_id": 99,
+          "resource_name": "Suspend User"
+        },
+        {
+          "parent_id": 102,
+          "resource_icon": "link",
+          "resource_id": 101,
+          "resource_name": "Specialization Type Master"
+        },
+        {
+          "parent_id": 108,
+          "resource_icon": "location_city",
+          "resource_id": 109,
+          "resource_name": "Company Master"
+        },
+        {
+          "parent_id": 117,
+          "resource_icon": "new_label",
+          "resource_id": 118,
+          "resource_name": "Feild Master"
+        },
+        {
+          "parent_id": 120,
+          "resource_icon": "apartment",
+          "resource_id": 121,
+          "resource_name": "Donor Master"
+        },
+        {
+          "parent_id": 93,
+          "resource_icon": "dashboard",
+          "resource_id": 125,
+          "resource_name": "Dashboard"
+        },
+        {
+          "parent_id": 129,
+          "resource_icon": "link",
+          "resource_id": 134,
+          "resource_name": "Course Evaluation Components Master"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "psychology",
+          "resource_id": 140,
+          "resource_name": "Fee Head Master"
+        },
+        {
+          "parent_id": 161,
+          "resource_icon": "link",
+          "resource_id": 162,
+          "resource_name": "Biometric Report"
+        },
+        {
+          "parent_id": 168,
+          "resource_icon": "link",
+          "resource_id": 165,
+          "resource_name": "Course Prequsites"
+        },
+        {
+          "parent_id": 173,
+          "resource_icon": "dashboard",
+          "resource_id": 178,
+          "resource_name": "Dashboard"
+        },
+        {
+          "parent_id": 180,
+          "resource_icon": "link",
+          "resource_id": 181,
+          "resource_name": "Medical Type"
+        },
+        {
+          "parent_id": 40,
+          "resource_icon": "link",
+          "resource_id": 187,
+          "resource_name": "Master"
+        },
+        {
+          "parent_id": 187,
+          "resource_icon": "link",
+          "resource_id": 188,
+          "resource_name": "Assets Type"
+        },
+        {
+          "parent_id": 40,
+          "resource_icon": "link",
+          "resource_id": 189,
+          "resource_name": "Assets Master"
+        },
+        {
+          "parent_id": 187,
+          "resource_icon": "link",
+          "resource_id": 190,
+          "resource_name": "Status Master"
+        },
+        {
+          "parent_id": 65,
+          "resource_icon": "school",
+          "resource_id": 8,
+          "resource_name": "School Master"
+        },
+        {
+          "parent_id": 66,
+          "resource_icon": "web",
+          "resource_id": 12,
+          "resource_name": "Program Master"
+        },
+        {
+          "parent_id": 67,
+          "resource_icon": "link",
+          "resource_id": 23,
+          "resource_name": "Faculty Type Master"
+        },
+        {
+          "parent_id": 31,
+          "resource_icon": "update",
+          "resource_id": 34,
+          "resource_name": "Profile Update"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 33,
+          "resource_name": "Course Offered"
+        },
+        {
+          "parent_id": 37,
+          "resource_icon": "file_upload",
+          "resource_id": 39,
+          "resource_name": "Upload Data"
+        },
+        {
+          "parent_id": 187,
+          "resource_icon": "link",
+          "resource_id": 47,
+          "resource_name": "Brand Master"
+        },
+        {
+          "parent_id": 2,
+          "resource_icon": "update",
+          "resource_id": 4,
+          "resource_name": "Profile"
+        },
+        {
+          "parent_id": 61,
+          "resource_icon": "manage_accounts",
+          "resource_id": 62,
+          "resource_name": "Role Resource Mapping"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "flourescent",
+          "resource_id": 69,
+          "resource_name": "Floor Master"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "psychology",
+          "resource_id": 75,
+          "resource_name": "KM Portal"
+        },
+        {
+          "parent_id": 93,
+          "resource_icon": "map",
+          "resource_id": 95,
+          "resource_name": "Device User Mapping"
+        },
+        {
+          "parent_id": 102,
+          "resource_icon": "link",
+          "resource_id": 100,
+          "resource_name": "Division Master"
+        },
+        {
+          "parent_id": 117,
+          "resource_icon": "beenhere",
+          "resource_id": 119,
+          "resource_name": "Template Master"
+        },
+        {
+          "parent_id": 120,
+          "resource_icon": "lan",
+          "resource_id": 122,
+          "resource_name": "Donor and FA Details"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "money",
+          "resource_id": 141,
+          "resource_name": "Fee Fixation Entry"
+        },
+        {
+          "parent_id": 168,
+          "resource_icon": "link",
+          "resource_id": 166,
+          "resource_name": "Course Term Bucket"
+        },
+        {
+          "parent_id": 173,
+          "resource_icon": "link",
+          "resource_id": 180,
+          "resource_name": "Master"
+        },
+        {
+          "parent_id": 180,
+          "resource_icon": "link",
+          "resource_id": 182,
+          "resource_name": "Medical Master"
+        },
+        {
+          "parent_id": 67,
+          "resource_icon": "inbox",
+          "resource_id": 9,
+          "resource_name": "Faculty Designation Master"
+        },
+        {
+          "parent_id": 67,
+          "resource_icon": "badge",
+          "resource_id": 10,
+          "resource_name": "Staff Designation Master"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "today",
+          "resource_id": 21,
+          "resource_name": "Year Master"
+        },
+        {
+          "parent_id": 4,
+          "resource_icon": "psychology",
+          "resource_id": 5,
+          "resource_name": "Profile View"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "link",
+          "resource_id": 42,
+          "resource_name": "Floor Levels Code"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 57,
+          "resource_name": "C. Offer Section"
+        },
+        {
+          "parent_id": 6,
+          "resource_icon": "loyalty",
+          "resource_id": 66,
+          "resource_name": "Programs Config"
+        },
+        {
+          "parent_id": 6,
+          "resource_icon": "psychology",
+          "resource_id": 72,
+          "resource_name": "KM Portal Config"
+        },
+        {
+          "parent_id": 93,
+          "resource_icon": "hub",
+          "resource_id": 96,
+          "resource_name": "Log View"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 105,
+          "resource_name": "Termwise Student Courses"
+        },
+        {
+          "parent_id": 61,
+          "resource_icon": "settings_suggest",
+          "resource_id": 63,
+          "resource_name": "User Role Mapping"
+        },
+        {
+          "parent_id": 187,
+          "resource_icon": "link",
+          "resource_id": 135,
+          "resource_name": "Category Master"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "grid_view",
+          "resource_id": 142,
+          "resource_name": "Fee Fixation View"
+        },
+        {
+          "parent_id": 168,
+          "resource_icon": "link",
+          "resource_id": 167,
+          "resource_name": "Course Alias"
+        },
+        {
+          "parent_id": 180,
+          "resource_icon": "admin_meds",
+          "resource_id": 174,
+          "resource_name": "Doctor Master"
+        },
+        {
+          "parent_id": 180,
+          "resource_icon": "link",
+          "resource_id": 183,
+          "resource_name": "Case Type"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "link",
+          "resource_id": 44,
+          "resource_name": "Venue Categories"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 54,
+          "resource_name": "C. Sec Fac. Mapping"
+        },
+        {
+          "parent_id": 72,
+          "resource_icon": "group",
+          "resource_id": 73,
+          "resource_name": "Committee List"
+        },
+        {
+          "parent_id": 61,
+          "resource_icon": "key",
+          "resource_id": 80,
+          "resource_name": "Act As User"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 92,
+          "resource_name": "Termwise Class Schedule"
+        },
+        {
+          "parent_id": 93,
+          "resource_icon": "stream",
+          "resource_id": 97,
+          "resource_name": "Live Feed"
+        },
+        {
+          "parent_id": 108,
+          "resource_icon": "link",
+          "resource_id": 112,
+          "resource_name": "Placement Activity Attendance Waiver"
+        },
+        {
+          "parent_id": 187,
+          "resource_icon": "link",
+          "resource_id": 136,
+          "resource_name": "Model Master"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "local_convenience_store",
+          "resource_id": 143,
+          "resource_name": "Fee Fixation View (Termwise)"
+        },
+        {
+          "parent_id": 173,
+          "resource_icon": "family_restroom",
+          "resource_id": 176,
+          "resource_name": "Other Patient Entry"
+        },
+        {
+          "parent_id": 180,
+          "resource_icon": "link",
+          "resource_id": 184,
+          "resource_name": "Chief Compalints Type"
+        },
+        {
+          "parent_id": 31,
+          "resource_icon": "add",
+          "resource_id": 36,
+          "resource_name": "Profile Add"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "link",
+          "resource_id": 45,
+          "resource_name": "Venue Master"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 56,
+          "resource_name": "C. Sec Stud. Mapping"
+        },
+        {
+          "parent_id": 6,
+          "resource_icon": "account_tree",
+          "resource_id": 68,
+          "resource_name": "Other Config"
+        },
+        {
+          "parent_id": 72,
+          "resource_icon": "manage_accounts",
+          "resource_id": 74,
+          "resource_name": "Committee Member Mapping"
+        },
+        {
+          "parent_id": 6,
+          "resource_icon": "source",
+          "resource_id": 102,
+          "resource_name": "Course Config"
+        },
+        {
+          "parent_id": 108,
+          "resource_icon": "link",
+          "resource_id": 113,
+          "resource_name": "Placement Activity Category"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 116,
+          "resource_name": "All Class Schedules"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "receipt",
+          "resource_id": 144,
+          "resource_name": "Demand Generation"
+        },
+        {
+          "parent_id": 173,
+          "resource_icon": "clinical_notes",
+          "resource_id": 175,
+          "resource_name": "Patient Registries"
+        },
+        {
+          "parent_id": 180,
+          "resource_icon": "link",
+          "resource_id": 185,
+          "resource_name": "Other Patient Type"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "calendar_month",
+          "resource_id": 84,
+          "resource_name": "My Schedule"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "devices",
+          "resource_id": 40,
+          "resource_name": "IT Assets"
+        },
+        {
+          "parent_id": 6,
+          "resource_icon": "engineering",
+          "resource_id": 67,
+          "resource_name": "Employee Config"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 71,
+          "resource_name": "Class Schedule"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 107,
+          "resource_name": "Student Leave Applications Report & Approval"
+        },
+        {
+          "parent_id": 173,
+          "resource_icon": "add_a_photo",
+          "resource_id": 177,
+          "resource_name": "Doctor Entry"
+        },
+        {
+          "parent_id": 66,
+          "resource_icon": "link",
+          "resource_id": 13,
+          "resource_name": "SIAS Program Offered"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "event_available",
+          "resource_id": 76,
+          "resource_name": "Couse Sectionwise Update Attendance"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 123,
+          "resource_name": "Attendance Sessionwise Report"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "link",
+          "resource_id": 138,
+          "resource_name": "Venue Calendar"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "event_available",
+          "resource_id": 164,
+          "resource_name": "Studentwise Update Attendance"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 14,
+          "resource_name": "Academic Year Master"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "light_mode",
+          "resource_id": 103,
+          "resource_name": "Eligable Credits"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 124,
+          "resource_name": "Attendance Termwise Report"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "link",
+          "resource_id": 151,
+          "resource_name": "Venue Approvial Level 1"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 15,
+          "resource_name": "Batch Master"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 126,
+          "resource_name": "Termwise Attendance Pending"
+        },
+        {
+          "parent_id": 43,
+          "resource_icon": "link",
+          "resource_id": 152,
+          "resource_name": "Venue Approvial Level 2"
+        },
+        {
+          "parent_id": 66,
+          "resource_icon": "link",
+          "resource_id": 16,
+          "resource_name": "GSB Program Offered"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "emoji_events",
+          "resource_id": 6,
+          "resource_name": "Master"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "source",
+          "resource_id": 53,
+          "resource_name": "Course Database"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 104,
+          "resource_name": "Add/Drop Form"
+        },
+        {
+          "parent_id": 102,
+          "resource_icon": "link",
+          "resource_id": 18,
+          "resource_name": "Area Master"
+        },
+        {
+          "parent_id": 49,
+          "resource_icon": "grade",
+          "resource_id": 51,
+          "resource_name": "Grade Master"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "group",
+          "resource_id": 30,
+          "resource_name": "Student Database"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 127,
+          "resource_name": "Termwise Courses Student Count"
+        },
+        {
+          "parent_id": 67,
+          "resource_icon": "link",
+          "resource_id": 19,
+          "resource_name": "Staff Department Master"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "person",
+          "resource_id": 2,
+          "resource_name": "Employee Database"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 131,
+          "resource_name": "Student Graduation Requirements"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "report",
+          "resource_id": 37,
+          "resource_name": "Data"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 132,
+          "resource_name": "Leave Application File Upload"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "bug_report",
+          "resource_id": 106,
+          "resource_name": "Report Master"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 22,
+          "resource_name": "Term Id Master"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "admin_panel_settings",
+          "resource_id": 61,
+          "resource_name": "Admin"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "fingerprint",
+          "resource_id": 93,
+          "resource_name": "Biometric"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "people",
+          "resource_id": 108,
+          "resource_name": "Placement"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "folder_open",
+          "resource_id": 117,
+          "resource_name": "Bonafide"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "public",
+          "resource_id": 98,
+          "resource_name": "Gsuite"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "medical_services",
+          "resource_id": 120,
+          "resource_name": "Financial Aid"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "support",
+          "resource_id": 77,
+          "resource_name": "FeedBack"
+        },
+        {
+          "parent_id": 66,
+          "resource_icon": "link",
+          "resource_id": 24,
+          "resource_name": "Batch Term Master"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 25,
+          "resource_name": "Section Master"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 26,
+          "resource_name": "Credit Master"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "meeting_room",
+          "resource_id": 137,
+          "resource_name": "My Venue Booking"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 27,
+          "resource_name": "Teaching Hour Master"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 29,
+          "resource_name": "Course Type"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "link",
+          "resource_id": 129,
+          "resource_name": "Exam Office"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 55,
+          "resource_name": "Sessions Master"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "meeting_room",
+          "resource_id": 43,
+          "resource_name": "Venue Management"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "event",
+          "resource_id": 58,
+          "resource_name": "Holiday Master"
+        },
+        {
+          "parent_id": 68,
+          "resource_icon": "link",
+          "resource_id": 60,
+          "resource_name": "Academic  Calendar and Term Dates"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "link",
+          "resource_id": 169,
+          "resource_name": "My Student Attendance"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "currency_rupee",
+          "resource_id": 139,
+          "resource_name": "Fee Management"
+        },
+        {
+          "parent_id": 53,
+          "resource_icon": "link",
+          "resource_id": 168,
+          "resource_name": "SIAS Module"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "link",
+          "resource_id": 170,
+          "resource_name": "My Profile Update"
+        },
+        {
+          "parent_id": 67,
+          "resource_icon": "verified",
+          "resource_id": 11,
+          "resource_name": "Approving Authority"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "link",
+          "resource_id": 161,
+          "resource_name": "Library"
+        },
+        {
+          "parent_id": 106,
+          "resource_icon": "done",
+          "resource_id": 133,
+          "resource_name": "Exam Leave Application"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "update",
+          "resource_id": 145,
+          "resource_name": "Termwise Update"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "update",
+          "resource_id": 146,
+          "resource_name": "Student-Wise Update"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "payments",
+          "resource_id": 147,
+          "resource_name": "Student Transcation"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "delete_forever",
+          "resource_id": 148,
+          "resource_name": "Receipt Cancelation"
+        },
+        {
+          "parent_id": 139,
+          "resource_icon": "backspace_outlined",
+          "resource_id": 149,
+          "resource_name": "Revert Fee Generation"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "campaign",
+          "resource_id": 172,
+          "resource_name": "Announcement"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "link",
+          "resource_id": 153,
+          "resource_name": "My Payments"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "medication",
+          "resource_id": 173,
+          "resource_name": "Medical Center"
+        },
+        {
+          "parent_id": 0,
+          "resource_icon": "link",
+          "resource_id": 160,
+          "resource_name": "Course Section Evaluation Components"
+        }
+      ],
+      "user": {
+        "erp_id": "120252",
+        "img": "img/ZS0wY2JhZjM2MzgyMjkyNmE3MmFjNjVhNGUwNWNjODdmMw==",
+        "name": "Senthil Prabhu  Karuppusamy",
+        "scope": "Full Stack Developer"
+      },
+      "views": [
+        {
+          "function_id": 111,
+          "id": 75,
+          "parent_id": null,
+          "resource_id": 136,
+          "rvm_options": null,
+          "view_key": "grid"
+        }
+      ]
+    },
+    "ok": true
+  }

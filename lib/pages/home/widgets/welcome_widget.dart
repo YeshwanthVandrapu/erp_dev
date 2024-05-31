@@ -104,7 +104,8 @@ class _WelcomeCardState extends State<WelcomeCard> {
           ),
           if (width > 800)
             const Expanded(
-              child: Image(image: AssetImage('res/images/image 6.png')),
+              child: Image(
+                  image: AssetImage('res/images/welcome_illustration1.png')),
             ),
         ],
       ),

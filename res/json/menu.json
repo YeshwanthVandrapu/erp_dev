@@ -1,0 +1,58 @@
+[
+    {
+        "menu": "Krea",
+        "icons": "grade_outlined"
+    },
+    {
+        "menu": "Home",
+        "icons": "home_outlined"
+    },
+    {
+        "menu": "Student Info",
+        "icons": "menu_book_outlined"
+    },
+    {
+        "menu": "Exams",
+        "icons": "list_alt_outlined"
+    },
+    {
+        "menu": "Student Life",
+        "icons": "layers_outlined"
+    },
+    {
+        "menu": "Payments",
+        "icons": "payments_outlined"
+    },
+    {
+        "menu": "ILS",
+        "icons": "handshake_outlined"
+    },
+    {
+        "menu": "Careers",
+        "icons": "work_outline_outlined"
+    },
+    {
+        "menu": "Helpdesk",
+        "icons": "desktop_windows_outlined"
+    },
+    {
+        "menu": "Onboarding",
+        "icons": "waving_hand_outlined"
+    },
+    {
+        "menu": "Library",
+        "icons": "local_library_outlined"
+    },
+    {
+        "menu": "Health",
+        "icons": "health_and_safety_outlined"
+    },
+    {
+        "menu": "Services",
+        "icons": "badge_outlined"
+    },
+    {
+        "menu": "Self",
+        "icons": "account_circle_outlined"
+    }
+]
