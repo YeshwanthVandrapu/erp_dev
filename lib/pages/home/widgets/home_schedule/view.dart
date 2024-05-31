@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import 'controller.dart';
 import 'modal.dart';
@@ -9,6 +10,9 @@ class UpcomingSchedule extends GetView<ScheduleController> {
 
   @override
   Widget build(BuildContext context) {
+    DateTime now = DateTime.now();
+    DateFormat formatter = DateFormat('dd-MM-yyyy');
+    String formattedDate = formatter.format(now);
     return GetBuilder<ScheduleController>(
       builder: (controller) => Stack(children: [
         controller.addingEvent
@@ -18,17 +22,17 @@ class UpcomingSchedule extends GetView<ScheduleController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      RichText(
-                        text: const TextSpan(
-                          text: "Upcoming Schedule",
-                          style: TextStyle(fontSize: 16, color: Colors.black),
-                          children: [
-                            TextSpan(
-                              text: "\n30-05-24",
-                              style: TextStyle(fontSize: 12),
-                            ),
-                          ],
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Upcoming Schedule",
+                            style: DefaultTextStyle.of(context)
+                                .style
+                                .apply(fontSizeFactor: 1.5),
+                          ),
+                          Text(formattedDate),
+                        ],
                       ),
                       IconButton(
                         onPressed: () {
@@ -65,7 +69,7 @@ class ScheduleItemCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: Colors.grey)),
         width: MediaQuery.of(context).size.width,
-        height: 120,
+        height: MediaQuery.of(context).size.width < 400 ? 180 : 140,
         child: Row(
           children: [
             Container(
@@ -88,38 +92,46 @@ class ScheduleItemCard extends StatelessWidget {
                       children: [
                         Text(
                           item.title,
-                          style: const TextStyle(fontSize: 16),
+                          style: DefaultTextStyle.of(context)
+                              .style
+                              .apply(fontSizeFactor: 1.2),
                         ),
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.calendar_month_outlined,
-                              size: 12,
-                            ),
-                            Text(
-                              item.date,
-                              style: const TextStyle(
-                                fontSize: 12,
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            const Icon(
-                              Icons.access_time,
-                              size: 12,
-                            ),
-                            Text(
-                              item.time,
-                              style: const TextStyle(
-                                fontSize: 12,
-                              ),
-                            ),
-                          ],
-                        ),
+                        RichText(
+                            text: TextSpan(children: [
+                          const WidgetSpan(
+                              child: Icon(Icons.calendar_month_outlined)),
+                          TextSpan(
+                            text: item.date,
+                            style: DefaultTextStyle.of(context)
+                                .style
+                                .apply(fontSizeFactor: 0.8),
+                          ),
+                          const WidgetSpan(
+                              child: SizedBox(
+                            width: 10,
+                          )),
+                          const WidgetSpan(child: Icon(Icons.access_time)),
+                          TextSpan(
+                            text: item.time,
+                            style: DefaultTextStyle.of(context)
+                                .style
+                                .apply(fontSizeFactor: 0.8),
+                          ),
+                        ]))
                       ],
                     ),
-                    Text(item.description),
+                    Text(
+                      item.description,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                     Row(
-                      children: [const Icon(Icons.person), Text(item.name)],
+                      children: [
+                        const Icon(Icons.person),
+                        Text(
+                          item.name,
+                          overflow: TextOverflow.ellipsis,
+                        )
+                      ],
                     ),
                   ],
                 ),
@@ -148,9 +160,10 @@ class AddScheduleItem extends GetView<ScheduleController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Enter the details of the event to be added",
-            style: TextStyle(fontSize: 16),
+            style:
+                DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.5),
           ),
           TextFormField(
             controller: title,
