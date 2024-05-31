@@ -64,7 +64,7 @@ class StudentCard extends StatelessWidget {
             Divider(color: Colors.grey[300]),
             const SizedBox(height: 8),
             Text(
-              'Say Hi!',
+              'Say Hi !',
               style: GoogleFonts.urbanist(
                 fontSize: 16,
                 color: Colors.blue,
