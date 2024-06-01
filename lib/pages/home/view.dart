@@ -2,6 +2,7 @@ import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 
 import '../../utils/icons.dart';
@@ -39,6 +40,8 @@ class _NewHomeBodyState extends State<NewHomeBody> {
   @override
   Widget build(BuildContext context) {
     double sWidth = MediaQuery.of(context).size.width;
+    Future.delayed(Duration.zero, () => showDialogIfFirstLoaded(context));
+    //showDialogIfFirstLoaded(context);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -186,5 +189,54 @@ class _NewHomeBodyState extends State<NewHomeBody> {
         ),
       ),
     );
+  }
+
+  showDialogIfFirstLoaded(BuildContext context) {
+    //TODO add Hive for the pop up to only come the first time
+    //SharedPreferences prefs = await SharedPreferences.getInstance();
+    //bool? isFirstLoaded = prefs.getBool(keyIsFirstLoaded);
+    if (true) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          // return object of type Dialog
+          return AlertDialog(
+            content: Column(
+              children: [
+                // Image.asset("/res/images/homepagePopup.png"),
+                const Image(image: AssetImage("res/images/homepagePopup.png")),
+                Text(
+                  "Welcome, Wahiq Iqbal 👋",
+                  style: DefaultTextStyle.of(context)
+                      .style
+                      .apply(fontSizeFactor: 1)
+                      .copyWith(
+                          color: Colors.black,
+                          fontFamily: GoogleFonts.urbanist().fontFamily,
+                          decoration: TextDecoration.none),
+                ),
+                const Text(
+                    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.")
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Color.fromARGB(255, 39, 92, 157),
+                  ),
+                ),
+                child: const Text(
+                  "I understand",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+            scrollable: true,
+          );
+        },
+      );
+    }
   }
 }
