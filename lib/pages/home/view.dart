@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
 import 'widgets/home_student_buddy/view.dart';
+import 'widgets/upcomming_events/view.dart';
 import 'widgets/welcome_widget.dart';
 
 class NewHomeBody extends StatefulWidget {
@@ -169,6 +170,14 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                       ],
                     ),
                   ),
+
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  Container(
+                      constraints:
+                          BoxConstraints(maxHeight: 500, maxWidth: Get.width),
+                      child: const CustomCarousel()),
                 ],
               ),
             ),
@@ -218,6 +227,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
     await Future.delayed(const Duration(seconds: 1));
     if (true) {
       showDialog(
+        // ignore: use_build_context_synchronously
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
