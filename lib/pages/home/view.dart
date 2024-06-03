@@ -122,7 +122,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
               children: <Widget>[
                 Div(
                   divison: const Division(
-                    colXL: 6,
+                    colXL: 7,
                     colL: 10,
                     colM: 12,
                     // colXS: 10,
@@ -158,13 +158,13 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   ),
                 ),
                 const Div(
-                    divison: Division(colXL: 3, colL: 5, colM: 10),
+                    divison: Division(colXL: 4, colL: 5, colM: 12),
                     child: Padding(
                       padding: EdgeInsets.all(12.0),
                       child: Placeholder(),
                     )),
                 const Div(
-                    divison: Division(colXL: 3, colL: 5, colM: 10),
+                    divison: Division(colXL: 3, colL: 5, colM: 12),
                     child: UpcomingSchedule()),
                 const SizedBox(
                   height: 40,
