@@ -1,4 +1,5 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
+import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
 import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
@@ -153,6 +154,21 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   //       const BoxConstraints(maxWidth: 400, maxHeight: 400),
                   //   child: const StudentCard(),
                   // ),
+                  const Div(
+                    child: Responsive(
+                      children: [
+                        Div(
+                            divison: Division(colXL: 5, colL: 5),
+                            child: Placeholder()),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Div(
+                            divison: Division(colXL: 5, colL: 5),
+                            child: UpcomingSchedule()),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
