@@ -3,6 +3,7 @@ import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
 import 'widgets/home_student_buddy/view.dart';
@@ -37,6 +38,8 @@ class _NewHomeBodyState extends State<NewHomeBody> {
   @override
   Widget build(BuildContext context) {
     double sWidth = MediaQuery.of(context).size.width;
+    Future.delayed(Duration.zero, () => showDialogIfFirstLoaded(context));
+    //showDialogIfFirstLoaded(context);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -188,5 +191,73 @@ class _NewHomeBodyState extends State<NewHomeBody> {
         ),
       ),
     );
+  }
+
+  showDialogIfFirstLoaded(BuildContext context) {
+    //TODO add Hive for the pop up to only come the first time
+    //SharedPreferences prefs = await SharedPreferences.getInstance();
+    //bool? isFirstLoaded = prefs.getBool(keyIsFirstLoaded);
+    if (true) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          // return object of type Dialog
+          return AlertDialog(
+            content: Column(
+              children: [
+                // Image.asset("/res/images/homepagePopup.png"),
+                const Image(image: AssetImage("res/images/homepagePopup.png")),
+                Text(
+                  "Welcome, Wahiq Iqbal 👋",
+                  style: DefaultTextStyle.of(context)
+                      .style
+                      .apply(fontSizeFactor: 1)
+                      .copyWith(
+                          color: Colors.black,
+                          fontFamily: GoogleFonts.urbanist().fontFamily,
+                          decoration: TextDecoration.none),
+                ),
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Dear Student,"),
+                    Text(
+                        "As we gear up to welcome you on campus, we need your support in ensuring a seamless transition for your enrollment as a Krea Student. We require all the information collected in this form to initiate your registration as a bonafide student of the University. Please furnish all the requested information correctly and fill all the sections to the best of your knowledge."),
+                    Text("Important Note: "),
+                    Text(
+                        "(1) Providing incorrect information intentionally or deliberately withholding the requested information from the University can result in the cancellation/suspension of your enrolment status as a student of the University"),
+                    Text(
+                        "(2) To ensure smooth and easy submission, please use this form on a laptop or desktop computer."),
+                    Text.rich(TextSpan(children: [
+                      TextSpan(
+                          text:
+                              "(3) The last deadline to update all the requested information is  "),
+                      TextSpan(
+                          text: "22nd July 2024",
+                          style: TextStyle(fontWeight: FontWeight.bold))
+                    ]))
+                  ],
+                )
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Color.fromARGB(255, 39, 92, 157),
+                  ),
+                ),
+                child: const Text(
+                  "I understand",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+            scrollable: true,
+          );
+        },
+      );
+    }
   }
 }
