@@ -44,13 +44,10 @@ class QuickLinks extends StatelessWidget {
             ),
             Expanded(
               child: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: controller.items
-                        .map((item) => Ccard(item: item))
-                        .toList(),
-                  ),
+                child: Column(
+                  children: controller.items
+                      .map((item) => Ccard(item: item))
+                      .toList(),
                 ),
               ),
             ),
@@ -132,7 +129,7 @@ class Ccard extends StatelessWidget {
         child: Row(
           children: [
             Container(
-                constraints: const BoxConstraints(maxHeight: 48, maxWidth: 48),
+                constraints: const BoxConstraints(maxHeight: 48, maxWidth: 50),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: const Color(0xff0095FF),
