@@ -1,5 +1,6 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
+import 'package:erp_dev/pages/home/widgets/upcomming_events/u_event.dart';
 import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
@@ -116,6 +117,9 @@ class _NewHomeBodyState extends State<NewHomeBody> {
           // crossAxisAlignment = WrapCrossAlignment.start,
           runSpacing: 50,
           children: <Widget>[
+            // const SizedBox(
+            //   width: 92,
+            // ),
             Div(
               divison: const Division(
                 colXL: 6,
@@ -155,17 +159,30 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   //       const BoxConstraints(maxWidth: 400, maxHeight: 400),
                   //   child: const StudentCard(),
                   // ),
-                  const Div(
+                  Div(
                     child: Responsive(
                       children: [
                         Div(
-                            divison: Division(colXL: 5, colL: 5),
-                            child: Placeholder()),
-                        SizedBox(
+                          divison: const Division(colXL: 5, colL: 5),
+                          child: Container(
+                            decoration: ShapeDecoration(
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                side: const BorderSide(
+                                    width: 1, color: Color(0xFFE2E2EA)),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
+                            constraints: const BoxConstraints(
+                                maxHeight: 400, maxWidth: 400),
+                            child: const EventCard1(),
+                          ),
+                        ),
+                        const SizedBox(
                           width: 20,
                         ),
-                        Div(
-                            divison: Division(colXL: 5, colL: 5),
+                        const Div(
+                            divison: Division(colXL: 6, colL: 6),
                             child: UpcomingSchedule()),
                       ],
                     ),
@@ -174,6 +191,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   const SizedBox(
                     height: 40,
                   ),
+
                   Container(
                       constraints:
                           BoxConstraints(maxHeight: 500, maxWidth: Get.width),
@@ -182,7 +200,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
               ),
             ),
             const SizedBox(
-              width: 40,
+              width: 48,
             ),
             Div(
               divison: const Division(
@@ -210,6 +228,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   // ),
                   // const UpcomingSchedule(),
                   const StudentBuddiesCard(),
+
                   // const Test(),
                 ],
               ),

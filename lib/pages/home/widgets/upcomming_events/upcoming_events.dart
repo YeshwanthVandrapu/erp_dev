@@ -123,13 +123,11 @@ class UpcomingEventsCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  SingleChildScrollView(
-                    child: Text(
-                      description,
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: Colors.black54,
-                      ),
+                  Text(
+                    description,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Colors.black54,
                     ),
                   ),
                   const SizedBox(height: 30),

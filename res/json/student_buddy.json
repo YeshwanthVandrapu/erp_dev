@@ -1,0 +1,14 @@
+[
+    {
+        "image":"res/images/student_buddy2.png",
+        "name": "Wahiq",
+        "branch": "Computer Science",
+        "mail": "wahiq_iqbal.sias22@krea.ac.in"
+    },
+    {
+        "image":"res/images/student_buddy1.png",
+        "name": "Billie Rikhari",
+        "branch": "Psychology",
+        "mail": "sample.email.sias88@krea.ac.in"
+    }
+]
