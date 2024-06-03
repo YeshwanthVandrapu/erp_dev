@@ -1,13 +1,11 @@
+import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:responsive_ui/responsive_ui.dart';
-
 import '../../utils/icons.dart';
-import 'widgets/home_schedule/view.dart';
-import 'widgets/quick_links.dart';
-import 'widgets/student_buddy_card.dart';
+import 'widgets/home_student_buddy/view.dart';
 import 'widgets/welcome_widget.dart';
 
 class NewHomeBody extends StatefulWidget {
@@ -145,20 +143,23 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   //   child: const TaskListCard(),
                   // ),
 
-                  Container(
-                    constraints:
-                        const BoxConstraints(maxWidth: 400, maxHeight: 400),
-                    child: const StudentCard(),
-                  ),
+                  // Container(
+                  //   constraints:
+                  //       const BoxConstraints(maxWidth: 400, maxHeight: 400),
+                  //   child: const StudentCard(),
+                  // ),
                 ],
               ),
             ),
+            const SizedBox(
+              width: 40,
+            ),
             Div(
               divison: const Division(
-                colXL: 3,
+                colXL: 4,
                 colL: 10,
                 colXS: 10,
-                offsetXL: 1,
+                // offsetXL: 1,
                 offsetL: 1,
                 offsetM: 1,
                 offsetS: 1,
@@ -168,8 +169,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                 children: [
                   Container(
                     margin: const EdgeInsets.only(top: 40, bottom: 40),
-                    constraints:
-                        const BoxConstraints(maxHeight: 300, maxWidth: 500),
+                    constraints: const BoxConstraints(maxHeight: 300),
                     child: const QuickLinks(),
                   ),
                   // Container(
@@ -178,7 +178,9 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   //       const BoxConstraints(maxHeight: 500, maxWidth: 500),
                   //   child: const CalenderCard(),
                   // ),
-                  const UpcomingSchedule(),
+                  // const UpcomingSchedule(),
+                  const StudentBuddiesCard(),
+                  // const Test(),
                 ],
               ),
             ),

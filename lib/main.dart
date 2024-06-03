@@ -1,3 +1,4 @@
+import 'package:erp_dev/pages/home/widgets/home_quick_links/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,6 +11,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   Get.put(ScheduleController());
+  Get.put(QuickLinkController());
   runApp(const MyApp());
 }
 
@@ -55,5 +57,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-// Test push

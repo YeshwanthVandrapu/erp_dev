@@ -44,7 +44,6 @@ class QuickLinks extends StatelessWidget {
         'link': ''
       },
     ];
-
     return Card(
       color: Colors.white,
       elevation: 5,
