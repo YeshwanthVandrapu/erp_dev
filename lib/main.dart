@@ -1,5 +1,4 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/controller.dart';
-import 'package:erp_dev/pages/home/widgets/home_student_buddy/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';

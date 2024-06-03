@@ -1,6 +1,5 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
-import 'package:erp_dev/pages/home/widgets/upcomming_events/u_event.dart';
 import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
