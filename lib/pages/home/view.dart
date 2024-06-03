@@ -111,110 +111,81 @@ class _NewHomeBodyState extends State<NewHomeBody> {
               ),
             )
           : null,
-      body: SingleChildScrollView(
-        child: Responsive(
-          // crossAxisAlignment = WrapCrossAlignment.start,
-          runSpacing: 50,
-          children: <Widget>[
-            Div(
-              divison: const Division(
-                colXL: 6,
-                colL: 10,
-                colXS: 10,
-                offsetXL: 1,
-                offsetL: 1,
-                offsetM: 1,
-                offsetS: 1,
-                offsetXS: 1,
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 40, bottom: 40),
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 189, 226, 238),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    constraints:
-                        const BoxConstraints(maxHeight: 300, minHeight: 270),
-                    child: const WelcomeCard(),
+      body: Center(
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 1600),
+          child: SingleChildScrollView(
+            child: Responsive(
+              alignment: WrapAlignment.center,
+              // crossAxisAlignment: WrapCrossAlignment.start,
+              runSpacing: 24,
+              children: <Widget>[
+                Div(
+                  divison: const Division(
+                    colXL: 6,
+                    colL: 10,
+                    colM: 12,
+                    // colXS: 10,
                   ),
-                  // const Cardgrid(),
-                  // Container(
-                  //   margin: const EdgeInsets.only(top: 40, bottom: 40),
-                  //   decoration: BoxDecoration(
-                  //       color: const Color.fromARGB(255, 189, 226, 238),
-                  //       borderRadius: BorderRadius.circular(8),
-                  //       border: Border.all(width: 1, color: Colors.grey)),
-                  //   constraints: const BoxConstraints(maxHeight: 300),
-                  //   child: const TaskListCard(),
-                  // ),
-
-                  // Container(
-                  //   constraints:
-                  //       const BoxConstraints(maxWidth: 400, maxHeight: 400),
-                  //   child: const StudentCard(),
-                  // ),
-                  const Div(
-                    child: Responsive(
-                      children: [
-                        Div(
-                            divison: Division(colXL: 5, colL: 5),
-                            child: Placeholder()),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Div(
-                            divison: Division(colXL: 5, colL: 5),
-                            child: UpcomingSchedule()),
-                      ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Container(
+                      // margin: const EdgeInsets.only(top: 40, bottom: 40),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 189, 226, 238),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      constraints: BoxConstraints(
+                          maxHeight: sWidth > 540 ? 300 : 350, minHeight: 270),
+                      child: const WelcomeCard(),
                     ),
                   ),
-
-                  const SizedBox(
-                    height: 40,
+                ),
+                Div(
+                  divison: const Division(
+                    colXL: 4,
+                    colL: 10,
+                    colM: 12,
+                    // colXS: 10,
                   ),
-                  Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Container(
+                      // margin: const EdgeInsets.only(bottom: 40),
+                      constraints: const BoxConstraints(maxHeight: 300),
+                      child: const QuickLinks(),
+                    ),
+                  ),
+                ),
+                const Div(
+                    divison: Division(colXL: 3, colL: 5, colM: 10),
+                    child: Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: Placeholder(),
+                    )),
+                const Div(
+                    divison: Division(colXL: 3, colL: 5, colM: 10),
+                    child: UpcomingSchedule()),
+                const SizedBox(
+                  height: 40,
+                ),
+                const Div(
+                  divison: Division(
+                    colXL: 4,
+                    colL: 10,
+                    colM: 12,
+                  ),
+                  child: StudentBuddiesCard(),
+                ),
+                Div(
+                  child: Container(
                       constraints:
                           BoxConstraints(maxHeight: 500, maxWidth: Get.width),
                       child: const CustomCarousel()),
-                ],
-              ),
+                ),
+              ],
             ),
-            const SizedBox(
-              width: 40,
-            ),
-            Div(
-              divison: const Division(
-                colXL: 4,
-                colL: 10,
-                colXS: 10,
-                // offsetXL: 1,
-                offsetL: 1,
-                offsetM: 1,
-                offsetS: 1,
-                offsetXS: 1,
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 40, bottom: 40),
-                    constraints: const BoxConstraints(maxHeight: 300),
-                    child: const QuickLinks(),
-                  ),
-                  // Container(
-                  //   margin: const EdgeInsets.only(top: 40, bottom: 40),
-                  //   constraints:
-                  //       const BoxConstraints(maxHeight: 500, maxWidth: 500),
-                  //   child: const CalenderCard(),
-                  // ),
-                  // const UpcomingSchedule(),
-                  const StudentBuddiesCard(),
-                  // const Test(),
-                ],
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -231,42 +202,82 @@ class _NewHomeBodyState extends State<NewHomeBody> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            content: Column(
-              children: [
-                Image.asset("res/images/homepagePopup.png"),
-                // const Image(image: AssetImage("res/images/homepagePopup.png")),
-                Text(
-                  "Welcome, Wahiq Iqbal 👋",
-                  style: DefaultTextStyle.of(context)
-                      .style
-                      .apply(fontSizeFactor: 1)
-                      .copyWith(
-                          color: Colors.black,
-                          fontFamily: GoogleFonts.urbanist().fontFamily,
-                          decoration: TextDecoration.none),
-                ),
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            contentPadding: const EdgeInsets.all(0),
+            content: Container(
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(10)),
+              width: 750,
+              height: 600,
+              child: SingleChildScrollView(
+                child: Column(
                   children: [
-                    Text("Dear Student,"),
-                    Text(
-                        "As we gear up to welcome you on campus, we need your support in ensuring a seamless transition for your enrollment as a Krea Student. We require all the information collected in this form to initiate your registration as a bonafide student of the University. Please furnish all the requested information correctly and fill all the sections to the best of your knowledge."),
-                    Text("Important Note: "),
-                    Text(
-                        "(1) Providing incorrect information intentionally or deliberately withholding the requested information from the University can result in the cancellation/suspension of your enrolment status as a student of the University"),
-                    Text(
-                        "(2) To ensure smooth and easy submission, please use this form on a laptop or desktop computer."),
-                    Text.rich(TextSpan(children: [
-                      TextSpan(
-                          text:
-                              "(3) The last deadline to update all the requested information is  "),
-                      TextSpan(
-                          text: "22nd July 2024",
-                          style: TextStyle(fontWeight: FontWeight.bold))
-                    ]))
+                    Get.width < 500
+                        ? const SizedBox.shrink()
+                        : ClipRRect(
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              topRight: Radius.circular(20),
+                            ),
+                            child: SizedBox(
+                              height: 360,
+                              child: Image.asset(
+                                "res/images/homepagePopup.png",
+                                height: 672,
+                                width: 1344,
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ),
+                          ),
+                    // const Image(image: AssetImage("res/images/homepagePopup.png")),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Welcome, Wahiq Iqbal 👋",
+                            style: DefaultTextStyle.of(context)
+                                .style
+                                .apply(fontSizeFactor: 1)
+                                .copyWith(
+                                    color: Colors.black,
+                                    fontFamily:
+                                        GoogleFonts.urbanist().fontFamily,
+                                    decoration: TextDecoration.none),
+                          ),
+                          const SizedBox(
+                            height: 12,
+                          ),
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Dear Student,"),
+                              Text(
+                                  "As we gear up to welcome you on campus, we need your support in ensuring a seamless transition for your enrollment as a Krea Student. We require all the information collected in this form to initiate your registration as a bonafide student of the University. Please furnish all the requested information correctly and fill all the sections to the best of your knowledge."),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Text("Important Note: "),
+                              Text(
+                                  "(1) Providing incorrect information intentionally or deliberately withholding the requested information from the University can result in the cancellation/suspension of your enrolment status as a student of the University"),
+                              Text(
+                                  "(2) To ensure smooth and easy submission, please use this form on a laptop or desktop computer."),
+                              Text.rich(TextSpan(children: [
+                                TextSpan(
+                                    text:
+                                        "(3) The last deadline to update all the requested information is  "),
+                                TextSpan(
+                                    text: "22nd July 2024",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold))
+                              ]))
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
                   ],
-                )
-              ],
+                ),
+              ),
             ),
             actions: [
               TextButton(
@@ -282,7 +293,6 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                 ),
               ),
             ],
-            scrollable: true,
           );
         },
       );

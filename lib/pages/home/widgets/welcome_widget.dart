@@ -19,6 +19,7 @@ class _WelcomeCardState extends State<WelcomeCard> {
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 RichText(
                   text: TextSpan(
@@ -36,7 +37,7 @@ class _WelcomeCardState extends State<WelcomeCard> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Flexible(
+                Expanded(
                   child: RichText(
                     text: TextSpan(
                       style: GoogleFonts.urbanist(
@@ -58,10 +59,10 @@ class _WelcomeCardState extends State<WelcomeCard> {
                       ],
                     ),
                     overflow: TextOverflow.visible,
-                    maxLines: 5,
+                    // maxLines: 7,
                   ),
                 ),
-                const Spacer(),
+                // const Spacer(),
                 TextButton(
                   style: ButtonStyle(
                     shape: WidgetStateProperty.all(

@@ -13,45 +13,49 @@ class UpcomingSchedule extends GetView<ScheduleController> {
     DateTime now = DateTime.now();
     DateFormat formatter = DateFormat('dd-MM-yyyy');
     String formattedDate = formatter.format(now);
-    return GetBuilder<ScheduleController>(
-      builder: (controller) => Stack(children: [
-        controller.addingEvent
-            ? AddScheduleItem()
-            : Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Upcoming Schedule",
-                            style: DefaultTextStyle.of(context)
-                                .style
-                                .apply(fontSizeFactor: 1.5),
-                          ),
-                          Text(formattedDate),
-                        ],
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          controller.addingEvent = !controller.addingEvent;
-                          controller.update();
-                        },
-                        icon: const Icon(Icons.add),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                      height: 500,
-                      child: ListView(
-                          children: controller.items
-                              .map((item) => ScheduleItemCard(item: item))
-                              .toList())),
-                ],
-              ),
-      ]),
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: GetBuilder<ScheduleController>(
+        builder: (controller) => Stack(children: [
+          controller.addingEvent
+              ? AddScheduleItem()
+              : Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Upcoming Schedule",
+                              style: DefaultTextStyle.of(context)
+                                  .style
+                                  .apply(fontSizeFactor: 1.2)
+                                  .copyWith(fontWeight: FontWeight.bold),
+                            ),
+                            Text(formattedDate),
+                          ],
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            controller.addingEvent = !controller.addingEvent;
+                            controller.update();
+                          },
+                          icon: const Icon(Icons.add),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                        height: controller.items.length < 2 ? 200 : 320,
+                        child: ListView(
+                            children: controller.items
+                                .map((item) => ScheduleItemCard(item: item))
+                                .toList())),
+                  ],
+                ),
+        ]),
+      ),
     );
   }
 }
@@ -204,31 +208,56 @@ class AddScheduleItem extends GetView<ScheduleController> {
           ),
           Align(
             alignment: Alignment.centerRight,
-            child: ElevatedButton(
-              onPressed: () {
-                if (formKey.currentState!.validate()) {
-                  controller.items.add(ScheduleItem(
-                      title: title.text,
-                      date: date.text,
-                      description: description.text,
-                      name: participants.text,
-                      time: time.text));
-                  controller.addingEvent = !controller.addingEvent;
-                  controller.update();
-                  title.dispose();
-                  date.dispose();
-                  description.dispose();
-                  participants.dispose();
-                  time.dispose();
-                }
-              },
-              style: const ButtonStyle(
-                  backgroundColor:
-                      WidgetStatePropertyAll(Color.fromARGB(255, 39, 92, 157))),
-              child: const Text(
-                "Add Event",
-                style: TextStyle(color: Colors.white),
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    controller.addingEvent = !controller.addingEvent;
+                    controller.update();
+                    title.dispose();
+                    date.dispose();
+                    description.dispose();
+                    participants.dispose();
+                    time.dispose();
+                  },
+                  style: const ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(Colors.white)),
+                  child: const Text(
+                    "Cancel",
+                    style: TextStyle(color: Color.fromARGB(255, 39, 92, 157)),
+                  ),
+                ),
+                const SizedBox(
+                  width: 12,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    if (formKey.currentState!.validate()) {
+                      controller.items.add(ScheduleItem(
+                          title: title.text,
+                          date: date.text,
+                          description: description.text,
+                          name: participants.text,
+                          time: time.text));
+                      controller.addingEvent = !controller.addingEvent;
+                      controller.update();
+                      title.dispose();
+                      date.dispose();
+                      description.dispose();
+                      participants.dispose();
+                      time.dispose();
+                    }
+                  },
+                  style: const ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(
+                          Color.fromARGB(255, 39, 92, 157))),
+                  child: const Text(
+                    "Add Event",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
           )
         ],

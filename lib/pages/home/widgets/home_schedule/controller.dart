@@ -19,9 +19,4 @@ class ScheduleController extends GetxController {
     }
     update();
   }
-
-  void addEvent() {
-    addingEvent = true;
-    update();
-  }
 }

@@ -47,9 +47,9 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: Row(
         children: <Widget>[
-          sWidth > 600 ? const MenuView() : Container(),
+          sWidth > 600 ? const MenuView() : const SizedBox.shrink(),
           const Expanded(
-            flex: 5,
+            // flex: 5,
             child: NewHomeBody(),
           ),
         ],
