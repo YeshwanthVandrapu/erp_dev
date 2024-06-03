@@ -3,6 +3,7 @@ import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
@@ -21,6 +22,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
   void initState() {
     super.initState();
     loadJsonAsset();
+    showDialogIfFirstLoaded();
   }
 
   final List<Map<String, dynamic>> jsonData = [];
@@ -38,7 +40,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
   @override
   Widget build(BuildContext context) {
     double sWidth = MediaQuery.of(context).size.width;
-    Future.delayed(Duration.zero, () => showDialogIfFirstLoaded(context));
+
     //showDialogIfFirstLoaded(context);
     return Scaffold(
       backgroundColor: Colors.white,
@@ -193,20 +195,20 @@ class _NewHomeBodyState extends State<NewHomeBody> {
     );
   }
 
-  showDialogIfFirstLoaded(BuildContext context) {
+  showDialogIfFirstLoaded() async {
     //TODO add Hive for the pop up to only come the first time
     //SharedPreferences prefs = await SharedPreferences.getInstance();
     //bool? isFirstLoaded = prefs.getBool(keyIsFirstLoaded);
+    await Future.delayed(const Duration(seconds: 1));
     if (true) {
       showDialog(
         context: context,
         builder: (BuildContext context) {
-          // return object of type Dialog
           return AlertDialog(
             content: Column(
               children: [
-                // Image.asset("/res/images/homepagePopup.png"),
-                const Image(image: AssetImage("res/images/homepagePopup.png")),
+                Image.asset("res/images/homepagePopup.png"),
+                // const Image(image: AssetImage("res/images/homepagePopup.png")),
                 Text(
                   "Welcome, Wahiq Iqbal 👋",
                   style: DefaultTextStyle.of(context)
@@ -242,7 +244,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
             ),
             actions: [
               TextButton(
-                onPressed: () => Navigator.pop(context),
+                onPressed: () => Get.back(),
                 style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(
                     Color.fromARGB(255, 39, 92, 157),
