@@ -1,5 +1,6 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
+import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
 import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
@@ -10,7 +11,7 @@ import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
 import 'widgets/home_student_buddy/view.dart';
 import 'widgets/upcomming_events/view.dart';
-import 'widgets/welcome_widget.dart';
+import 'widgets/welcome_card/welcome_widget.dart';
 
 class NewHomeBody extends StatefulWidget {
   const NewHomeBody({super.key});
@@ -157,12 +158,14 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                     ),
                   ),
                 ),
-                const Div(
-                    divison: Division(colXL: 4, colL: 5, colM: 12),
-                    child: Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Placeholder(),
-                    )),
+                Div(
+                  divison: const Division(colXL: 4, colL: 5, colM: 12),
+                  child: Container(
+                    constraints:
+                        BoxConstraints(maxWidth: Get.width, maxHeight: 400),
+                    child: const CustomCarousel(),
+                  ),
+                ),
                 const Div(
                     divison: Division(colXL: 3, colL: 5, colM: 12),
                     child: UpcomingSchedule()),
@@ -176,12 +179,6 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                     colM: 12,
                   ),
                   child: StudentBuddiesCard(),
-                ),
-                Div(
-                  child: Container(
-                      constraints:
-                          BoxConstraints(maxHeight: 500, maxWidth: Get.width),
-                      child: const CustomCarousel()),
                 ),
               ],
             ),
@@ -210,8 +207,9 @@ class _NewHomeBodyState extends State<NewHomeBody> {
               height: 600,
               child: SingleChildScrollView(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Get.width < 500
+                    Get.width < 10
                         ? const SizedBox.shrink()
                         : ClipRRect(
                             borderRadius: const BorderRadius.only(
@@ -224,56 +222,58 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                                 "res/images/homepagePopup.png",
                                 height: 672,
                                 width: 1344,
-                                fit: BoxFit.fitWidth,
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),
                     // const Image(image: AssetImage("res/images/homepagePopup.png")),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Welcome, Wahiq Iqbal 👋",
-                            style: DefaultTextStyle.of(context)
-                                .style
-                                .apply(fontSizeFactor: 1)
-                                .copyWith(
-                                    color: Colors.black,
-                                    fontFamily:
-                                        GoogleFonts.urbanist().fontFamily,
-                                    decoration: TextDecoration.none),
-                          ),
-                          const SizedBox(
-                            height: 12,
-                          ),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Dear Student,"),
-                              Text(
-                                  "As we gear up to welcome you on campus, we need your support in ensuring a seamless transition for your enrollment as a Krea Student. We require all the information collected in this form to initiate your registration as a bonafide student of the University. Please furnish all the requested information correctly and fill all the sections to the best of your knowledge."),
-                              SizedBox(
-                                height: 12,
-                              ),
-                              Text("Important Note: "),
-                              Text(
-                                  "(1) Providing incorrect information intentionally or deliberately withholding the requested information from the University can result in the cancellation/suspension of your enrolment status as a student of the University"),
-                              Text(
-                                  "(2) To ensure smooth and easy submission, please use this form on a laptop or desktop computer."),
-                              Text.rich(TextSpan(children: [
-                                TextSpan(
-                                    text:
-                                        "(3) The last deadline to update all the requested information is  "),
-                                TextSpan(
-                                    text: "22nd July 2024",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold))
-                              ]))
-                            ],
-                          ),
-                        ],
-                      ),
+                      child: GetBuilder<UserController>(builder: (controller) {
+                        return Column(
+                          children: [
+                            Text(
+                              "${"Welcome, ${controller.user!.name}"}👋",
+                              style: DefaultTextStyle.of(context)
+                                  .style
+                                  .apply(fontSizeFactor: 1)
+                                  .copyWith(
+                                      color: Colors.black,
+                                      fontFamily:
+                                          GoogleFonts.urbanist().fontFamily,
+                                      decoration: TextDecoration.none),
+                            ),
+                            const SizedBox(
+                              height: 12,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text("Dear Student,"),
+                                const Text(
+                                    "As we gear up to welcome you on campus, we need your support in ensuring a seamless transition for your enrollment as a Krea Student. We require all the information collected in this form to initiate your registration as a bonafide student of the University. Please furnish all the requested information correctly and fill all the sections to the best of your knowledge."),
+                                const SizedBox(
+                                  height: 12,
+                                ),
+                                const Text("Important Note: "),
+                                const Text(
+                                    "(1) Providing incorrect information intentionally or deliberately withholding the requested information from the University can result in the cancellation/suspension of your enrolment status as a student of the University"),
+                                const Text(
+                                    "(2) To ensure smooth and easy submission, please use this form on a laptop or desktop computer."),
+                                Text.rich(TextSpan(children: [
+                                  const TextSpan(
+                                      text:
+                                          "(3) The last deadline to update all the requested information is  "),
+                                  TextSpan(
+                                      text: controller.user!.date,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold))
+                                ]))
+                              ],
+                            ),
+                          ],
+                        );
+                      }),
                     )
                   ],
                 ),

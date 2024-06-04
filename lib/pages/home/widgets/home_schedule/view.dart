@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import 'controller.dart';
@@ -14,37 +15,37 @@ class UpcomingSchedule extends GetView<ScheduleController> {
     DateFormat formatter = DateFormat('dd-MM-yyyy');
     String formattedDate = formatter.format(now);
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.symmetric(horizontal: 12.0),
       child: GetBuilder<ScheduleController>(
         builder: (controller) => Stack(children: [
           controller.addingEvent
               ? AddScheduleItem()
               : Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Upcoming Schedule",
-                              style: DefaultTextStyle.of(context)
-                                  .style
-                                  .apply(fontSizeFactor: 1.2)
-                                  .copyWith(fontWeight: FontWeight.bold),
-                            ),
-                            Text(formattedDate),
-                          ],
-                        ),
-                        IconButton(
+                    Container(
+                      constraints: BoxConstraints(maxWidth: Get.width),
+                      child: ListTile(
+                        trailing: IconButton(
                           onPressed: () {
                             controller.addingEvent = !controller.addingEvent;
                             controller.update();
                           },
                           icon: const Icon(Icons.add),
                         ),
-                      ],
+                        contentPadding: const EdgeInsets.all(0),
+                        title: Text(
+                          "Upcoming Schedule",
+                          style: GoogleFonts.urbanist(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                        subtitle: Text(
+                          formattedDate,
+                          style: GoogleFonts.urbanist(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w700,
+                              color: const Color(0xff6c6c6c)),
+                        ),
+                      ),
                     ),
                     SizedBox(
                         height: controller.items.length < 2 ? 200 : 320,
@@ -68,80 +69,91 @@ class ScheduleItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 8, bottom: 8),
-      child: Container(
-        decoration: BoxDecoration(
+      child: Card(
+        elevation: 3,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.grey)),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.width < 400 ? 180 : 140,
-        child: Row(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadiusDirectional.only(
-                      topStart: Radius.circular(10),
-                      bottomStart: Radius.circular(10))),
-              width: 20,
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          item.title,
-                          style: DefaultTextStyle.of(context)
-                              .style
-                              .apply(fontSizeFactor: 1.2),
-                        ),
-                        RichText(
-                            text: TextSpan(children: [
-                          const WidgetSpan(
-                              child: Icon(Icons.calendar_month_outlined)),
-                          TextSpan(
-                            text: item.date,
-                            style: DefaultTextStyle.of(context)
-                                .style
-                                .apply(fontSizeFactor: 0.8),
-                          ),
-                          const WidgetSpan(
-                              child: SizedBox(
-                            width: 10,
-                          )),
-                          const WidgetSpan(child: Icon(Icons.access_time)),
-                          TextSpan(
-                            text: item.time,
-                            style: DefaultTextStyle.of(context)
-                                .style
-                                .apply(fontSizeFactor: 0.8),
-                          ),
-                        ]))
-                      ],
-                    ),
-                    Text(
-                      item.description,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    Row(
-                      children: [
-                        const Icon(Icons.person),
-                        Text(
-                          item.name,
-                          overflow: TextOverflow.ellipsis,
-                        )
-                      ],
-                    ),
-                  ],
+          ),
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.width < 400 ? 180 : 140,
+          child: Row(
+            children: [
+              Container(
+                decoration: const BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadiusDirectional.only(
+                        topStart: Radius.circular(10),
+                        bottomStart: Radius.circular(10))),
+                width: 20,
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(item.title,
+                              style: DefaultTextStyle.of(context)
+                                  .style
+                                  .apply(
+                                    fontSizeFactor: 1.2,
+                                  )
+                                  .copyWith(fontWeight: FontWeight.w600)),
+                          RichText(
+                              text: TextSpan(
+                                  style:
+                                      const TextStyle(color: Color(0xff6C6C6C)),
+                                  children: [
+                                const WidgetSpan(
+                                    child: Icon(Icons.calendar_month_outlined,
+                                        color: Color(0xff6C6C6C))),
+                                TextSpan(
+                                  text: item.date,
+                                  style: DefaultTextStyle.of(context)
+                                      .style
+                                      .apply(fontSizeFactor: 0.8),
+                                ),
+                                const WidgetSpan(
+                                    child: SizedBox(
+                                  width: 10,
+                                )),
+                                const WidgetSpan(
+                                    child: Icon(Icons.access_time,
+                                        color: Color(0xff6C6C6C))),
+                                TextSpan(
+                                  text: item.time,
+                                  style: DefaultTextStyle.of(context)
+                                      .style
+                                      .apply(fontSizeFactor: 0.8),
+                                ),
+                              ]))
+                        ],
+                      ),
+                      Text(
+                        item.description,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Row(
+                        children: [
+                          const Icon(Icons.person),
+                          Text(
+                            item.name,
+                            overflow: TextOverflow.ellipsis,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
