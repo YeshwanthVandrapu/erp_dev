@@ -9,7 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
 import 'widgets/home_student_buddy/view.dart';
-import 'widgets/upcomming_events/view.dart';
+import 'widgets/upcoming_events/view.dart';
 import 'widgets/welcome_card/welcome_widget.dart';
 
 class NewHomeBody extends StatefulWidget {

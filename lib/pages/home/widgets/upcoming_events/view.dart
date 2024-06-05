@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:erp_dev/pages/home/widgets/upcomming_events/modal.dart';
+import 'package:erp_dev/pages/home/widgets/upcoming_events/modal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -55,6 +55,7 @@ class _CustomCarouselState extends State<CustomCarousel>
     }
   }
 
+<<<<<<< HEAD:lib/pages/home/widgets/upcomming_events/view.dart
   // Future<void> _startAutoSlide() async {
   //   await loadEvents();
   //   _timer = Timer.periodic(const Duration(seconds: 0), (Timer timer) {
@@ -70,6 +71,24 @@ class _CustomCarouselState extends State<CustomCarousel>
   //     );
   //   });
   // }
+=======
+  // ignore: unused_element
+  Future<void> _startAutoSlide() async {
+    await loadEvents();
+    _timer = Timer.periodic(const Duration(seconds: 0), (Timer timer) {
+      if (_currentPage < events.length - 1) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+      _pageController.animateToPage(
+        _currentPage,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeIn,
+      );
+    });
+  }
+>>>>>>> 5127888ea38cabf1ff5a57be9da37b388a49c05e:lib/pages/home/widgets/upcoming_events/view.dart
 
   void _handlePageViewChanged(int currentPageIndex) {
     _tabController.index = currentPageIndex;

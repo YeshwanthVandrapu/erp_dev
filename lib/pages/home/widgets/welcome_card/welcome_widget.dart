@@ -2,6 +2,7 @@ import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class WelcomeCard extends StatelessWidget {
   const WelcomeCard({super.key});
@@ -76,13 +77,16 @@ class WelcomeCard extends StatelessWidget {
                         foregroundColor: WidgetStateProperty.all(
                             const Color.fromARGB(255, 189, 226, 238)),
                       ),
-                      onPressed: () {},
+                      onPressed: () async {
+                        launchUrl(Uri.parse(
+                            'https://oneerp.krea.edu.in/u/0/onboarding-1'));
+                      },
                       child: RichText(
                         textAlign: TextAlign.center,
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: "Onboarding Application",
+                              text: "Onboarding Application ",
                               style: GoogleFonts.urbanist(
                                 fontSize: 16,
                                 fontStyle: FontStyle.normal,
