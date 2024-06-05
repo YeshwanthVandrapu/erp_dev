@@ -1,0 +1,63 @@
+[
+    {
+        "icon": "school_outlined",
+        "title": "Canvas",
+        "text": "Canvas LMB for students and Faculty",
+        "link": "https://canvas.krea.edu.in/"
+    },
+    {
+        "icon": "view_list_outlined",
+        "title": "Examination",
+        "text": "Access all your evaluation needs and queries",
+        "link": ""
+    },
+    {
+        "icon": "policy_outlined",
+        "title": "University Policies",
+        "text": "Access the universities official policies",
+        "link": ""
+    },
+    {
+        "icon": "local_library_outlined",
+        "title": "KREA E-Library",
+        "text": "Read from over 5,00,000 eResources",
+        "link": "https://library.krea.edu.in/"
+    },
+    {
+        "icon": "currency_rupee_outlined",
+        "title": "Expense Management",
+        "text": "All your expenses and reimbursement needs",
+        "link": ""
+    },
+    {
+        "icon": "badge_outlined",
+        "title": "Employee Management",
+        "text": "Canvas LMS for students and Faculty",
+        "link": ""
+    },
+    {
+        "icon": "monitor_outlined",
+        "title": "Helpdesk",
+        "text": "Access the helpdesk for support",
+        "link": ""
+    },
+    {
+        "icon": "add_outlined",
+        "title": "Additional Widget 1",
+        "text": "Additional Limited Information related to the sidebar",
+        "link": ""
+    },
+    {
+        "icon": "add_outlined",
+        "title": "Additional Widget 2",
+        "text": "Additional Limited Information related to the sidebar",
+        "link": ""
+    },
+    {
+        "icon": "add_outlined",
+        "title": "Additional Widget 3",
+        "text": "Additional Limited Information related to the sidebar",
+        "link": ""
+    }
+  ]
+  

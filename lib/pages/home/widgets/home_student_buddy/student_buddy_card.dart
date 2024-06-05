@@ -1,6 +1,7 @@
 import 'package:erp_dev/pages/home/widgets/home_student_buddy/modal.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class StudentCard extends StatelessWidget {
   final StudentBuddy item;
@@ -84,12 +85,29 @@ class StudentCard extends StatelessWidget {
             const SizedBox(height: 16),
             Divider(color: Colors.grey[300]),
             const SizedBox(height: 8),
-            Text(
-              'Say Hi!',
-              style: GoogleFonts.urbanist(
-                fontSize: 16,
-                color: Colors.blue,
-                fontWeight: FontWeight.bold,
+            TextButton(
+              onPressed: () async {
+                launchUrl(Uri.parse(
+                    'https://wa.me/+${item.extension + item.number}?text=Hi'));
+              },
+              style: ButtonStyle(
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                // overlayColor: const WidgetStatePropertyAll(Colors.red),
+              ),
+              child: RichText(
+                text: TextSpan(
+                  text: "Say Hi!",
+                  style: GoogleFonts.urbanist(
+                    fontSize: 16,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
+                ),
               ),
             ),
           ],
