@@ -40,6 +40,7 @@ class UpcomingEventsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.fromLTRB(1, 0, 10, 0),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -51,30 +52,37 @@ class UpcomingEventsCard extends StatelessWidget {
         runSpacing: 10,
         children: [
           Div(
-            divison: const Division(colL: 4, colM: 4),
+            divison: const Division(colXL: 4, colL: 4, colM: 4, colS: 4),
+            // child: Placeholder()
             child: SizedBox(
               width: 147,
-              child: Image.asset(
-                imageUrl,
-                fit: BoxFit.cover,
-                // height: double.infinity,
+              height: MediaQuery.of(context).size.height,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  imageUrl,
+                  fit: BoxFit.fitHeight,
+                  // height: double.infinity,
+                ),
               ),
             ),
           ),
+          const SizedBox(width: 15),
           Div(
-            divison: const Division(colL: 5, colM: 5),
+            divison: const Division(colL: 7, colM: 7),
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 16),
                   Text(
-                    header,
+                    title,
                     style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
-                      height: 0.09,
+                      fontFamily: 'Urbanist',
+                      // height: 0.09,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -82,7 +90,7 @@ class UpcomingEventsCard extends StatelessWidget {
                     color: Colors.grey[300],
                   ),
                   const SizedBox(
-                    height: 12,
+                    height: 8,
                   ),
                   const Text(
                     'Start Date',
@@ -90,49 +98,54 @@ class UpcomingEventsCard extends StatelessWidget {
                       color: Colors.black,
                       fontSize: 10,
                       fontWeight: FontWeight.w400,
-                      height: 0.15,
+                      fontFamily: 'Urbanist',
+                      // height: 0.15,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 6),
                   Text(
                     "$date, $timing",
                     style: const TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w700,
-                      height: 0.15,
+                      fontFamily: 'Urbanist',
+                      // height: 0.15,
                       color: Colors.black,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 6),
                   Text(
                     venue,
                     style: const TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w700,
-                      height: 0.15,
+                      fontFamily: 'Urbanist',
+                      // height: 0.15,
                       color: Colors.black,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
                   Text(
-                    title,
+                    header,
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
+                      fontFamily: 'Urbanist',
                     ),
                   ),
                   const SizedBox(height: 10),
-                  SingleChildScrollView(
+                  Div(
                     child: Text(
-                      description,
+                      description + description,
                       style: const TextStyle(
-                        fontSize: 12,
-                        color: Colors.black54,
+                        fontSize: 10,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 60),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -148,7 +161,7 @@ class UpcomingEventsCard extends StatelessWidget {
                           fontSize: 10,
                           fontWeight: FontWeight.w400,
                           color: Colors.black,
-                          height: 0.15,
+                          // height: 0.15,
                         ),
                       ),
                     ],

@@ -80,18 +80,15 @@ class _CustomCarouselState extends State<CustomCarousel> {
         itemCount: events.length,
         itemBuilder: (context, index) {
           final event = events[index];
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: UpcomingEventsCard(
-              imageUrl: event.image,
-              date: event.day,
-              timing: event.timing,
-              header: event.header,
-              title: event.title,
-              description: event.description,
-              viewers: event.viewers,
-              venue: event.venue,
-            ),
+          return UpcomingEventsCard(
+            imageUrl: event.image,
+            date: event.day,
+            timing: event.timing,
+            header: event.header,
+            title: event.title,
+            description: event.description,
+            viewers: event.viewers,
+            venue: event.venue,
           );
         },
       );

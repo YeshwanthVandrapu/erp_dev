@@ -155,16 +155,20 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   //       const BoxConstraints(maxWidth: 400, maxHeight: 400),
                   //   child: const StudentCard(),
                   // ),
-                  const Div(
+                  Div(
                     child: Responsive(
                       children: [
                         Div(
-                            divison: Division(colXL: 5, colL: 5),
-                            child: Placeholder()),
-                        SizedBox(
-                          width: 20,
+                          divison: const Division(colXL: 5, colL: 5),
+                          child: Container(
+                              constraints: BoxConstraints(
+                                  maxWidth: Get.width, maxHeight: 400),
+                              child: const CustomCarousel()),
                         ),
-                        Div(
+                        const SizedBox(
+                          width: 60,
+                        ),
+                        const Div(
                             divison: Division(colXL: 5, colL: 5),
                             child: UpcomingSchedule()),
                       ],
@@ -174,10 +178,6 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Container(
-                      constraints:
-                          BoxConstraints(maxHeight: 500, maxWidth: Get.width),
-                      child: const CustomCarousel()),
                 ],
               ),
             ),
