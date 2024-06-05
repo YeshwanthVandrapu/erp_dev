@@ -13,7 +13,7 @@ class QuickLinks extends StatelessWidget {
     return GetBuilder<QuickLinkController>(builder: (controller) {
       return Card(
         color: Colors.white,
-        elevation: 5,
+        elevation: 3,
         child: Column(
           children: [
             Padding(
@@ -26,7 +26,7 @@ class QuickLinks extends StatelessWidget {
                   border: Border(
                     bottom: BorderSide(
                       color: Color(0xff979797),
-                      width: 3,
+                      width: 2,
                     ),
                   ),
                 ),
@@ -44,13 +44,10 @@ class QuickLinks extends StatelessWidget {
             ),
             Expanded(
               child: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.all(24.0),
-                  child: Column(
-                    children: controller.items
-                        .map((item) => Ccard(item: item))
-                        .toList(),
-                  ),
+                child: Column(
+                  children: controller.items
+                      .map((item) => Ccard(item: item))
+                      .toList(),
                 ),
               ),
             ),
@@ -121,7 +118,7 @@ class Ccard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8.0),
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
@@ -132,7 +129,7 @@ class Ccard extends StatelessWidget {
         child: Row(
           children: [
             Container(
-                constraints: const BoxConstraints(maxHeight: 50, maxWidth: 50),
+                constraints: const BoxConstraints(maxHeight: 48, maxWidth: 50),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: const Color(0xff0095FF),
