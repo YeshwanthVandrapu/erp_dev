@@ -84,12 +84,11 @@ class StudentCard extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Divider(color: Colors.grey[300]),
+            const SizedBox(height: 8),
             TextButton(
               onPressed: () async {
-                var url = Uri.https('linktr.ee', '/misscoding');
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(url);
-                }
+                launchUrl(Uri.parse(
+                    'https://wa.me/+${item.extension + item.number}?text=Hi'));
               },
               style: ButtonStyle(
                 shape: WidgetStateProperty.all(

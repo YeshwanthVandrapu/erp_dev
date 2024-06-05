@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:erp_dev/pages/home/widgets/upcomming_events/modal.dart';
+import 'package:erp_dev/pages/home/widgets/upcoming_events/modal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -55,6 +55,7 @@ class _CustomCarouselState extends State<CustomCarousel>
     }
   }
 
+  // ignore: unused_element
   // Future<void> _startAutoSlide() async {
   //   await loadEvents();
   //   _timer = Timer.periodic(const Duration(seconds: 0), (Timer timer) {
