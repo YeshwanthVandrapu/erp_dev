@@ -12,24 +12,25 @@ class QuickLinks extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<QuickLinkController>(builder: (controller) {
       return Card(
+        margin: EdgeInsets.zero,
         color: Colors.white,
         elevation: 3,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 constraints: const BoxConstraints(
                     minHeight: 60, minWidth: double.infinity),
                 decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: Color(0xff979797),
-                      width: 2,
+                    // border: Border(
+                    //   bottom: BorderSide(
+                    //     color: Color(0xff979797),
+                    //     width: 2,
+                    //   ),
+                    // ),
                     ),
-                  ),
-                ),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
@@ -41,17 +42,18 @@ class QuickLinks extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: controller.items
-                      .map((item) => Ccard(item: item))
-                      .toList(),
+              const Divider(color: Color(0xff979797)),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: controller.items
+                        .map((item) => Ccard(item: item))
+                        .toList(),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
     });
