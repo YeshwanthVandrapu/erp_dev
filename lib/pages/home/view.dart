@@ -1,7 +1,6 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
 import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
-import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
@@ -37,7 +36,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
       jsonData.add(e);
     }
     setState(() {});
-    dPrint(jsonData);
+    // dPrint(jsonData);
   }
 
   @override
