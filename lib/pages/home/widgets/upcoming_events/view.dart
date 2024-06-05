@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:erp_dev/pages/home/widgets/upcomming_events/modal.dart';
+import 'package:erp_dev/pages/home/widgets/upcoming_events/modal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,7 +21,7 @@ class _CustomCarouselState extends State<CustomCarousel>
   final PageController _pageController = PageController();
   late TabController _tabController;
   Timer? _timer;
-  int _currentPage = 0;
+  // final int _currentPage = 0;
   int cp = 0;
 
   @override
@@ -55,21 +55,21 @@ class _CustomCarouselState extends State<CustomCarousel>
     }
   }
 
-  Future<void> _startAutoSlide() async {
-    await loadEvents();
-    _timer = Timer.periodic(const Duration(seconds: 0), (Timer timer) {
-      if (_currentPage < events.length - 1) {
-        _currentPage++;
-      } else {
-        _currentPage = 0;
-      }
-      _pageController.animateToPage(
-        _currentPage,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeIn,
-      );
-    });
-  }
+  // Future<void> _startAutoSlide() async {
+  //   await loadEvents();
+  //   _timer = Timer.periodic(const Duration(seconds: 0), (Timer timer) {
+  //     if (_currentPage < events.length - 1) {
+  //       _currentPage++;
+  //     } else {
+  //       _currentPage = 0;
+  //     }
+  //     _pageController.animateToPage(
+  //       _currentPage,
+  //       duration: const Duration(milliseconds: 300),
+  //       curve: Curves.easeIn,
+  //     );
+  //   });
+  // }
 
   void _handlePageViewChanged(int currentPageIndex) {
     _tabController.index = currentPageIndex;

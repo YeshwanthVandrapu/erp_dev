@@ -1,9 +1,11 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/controller.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/modal.dart';
 import 'package:erp_dev/utils/icons.dart';
+import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class QuickLinks extends StatelessWidget {
   const QuickLinks({super.key});
@@ -125,44 +127,55 @@ class Ccard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
       ),
-      child: Tooltip(
-        message: item.text,
-        verticalOffset: 40,
-        child: Row(
-          children: [
-            Container(
-                constraints: const BoxConstraints(maxHeight: 48, maxWidth: 50),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xff0095FF),
-                ),
-                child: Center(child: CustomMaterialIcon(item.icon))),
-            const SizedBox(width: 16.0),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    item.title,
-                    style: GoogleFonts.urbanist(
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.w500,
+      child: InkWell(
+        onTap: () {
+          if (item.link.isNotEmpty) {
+            launchUrl(Uri.parse(item.link));
+            dPrint(item.text);
+          } else {
+            launchUrl(Uri.parse('https://krea.edu.in/'));
+          }
+        },
+        child: Tooltip(
+          message: item.text,
+          verticalOffset: 40,
+          child: Row(
+            children: [
+              Container(
+                  constraints:
+                      const BoxConstraints(maxHeight: 48, maxWidth: 50),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: const Color(0xff0095FF),
+                  ),
+                  child: Center(child: CustomMaterialIcon(item.icon))),
+              const SizedBox(width: 16.0),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      item.title,
+                      style: GoogleFonts.urbanist(
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 4.0),
-                  Text(
-                    item.text,
-                    style: GoogleFonts.urbanist(
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xff8F9BB3)),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ],
+                    const SizedBox(height: 4.0),
+                    Text(
+                      item.text,
+                      style: GoogleFonts.urbanist(
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.w400,
+                          color: const Color(0xff8F9BB3)),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

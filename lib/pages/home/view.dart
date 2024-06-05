@@ -1,7 +1,6 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
 import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
-import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
@@ -10,7 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
 import 'widgets/home_student_buddy/view.dart';
-import 'widgets/upcomming_events/view.dart';
+import 'widgets/upcoming_events/view.dart';
 import 'widgets/welcome_card/welcome_widget.dart';
 
 class NewHomeBody extends StatefulWidget {
@@ -37,7 +36,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
       jsonData.add(e);
     }
     setState(() {});
-    dPrint(jsonData);
+    // dPrint(jsonData);
   }
 
   @override
