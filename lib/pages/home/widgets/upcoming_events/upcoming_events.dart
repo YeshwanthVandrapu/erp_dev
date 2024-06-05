@@ -166,7 +166,9 @@ class UpcomingEventsCard extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: SizedBox(
-                              width: (constraints.maxWidth * 2 / 3) - 144,
+                              width: (constraints.maxWidth * 2 / 3) - 144 < 0
+                                  ? 0
+                                  : (constraints.maxWidth * 2 / 3) - 144,
                               // Width calculated by the following,
                               // Image width in card = 1/3, so remaining = 2/3
                               //SizedBox = 15 , Padding = 8, PageIndicator for switching = 120, so 120 + 15 + 8 = 143
