@@ -5,7 +5,8 @@
         "time": "9:00 AM to 12:00 PM",
         "description": "Virtual - Google Meet",
         "link": "",
-        "name": "Wahiq"
+        "name": "Wahiq",
+        "colorCode" : "0xffF34850"
     },
     {
         "title": "Student Buddy Meeting",
@@ -13,7 +14,8 @@
         "time": "9:00 AM to 12:00 PM",
         "description": "Virtual - Google Meet",
         "link": "",
-        "name": "Wahiq"
+        "name": "Wahiq",
+        "colorCode" : "0xff2EB0D5"
     },
     {
         "title": "Student Buddy Meeting",
@@ -21,6 +23,7 @@
         "time": "9:00 AM to 12:00 PM",
         "description": "Virtual - Google Meet",
         "link": "",
-        "name": "Wahiq"
+        "name": "Wahiq",
+        "colorCode" : "0xff7F265B"
     }
 ]

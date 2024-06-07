@@ -7,6 +7,7 @@ import 'modal.dart';
 class ScheduleController extends GetxController {
   List<ScheduleItem> items = [];
   bool addingEvent = false;
+  double sWidth = 0;
 
   @override
   void onInit() async {

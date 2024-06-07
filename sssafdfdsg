@@ -1,0 +1,171 @@
+[33mcommit ad5f979c707dceff73a6fc5347122fbf9058bf77[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Tue Jun 4 19:36:07 2024 +0530
+
+    Updated layout and carousel --  04June
+
+[33mcommit d5764c83bdcf00db10b6149fb5dd4ae08e2ecf22[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 20:58:14 2024 +0530
+
+    fixed error in student buddy card
+
+[33mcommit 99e9b37d4094f462679138ec291d4ce771404b0f[m
+Merge: 4e4524e b260c48
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 20:51:20 2024 +0530
+
+    03June_Last
+
+[33mcommit 4e4524ea61ce6c97b679f24d79e0aa93c3a5d113[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 20:45:10 2024 +0530
+
+    test
+
+[33mcommit b260c489674e2f72c59da5da2b227bc00b39f371[m
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Mon Jun 3 19:40:46 2024 +0530
+
+    chanfing div width
+
+[33mcommit 0f633363e569ed4bb4a86afce4c6182a3c1137a5[m
+Merge: 79cdb51 38d91b3
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Mon Jun 3 19:27:58 2024 +0530
+
+    Merge branch 'main' of https://github.com/YeshwanthVandrapu/erp_dev
+
+[33mcommit 79cdb51fbd3ede074908edc1a903fae38aa2aa8f[m
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Mon Jun 3 19:27:20 2024 +0530
+
+    altering responsive skeleton of homepage
+
+[33mcommit 38d91b361972ed492c3f29a5d5109fa245bca5aa[m
+Author: Senthil Prabhu K <42956583+senthilnasa@users.noreply.github.com>
+Date:   Mon Jun 3 15:36:38 2024 +0530
+
+    Change Menu File
+
+[33mcommit 6e6f106ee6a55e53040c506d42c835216cf52e74[m
+Merge: 2f57db9 3bfe133
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 11:37:21 2024 +0530
+
+    Merge branch 'main' of https://github.com/YeshwanthVandrapu/erp_dev
+
+[33mcommit 2f57db9d85db3fc7284bbc9ec854784400370da9[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 11:36:01 2024 +0530
+
+    re altering responsive
+
+[33mcommit 3bfe1337277e8dd94780003b1ea204d343dca779[m
+Author: ArcticMonkey101 <vidisha_ponnappa.sias21@krea.ac.in>
+Date:   Mon Jun 3 11:31:16 2024 +0530
+
+    Add Events to Home Page
+
+[33mcommit 7ad707d0d41597d9127f5c2c4cc9ddaab696ea4d[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 10:19:09 2024 +0530
+
+     Fixed multiple run of showDialogIfFirstLoaded error
+
+[33mcommit e0a61adf15cd7ecdbefa751509000f63329075ba[m
+Merge: 0cfa9ef 5fdb810
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 09:59:58 2024 +0530
+
+    Merge branch 'main' of https://github.com/YeshwanthVandrapu/erp_dev
+
+[33mcommit 0cfa9ef0a818e3ad0571af11d49941f028108f57[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Mon Jun 3 09:56:03 2024 +0530
+
+    refactoring files in the Quick Links Widget
+
+[33mcommit 5fdb81021656e8ede6afe80fc386db7bd56c0a7a[m
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Sat Jun 1 15:08:39 2024 +0530
+
+    changed text in the pop up
+
+[33mcommit 2e25bb74e035e6adfe61a669b9ee35c2b970ef7a[m
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Sat Jun 1 14:48:01 2024 +0530
+
+    added pop up on homepage
+
+[33mcommit 76660823aa0cecf352ed73889ca580deb5b30011[m
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Fri May 31 17:14:55 2024 +0530
+
+    changed the button when adding a new event to schedule
+
+[33mcommit 829de754cf12f0aea69266dd361ca36092fca7ed[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Fri May 31 16:53:39 2024 +0530
+
+    Fix Error in  Card Update Using  rootBundle.loadString
+
+[33mcommit a32ee7fe86289f62d27c1cfdf923f0ea11b6c185[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Fri May 31 16:45:59 2024 +0530
+
+    say Hi! to say Hi !
+
+[33mcommit b54f0f2bfaab108a41618d6245133f6e1a9677c1[m
+Merge: db9bcdb 69eac2d
+Author: prithvipaddy <91523934+prithvipaddy@users.noreply.github.com>
+Date:   Fri May 31 16:09:39 2024 +0530
+
+    Merge pull request #2 from prithvipaddy/main
+    
+    changed from fontSize to fontStyle in upcoming schedule
+
+[33mcommit 69eac2d441625349b1e1b238865efd3188fea43b[m
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Fri May 31 16:04:52 2024 +0530
+
+    changed from fontSize to fontStyle in upcoming schedule
+
+[33mcommit db9bcdb941359c0d323c0af0928cc610a0346290[m
+Merge: e6e2c4b ddbc4b9
+Author: prithvipaddy <91523934+prithvipaddy@users.noreply.github.com>
+Date:   Fri May 31 15:09:19 2024 +0530
+
+    Merge pull request #1 from prithvipaddy/main
+    
+    test push
+
+[33mcommit ddbc4b945156c07f790a7403eb2e62db4f546d3d[m
+Author: prithvipaddy <prithvipaddy@gmail.com>
+Date:   Fri May 31 14:59:48 2024 +0530
+
+    test push
+
+[33mcommit e6e2c4b242c94821026a16989622317dbde5a5ad[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Fri May 31 10:40:18 2024 +0530
+
+    added workflow
+
+[33mcommit ff0bf8061cfa61d028bd567dae9a30a1af806d1b[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Fri May 31 10:36:16 2024 +0530
+
+    Refactored file names and added res file
+
+[33mcommit 0382821ded9f77bf27f4dfdb0a48a3b93f11b9a5[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Fri May 31 10:19:41 2024 +0530
+
+    first commit
+
+[33mcommit f6588fc09d60ea2104ee65308114dce28ba7cd86[m
+Author: YeshwanthVandrapu <yeshwanth.vandrapu@krea.edu.in>
+Date:   Fri May 31 10:10:17 2024 +0530
+
+    init

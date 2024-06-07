@@ -7,7 +7,7 @@
         "header" : "Student Orientation Inauguration - Batch of 2028",
         "description" : "Please Welcome us with the orientation programme of the upcoming cohort of 2028. The event is packed with fun stuff and cool games. See you all at the OAT.",
         "viewers" : ["Students", "Faculty", "Staff"],
-        "image" : "res/images/welcome_illustration1.png"
+        "image" : "res/images/homepagePopup.png"
     },
 
     {
@@ -18,7 +18,7 @@
         "header" : "Student Orientation Inauguration - Batch of 2028",
         "description" : "Please Welcome us with the orientation programme of the upcoming cohort of 2028. The event is packed with fun stuff and cool games. See you all at the OAT.",
         "viewers" : ["Staff"],
-        "image" : "res/images/welcome_illustration1.png"
+        "image" : "res/images/homepagePopup.png"
     },
 
     {
@@ -29,7 +29,7 @@
         "header" : "Student Orientation Inauguration - Batch of 2028",
         "description" : "Please Welcome us with the orientation programme of the upcoming cohort of 2028. The event is packed with fun stuff and cool games. See you all at the OAT.",
         "viewers" : ["Students", "Faculty"],
-        "image" : "res/images/welcome_illustration1.png"
+        "image" : "res/images/homepagePopup.png"
     },
 
     {
@@ -40,6 +40,6 @@
         "header" : "Student Orientation Inauguration - Batch of 2028",
         "description" : "Please Welcome us with the orientation programme of the upcoming cohort of 2028. The event is packed with fun stuff and cool games. See you all at the OAT.",
         "viewers" : ["Students", "Staff"],
-        "image" : "res/images/welcome_illustration1.png"
+        "image" : "res/images/homepagePopup.png"
     }
 ]

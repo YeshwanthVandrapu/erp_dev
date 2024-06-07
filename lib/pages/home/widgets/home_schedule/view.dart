@@ -14,55 +14,80 @@ class UpcomingSchedule extends GetView<ScheduleController> {
     DateTime now = DateTime.now();
     DateFormat formatter = DateFormat('dd-MM-yyyy');
     String formattedDate = formatter.format(now);
+    // double sWidth = Get.width;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0),
       child: GetBuilder<ScheduleController>(
-        builder: (controller) => Stack(children: [
-          controller.addingEvent
-              ? AddScheduleItem()
-              : Column(
-                  children: [
-                    Container(
-                      constraints: BoxConstraints(maxWidth: Get.width),
-                      child: ListTile(
-                        trailing: IconButton(
-                          onPressed: () {
-                            controller.addingEvent = !controller.addingEvent;
-                            controller.update();
-                          },
-                          icon: const Icon(Icons.add),
-                        ),
-                        contentPadding: const EdgeInsets.all(0),
-                        title: Text(
-                          "Upcoming Schedule",
-                          style: GoogleFonts.urbanist(
-                              fontSize: 18, fontWeight: FontWeight.w600),
-                        ),
-                        subtitle: Text(
-                          formattedDate,
-                          style: GoogleFonts.urbanist(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w700,
-                              color: const Color(0xff6c6c6c)),
+        builder: (controller) => Stack(
+          children: [
+            controller.addingEvent
+                ? AddScheduleItem()
+                : Column(
+                    children: [
+                      Container(
+                        constraints: BoxConstraints(maxWidth: Get.width),
+                        child: ListTile(
+                          trailing: IconButton(
+                            onPressed: () {
+                              controller.addingEvent = !controller.addingEvent;
+                              controller.update();
+                            },
+                            icon: const Icon(Icons.add),
+                          ),
+                          contentPadding: const EdgeInsets.all(0),
+                          title: Text(
+                            "Upcoming Schedule",
+                            style: GoogleFonts.urbanist(
+                                fontSize: 18, fontWeight: FontWeight.w600),
+                          ),
+                          subtitle: Text(
+                            formattedDate,
+                            style: GoogleFonts.urbanist(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0xff6c6c6c)),
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                        height: controller.items.length < 2 ? 200 : 320,
-                        child: ListView(
-                            children: controller.items
-                                .map((item) => ScheduleItemCard(item: item))
-                                .toList())),
-                  ],
-                ),
-        ]),
+                      LayoutBuilder(builder: (context, constraints) {
+                        // List<Color> cardColors = [
+                        //   Colors.red,
+                        //   Colors.blue,
+                        //   const Color(0xff7F265B),
+                        // ];
+                        controller.sWidth = Get.width;
+                        return controller.sWidth > 1200
+                            ? SizedBox(
+                                height: 300,
+                                child: ListView(
+                                    children: controller.items
+                                        .map((item) => ScheduleItemCard(
+                                              item: item,
+                                            ))
+                                        .toList()),
+                              )
+                            : Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: controller.items
+                                    .map((item) => ScheduleItemCard(
+                                          item: item,
+                                        ))
+                                    .toList());
+                      }),
+                    ],
+                  ),
+          ],
+        ),
       ),
     );
   }
 }
 
 class ScheduleItemCard extends StatelessWidget {
-  const ScheduleItemCard({super.key, required this.item});
+  const ScheduleItemCard({
+    super.key,
+    required this.item,
+  });
   final ScheduleItem item;
 
   @override
@@ -81,9 +106,9 @@ class ScheduleItemCard extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                decoration: const BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadiusDirectional.only(
+                decoration: BoxDecoration(
+                    color: Color(int.parse(item.colorCode)),
+                    borderRadius: const BorderRadiusDirectional.only(
                         topStart: Radius.circular(10),
                         bottomStart: Radius.circular(10))),
                 width: 20,
@@ -111,6 +136,7 @@ class ScheduleItemCard extends StatelessWidget {
                                       const TextStyle(color: Color(0xff6C6C6C)),
                                   children: [
                                 const WidgetSpan(
+                                    alignment: PlaceholderAlignment.middle,
                                     child: Icon(Icons.calendar_month_outlined,
                                         color: Color(0xff6C6C6C))),
                                 TextSpan(
@@ -124,6 +150,7 @@ class ScheduleItemCard extends StatelessWidget {
                                   width: 10,
                                 )),
                                 const WidgetSpan(
+                                    alignment: PlaceholderAlignment.middle,
                                     child: Icon(Icons.access_time,
                                         color: Color(0xff6C6C6C))),
                                 TextSpan(
@@ -251,7 +278,8 @@ class AddScheduleItem extends GetView<ScheduleController> {
                           date: date.text,
                           description: description.text,
                           name: participants.text,
-                          time: time.text));
+                          time: time.text,
+                          colorCode: "0xffF34850"));
                       controller.addingEvent = !controller.addingEvent;
                       controller.update();
                       title.dispose();

@@ -208,23 +208,21 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Get.width < 10
-                        ? const SizedBox.shrink()
-                        : ClipRRect(
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              topRight: Radius.circular(20),
-                            ),
-                            child: SizedBox(
-                              height: 360,
-                              child: Image.asset(
-                                "res/images/homepagePopup.png",
-                                height: 672,
-                                width: 1344,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                      child: SizedBox(
+                        height: 360,
+                        child: Image.asset(
+                          "res/images/homepagePopup.png",
+                          height: 672,
+                          width: 1344,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                     // const Image(image: AssetImage("res/images/homepagePopup.png")),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
