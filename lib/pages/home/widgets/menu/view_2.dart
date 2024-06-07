@@ -125,7 +125,7 @@ class _MenuViewState extends State<MenuView> {
 
   Widget childSideBar(int cIndex) {
     List<MenuModal> childrens = menus.where((e) {
-      if (e.resourceId == cIndex && e.children.isNotEmpty) {
+      if (e.resourceId == cIndex as String && e.children.isNotEmpty) {
         return true;
       }
       return false;

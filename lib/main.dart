@@ -1,5 +1,6 @@
 import 'package:erp_dev/pages/home/widgets/home_quick_links/controller.dart';
 import 'package:erp_dev/pages/home/widgets/home_student_buddy/controller.dart';
+import 'package:erp_dev/pages/home/widgets/menu/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,6 +16,7 @@ void main() async {
   Get.put(StudentBuddyController());
   Get.put(ScheduleController());
   Get.put(QuickLinkController());
+  Get.put(HomeMenuController());
   await Hive.openBox('preferences', path: './');
   runApp(const MyApp());
 }
@@ -37,14 +39,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatefulWidget {
+class Home extends GetView<HomeMenuController> {
   const Home({super.key});
 
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     double sWidth = MediaQuery.of(context).size.width;
@@ -52,10 +49,17 @@ class _HomeState extends State<Home> {
       child: Row(
         children: <Widget>[
           sWidth > 600 ? const MenuView() : const SizedBox.shrink(),
-          const Expanded(
-            // flex: 5,
-            child: NewHomeBody(),
-          ),
+          GetBuilder<HomeMenuController>(builder: (controller) {
+            return Expanded(
+              child: Stack(children: [
+                const NewHomeBody(),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: controller.childSideMenu(),
+                )
+              ]),
+            );
+          }),
         ],
       ),
     );

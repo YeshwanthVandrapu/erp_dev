@@ -37,6 +37,15 @@
   },
   {
     "bottom_nav": "0",
+    "parent_id": "f1",
+    "resource_description": "Student Onboarding V1",
+    "resource_icon": "emoji_people",
+    "resource_id": "f11",
+    "resource_name": "Onboarding Form Filling - Test L3",
+    "resource_type": "form"
+  },
+  {
+    "bottom_nav": "0",
     "parent_id": "1",
     "resource_description": "",
     "resource_icon": "link",
