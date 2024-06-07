@@ -31,11 +31,11 @@ class _MenuViewState extends State<MenuView> {
       rmenus.add(RawMenuModal.fromJson(e));
     }
     menus.clear();
-    menus.addAll(getMenu(0, rmenus));
+    menus.addAll(getMenu("0", rmenus));
     setState(() {});
   }
 
-  List<MenuModal> getMenu(int pid, List<RawMenuModal> rmenus) {
+  List<MenuModal> getMenu(String pid, List<RawMenuModal> rmenus) {
     List<MenuModal> menus = [];
     List<RawMenuModal> rmenuss = [];
     for (var rmenu in rmenus) {
