@@ -6,6 +6,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
 import 'widgets/home_student_buddy/view.dart';
@@ -188,11 +189,12 @@ class _NewHomeBodyState extends State<NewHomeBody> {
   }
 
   showDialogIfFirstLoaded() async {
-    //TODO add Hive for the pop up to only come the first time
-    //SharedPreferences prefs = await SharedPreferences.getInstance();
-    //bool? isFirstLoaded = prefs.getBool(keyIsFirstLoaded);
+    var box = Hive.box('preferences');
+    String firstLoadedKey = 'isFirstLoaded';
+    // box.put(firstLoadedKey, true);
     await Future.delayed(const Duration(seconds: 1));
-    if (true) {
+    if (box.get(firstLoadedKey) || box.get(firstLoadedKey).isNull) {
+      box.put(firstLoadedKey, false);
       showDialog(
         // ignore: use_build_context_synchronously
         context: context,
