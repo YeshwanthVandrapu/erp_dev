@@ -1,4 +1,5 @@
 import 'package:erp_dev/pages/home/widgets/menu/controller.dart';
+import 'package:erp_dev/pages/home/widgets/menu/modal.dart';
 import 'package:erp_dev/utils/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,45 +7,6 @@ import 'package:get/get.dart';
 class MenuView extends GetView<HomeMenuController> {
   const MenuView({super.key});
 
-  // final List<RawMenuModal> rmenus = [];
-  // List<MenuModal> menus = [];
-  // int cIndex = -1;
-
-  // Future<void> loadJsonAsset() async {
-  //   final String jsonString =
-  //       await rootBundle.loadString('res/json/jsonformmatter.json');
-  //   var data = jsonDecode(jsonString);
-  //   rmenus.clear();
-  //   for (var e in data) {
-  //     rmenus.add(RawMenuModal.fromJson(e));
-  //   }
-  //   menus.clear();
-  //   menus.addAll(getMenu("0", rmenus));
-  //   setState(() {});
-  // }
-
-  // List<MenuModal> getMenu(String pid, List<RawMenuModal> rmenus) {
-  //   List<MenuModal> menus = [];
-  //   List<RawMenuModal> rmenuss = [];
-  //   for (var rmenu in rmenus) {
-  //     if (pid != rmenu.parentId) {
-  //       rmenuss.add(rmenu);
-  //     }
-  //   }
-  //   for (var rmenu in rmenus) {
-  //     // rmenus.remove(rmenu);
-  //     if (pid == rmenu.parentId) {
-  //       menus.add(MenuModal(
-  //           resourceIcon: rmenu.resourceIcon,
-  //           resourceId: rmenu.resourceId,
-  //           resourceName: rmenu.resourceName,
-  //           children: getMenu(rmenu.resourceId, rmenuss)));
-  //     }
-  //   }
-  //   return menus;
-  // }
-
-// 481216
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeMenuController>(builder: (controller) {
@@ -116,73 +78,19 @@ class MenuView extends GetView<HomeMenuController> {
       );
     });
   }
-
-  // Widget childSideBar(int cIndex) {
-  //   if (cIndex == -1 || menus[cIndex].children.isEmpty) {
-  //     return const SizedBox.shrink();
-  //   }
-  //   return Container(
-  //     width: 220,
-  //     color: const Color(0xff275C9D),
-  //     child: ListView.builder(
-  //       itemCount: menus[cIndex].children.length,
-  //       itemBuilder: (context, index) {
-  //         return InkWell(
-  //           onTap: () {
-  //             setState(() {
-  //               for (var d in menus) {
-  //                 d.isSelected = false;
-  //               }
-  //               menus[cIndex].children[index].isSelected = true;
-  //               // data.clickIndex = index;
-  //               cIndex = index;
-  //             });
-  //           },
-  //           child: ExpansionTile(
-  //             iconColor: const Color(0xffBDE2EE),
-  //             collapsedIconColor: const Color(0xffBDE2EE),
-  //             backgroundColor: const Color.fromARGB(255, 71, 128, 199),
-  //             // enableFeedback: true,
-  //             leading: CustomMaterialIcon(
-  //               menus[cIndex].children[index].resourceIcon,
-  //               color: menus[cIndex].children[index].isSelected
-  //                   ? const Color.fromARGB(255, 71, 128, 199)
-  //                   : const Color(0xffBDE2EE),
-  //             ),
-  //             title: Text(
-  //               menus[cIndex].children[index].resourceName,
-  //               maxLines: 2,
-  //               overflow: TextOverflow.ellipsis,
-  //               style: const TextStyle(color: Color(0xffBDE2EE), fontSize: 12),
-  //             ),
-  //             children: menus[cIndex].children[index].children.map((data) {
-  //               return ListTile(
-  //                 title: Text(
-  //                   data.resourceName,
-  //                   maxLines: 1,
-  //                   overflow: TextOverflow.ellipsis,
-  //                   style:
-  //                       const TextStyle(color: Color(0xffBDE2EE), fontSize: 10),
-  //                 ),
-  //                 leading: CustomMaterialIcon(
-  //                   data.resourceIcon,
-  //                   color: const Color(0xffBDE2EE),
-  //                 ),
-  //               );
-  //             }).toList(),
-  //           ),
-  //         );
-  //       },
-  //     ),
-  //   );
-  // }
 }
 
 Widget childSideMenu() {
   final HomeMenuController controller = Get.find();
+
   if (controller.cIndex == -1 ||
       controller.menus[controller.cIndex].children.isEmpty) {
     return const SizedBox.shrink();
+  }
+  List<MenuModal> l2 = controller.menus[controller.cIndex].children;
+  List<List<MenuModal>> l3 = [];
+  for (MenuModal i in l2) {
+    l3.add(i.children);
   }
   return Material(
     child: MouseRegion(
@@ -197,34 +105,20 @@ Widget childSideMenu() {
         color: const Color(0xff275C9D),
         child: ListView.builder(
           key: Key('builder ${controller.selected.toString()}'),
-          itemCount: controller.menus[controller.cIndex].children.length,
+          itemCount: l2.length,
           itemBuilder: (context, index) {
             return ExpansionTile(
-              // trailing: () {
-              //   if (controller.menus[controller.cIndex].children[index]
-              //       .children.isNotEmpty) {
-              //     return const Icon(Icons.arrow_drop_down_outlined);
-              //   } else {
-              //     return const SizedBox.shrink();
-              //   }
-              // }(),
               key: Key(index.toString()),
               initiallyExpanded: index == controller.selected,
               iconColor: const Color(0xffBDE2EE),
               collapsedIconColor: const Color(0xffBDE2EE),
               backgroundColor: const Color.fromARGB(255, 71, 128, 199),
-              // enableFeedback: true,
               leading: CustomMaterialIcon(
-                controller
-                    .menus[controller.cIndex].children[index].resourceIcon,
-                color: controller
-                        .menus[controller.cIndex].children[index].isSelected
-                    ? const Color.fromARGB(255, 71, 128, 199)
-                    : const Color(0xffBDE2EE),
+                l2[index].resourceIcon,
+                color: const Color(0xffBDE2EE),
               ),
               title: Text(
-                controller
-                    .menus[controller.cIndex].children[index].resourceName,
+                l2[index].resourceName,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(color: Color(0xffBDE2EE), fontSize: 12),
@@ -241,9 +135,7 @@ Widget childSideMenu() {
               }),
               // initiallyExpanded: expandedTileKey == index,
 
-              children: controller
-                  .menus[controller.cIndex].children[index].children
-                  .map((data) {
+              children: l3[index].map((data) {
                 return ListTile(
                   title: Text(
                     data.resourceName,
