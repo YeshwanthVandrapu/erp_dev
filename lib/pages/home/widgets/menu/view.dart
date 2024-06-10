@@ -177,3 +177,91 @@ class MenuView extends GetView<HomeMenuController> {
   //   );
   // }
 }
+
+Widget childSideMenu() {
+  final HomeMenuController controller = Get.find();
+  if (controller.cIndex == -1 ||
+      controller.menus[controller.cIndex].children.isEmpty) {
+    return const SizedBox.shrink();
+  }
+  return Material(
+    child: MouseRegion(
+      onExit: (event) {
+        controller.menus[controller.cIndex].isSelected = false;
+        controller.cIndex = -1;
+        controller.selected = -1;
+        controller.update();
+      },
+      child: Container(
+        width: 220,
+        color: const Color(0xff275C9D),
+        child: ListView.builder(
+          key: Key('builder ${controller.selected.toString()}'),
+          itemCount: controller.menus[controller.cIndex].children.length,
+          itemBuilder: (context, index) {
+            return ExpansionTile(
+              // trailing: () {
+              //   if (controller.menus[controller.cIndex].children[index]
+              //       .children.isNotEmpty) {
+              //     return const Icon(Icons.arrow_drop_down_outlined);
+              //   } else {
+              //     return const SizedBox.shrink();
+              //   }
+              // }(),
+              key: Key(index.toString()),
+              initiallyExpanded: index == controller.selected,
+              iconColor: const Color(0xffBDE2EE),
+              collapsedIconColor: const Color(0xffBDE2EE),
+              backgroundColor: const Color.fromARGB(255, 71, 128, 199),
+              // enableFeedback: true,
+              leading: CustomMaterialIcon(
+                controller
+                    .menus[controller.cIndex].children[index].resourceIcon,
+                color: controller
+                        .menus[controller.cIndex].children[index].isSelected
+                    ? const Color.fromARGB(255, 71, 128, 199)
+                    : const Color(0xffBDE2EE),
+              ),
+              title: Text(
+                controller
+                    .menus[controller.cIndex].children[index].resourceName,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(color: Color(0xffBDE2EE), fontSize: 12),
+              ),
+
+              onExpansionChanged: ((newState) {
+                if (newState) {
+                  controller.selected = index;
+                  controller.update();
+                } else {
+                  controller.selected = -1;
+                  controller.update();
+                }
+              }),
+              // initiallyExpanded: expandedTileKey == index,
+
+              children: controller
+                  .menus[controller.cIndex].children[index].children
+                  .map((data) {
+                return ListTile(
+                  title: Text(
+                    data.resourceName,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style:
+                        const TextStyle(color: Color(0xffBDE2EE), fontSize: 10),
+                  ),
+                  leading: CustomMaterialIcon(
+                    data.resourceIcon,
+                    color: const Color(0xffBDE2EE),
+                  ),
+                );
+              }).toList(),
+            );
+          },
+        ),
+      ),
+    ),
+  );
+}

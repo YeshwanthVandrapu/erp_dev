@@ -193,7 +193,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
     String firstLoadedKey = 'isFirstLoaded';
     // box.put(firstLoadedKey, true);
     await Future.delayed(const Duration(seconds: 1));
-    if (box.get(firstLoadedKey) || box.get(firstLoadedKey).isNull) {
+    if (box.get(firstLoadedKey) ?? false) {
       box.put(firstLoadedKey, false);
       showDialog(
         // ignore: use_build_context_synchronously

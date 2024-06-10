@@ -17,6 +17,7 @@ void main() async {
   Get.put(ScheduleController());
   Get.put(QuickLinkController());
   Get.put(HomeMenuController());
+
   await Hive.openBox('preferences', path: './');
   runApp(const MyApp());
 }
@@ -55,7 +56,7 @@ class Home extends GetView<HomeMenuController> {
                 const NewHomeBody(),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: controller.childSideMenu(),
+                  child: childSideMenu(),
                 )
               ]),
             );
