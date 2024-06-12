@@ -1,3 +1,4 @@
+import 'package:erp_dev/pages/home/widgets/faq_page/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
 import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
@@ -46,7 +47,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
 
     //showDialogIfFirstLoaded(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xfff8f9fb),
       appBar: AppBar(
         elevation: 10,
         backgroundColor: Colors.white,
@@ -137,7 +138,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       constraints: BoxConstraints(
-                          maxHeight: sWidth > 540 ? 300 : 350, minHeight: 270),
+                          maxHeight: sWidth > 540 ? 300 : 350, minHeight: 144),
                       child: const WelcomeCard(),
                     ),
                   ),
@@ -180,6 +181,19 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   ),
                   child: StudentBuddiesCard(),
                 ),
+                // Div(
+                //   divison: const Division(colXL: 3, colL: 5, colM: 12),
+                //   child: Container(
+                //       constraints: const BoxConstraints(maxHeight: 300),
+                //       child: const TaskListCard()),
+                // ),
+                const Div(
+                  divison: Division(colL: 10),
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 40.0),
+                    child: Faq(),
+                  ),
+                )
               ],
             ),
           ),

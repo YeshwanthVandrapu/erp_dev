@@ -1,0 +1,40 @@
+[
+    {
+        "category":"General",
+        "questions": [
+            {
+                "question": "How do access the form?",
+                "answer": "Answer"
+            },
+            {
+                "question": "What happens if I miss the deadline?",
+                "answer": "Answer"
+            },
+            {
+                "question": "I cannot see the form on my Dashboard",
+                "answer": "Answer"
+            }
+        ]
+    },
+    {
+        "category":"Personal Details"
+    },
+    {
+        "category":"Academic Details"
+    },
+    {
+        "category":"Contact Details"
+    },
+    {
+        "category":"Health Information"
+    },
+    {
+        "category":"Insurance Details"
+    },
+    {
+        "category":"Undertaking and Consent Form"
+    },
+    {
+        "category":"Preferences"
+    }
+]

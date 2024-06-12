@@ -17,7 +17,7 @@ class StudentBuddiesCard extends StatelessWidget {
       } else {
         return LayoutBuilder(
           builder: (context, constrain) {
-            if (sWidth > 400) {
+            if (sWidth > 480) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Column(
@@ -37,13 +37,19 @@ class StudentBuddiesCard extends StatelessWidget {
                             color: const Color(0xff6c6c6c)),
                       ),
                     ),
-                    Row(
-                        children: controller.items.map((item) {
-                      return Expanded(
-                          child: StudentCard(
-                        item: item,
-                      ));
-                    }).toList())
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                          children: controller.items.map((item) {
+                        return Center(
+                          child: Container(
+                              constraints: const BoxConstraints(maxWidth: 226),
+                              child: StudentCard(
+                                item: item,
+                              )),
+                        );
+                      }).toList()),
+                    )
                   ],
                 ),
               );
@@ -72,7 +78,7 @@ class StudentBuddiesCard extends StatelessWidget {
                     child: Center(
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(
-                          maxWidth: 400,
+                          maxWidth: 300,
                         ),
                         child: StudentCard(
                           item: item,
