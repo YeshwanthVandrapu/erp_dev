@@ -12,72 +12,126 @@ class UpcomingSchedule extends GetView<ScheduleController> {
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
-    DateFormat formatter = DateFormat('dd-MM-yyyy');
-    String formattedDate = formatter.format(now);
+    DateFormat dateFormatter = DateFormat('dd-MM-yyyy');
+    String formattedDate = dateFormatter.format(now);
     // double sWidth = Get.width;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0),
-      child: GetBuilder<ScheduleController>(
-        builder: (controller) => Stack(
-          children: [
-            controller.addingEvent
-                ? AddScheduleItem()
-                : Column(
-                    children: [
-                      Container(
-                        constraints: BoxConstraints(maxWidth: Get.width),
-                        child: ListTile(
-                          trailing: IconButton(
-                            onPressed: () {
-                              controller.addingEvent = !controller.addingEvent;
-                              controller.update();
-                            },
-                            icon: const Icon(Icons.add),
-                          ),
-                          contentPadding: const EdgeInsets.all(0),
-                          title: Text(
-                            "Upcoming Schedule",
-                            style: GoogleFonts.urbanist(
-                                fontSize: 18, fontWeight: FontWeight.w600),
-                          ),
-                          subtitle: Text(
-                            formattedDate,
-                            style: GoogleFonts.urbanist(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xff6c6c6c)),
-                          ),
-                        ),
-                      ),
-                      LayoutBuilder(builder: (context, constraints) {
-                        // List<Color> cardColors = [
-                        //   Colors.red,
-                        //   Colors.blue,
-                        //   const Color(0xff7F265B),
-                        // ];
-                        controller.sWidth = Get.width;
-                        return controller.sWidth > 1200
-                            ? SizedBox(
-                                height: 300,
-                                child: ListView(
-                                    children: controller.items
-                                        .map((item) => ScheduleItemCard(
-                                              item: item,
-                                            ))
-                                        .toList()),
-                              )
-                            : Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: controller.items
-                                    .map((item) => ScheduleItemCard(
-                                          item: item,
-                                        ))
-                                    .toList());
-                      }),
-                    ],
-                  ),
-          ],
-        ),
+      child: Column(
+        children: [
+          Container(
+            constraints: BoxConstraints(maxWidth: Get.width),
+            child: ListTile(
+              trailing: IconButton(
+                onPressed: () {
+                  AddScheduleItemController addController =
+                      Get.put(AddScheduleItemController());
+                  final ScheduleController controller = Get.find();
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          content: AddScheduleItem(),
+                          actions: [
+                            ElevatedButton(
+                              onPressed: () {
+                                // addController.dispose();
+                                Get.back();
+                              },
+                              style: const ButtonStyle(
+                                  backgroundColor:
+                                      WidgetStatePropertyAll(Colors.white)),
+                              child: const Text(
+                                "Cancel",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 39, 92, 157)),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                if (addController.formKey.currentState!
+                                    .validate()) {
+                                  controller.addItemToList(
+                                    ScheduleItem(
+                                        title: addController.title.text,
+                                        date: addController.selectedDate!,
+                                        description:
+                                            addController.description.text,
+                                        name: addController.participants.text,
+                                        time: addController.selectedTime!,
+                                        colorCode: "0xffF34850"),
+                                  );
+                                  controller.update();
+                                  // addController.dispose();
+                                  Get.back();
+                                }
+                              },
+                              style: const ButtonStyle(
+                                  backgroundColor: WidgetStatePropertyAll(
+                                      Color.fromARGB(255, 39, 92, 157))),
+                              child: const Text(
+                                "Add Event",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
+                        );
+                      }).then((_) {
+                    // addController.title.text = '';
+                    // addController.description.text = '';
+                    // addController.participants.text = '';
+                    // addController.dateTime.text = '';
+                    // addController.selectedDateTime = null;
+                    // addController.selectedDate = null;
+                    // addController.selectedTime = null;
+                    Get.delete<AddScheduleItemController>();
+                  });
+                },
+                icon: const Icon(Icons.add),
+              ),
+              contentPadding: const EdgeInsets.all(0),
+              title: Text(
+                "Upcoming Schedule",
+                style: GoogleFonts.urbanist(
+                    fontSize: 18, fontWeight: FontWeight.w600),
+              ),
+              subtitle: Text(
+                formattedDate,
+                style: GoogleFonts.urbanist(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w700,
+                    color: const Color(0xff6c6c6c)),
+              ),
+            ),
+          ),
+          GetBuilder<ScheduleController>(builder: (controller) {
+            return LayoutBuilder(builder: (context, constraints) {
+              // List<Color> cardColors = [
+              //   Colors.red,
+              //   Colors.blue,
+              //   const Color(0xff7F265B),
+              // ];
+              controller.sWidth = Get.width;
+              return controller.sWidth > 1200
+                  ? SizedBox(
+                      height: 300,
+                      child: ListView(
+                          children: controller.items
+                              .map((item) => ScheduleItemCard(
+                                    item: item,
+                                  ))
+                              .toList()),
+                    )
+                  : Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: controller.items
+                          .map((item) => ScheduleItemCard(
+                                item: item,
+                              ))
+                          .toList());
+            });
+          }),
+        ],
       ),
     );
   }
@@ -132,18 +186,22 @@ class ScheduleItemCard extends StatelessWidget {
                                   .copyWith(fontWeight: FontWeight.w600)),
                           RichText(
                               text: TextSpan(
-                                  style:
-                                      const TextStyle(color: Color(0xff6C6C6C)),
+                                  style: DefaultTextStyle.of(context)
+                                      .style
+                                      .apply(fontSizeFactor: 0.9)
+                                      .copyWith(
+                                        color: const Color(0xff6C6C6C),
+                                      ),
                                   children: [
                                 const WidgetSpan(
                                     alignment: PlaceholderAlignment.middle,
-                                    child: Icon(Icons.calendar_month_outlined,
-                                        color: Color(0xff6C6C6C))),
+                                    child: Padding(
+                                      padding: EdgeInsets.only(right: 4.0),
+                                      child: Icon(Icons.calendar_month_outlined,
+                                          color: Color(0xff6C6C6C)),
+                                    )),
                                 TextSpan(
                                   text: item.date,
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 0.8),
                                 ),
                                 const WidgetSpan(
                                     child: SizedBox(
@@ -151,13 +209,13 @@ class ScheduleItemCard extends StatelessWidget {
                                 )),
                                 const WidgetSpan(
                                     alignment: PlaceholderAlignment.middle,
-                                    child: Icon(Icons.access_time,
-                                        color: Color(0xff6C6C6C))),
+                                    child: Padding(
+                                      padding: EdgeInsets.all(4.0),
+                                      child: Icon(Icons.access_time,
+                                          color: Color(0xff6C6C6C)),
+                                    )),
                                 TextSpan(
                                   text: item.time,
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 0.8),
                                 ),
                               ]))
                         ],
@@ -187,120 +245,97 @@ class ScheduleItemCard extends StatelessWidget {
   }
 }
 
-class AddScheduleItem extends GetView<ScheduleController> {
+class AddScheduleItem extends StatelessWidget {
   AddScheduleItem({super.key});
-  final TextEditingController title = TextEditingController();
-  final TextEditingController date = TextEditingController();
-  final TextEditingController time = TextEditingController();
-  final TextEditingController description = TextEditingController();
-  final TextEditingController participants = TextEditingController();
-  final formKey = GlobalKey<FormState>();
+
+  final AddScheduleItemController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Enter the details of the event to be added",
-            style:
-                DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.5),
-          ),
-          TextFormField(
-            controller: title,
-            validator: (value) => GetUtils.isBlank(value ?? "") == true
-                ? "Please fill this field"
-                : null,
-            decoration:
-                const InputDecoration(hintText: "Enter the event title"),
-          ),
-          TextFormField(
-              controller: date,
-              validator: (value) => GetUtils.isBlank(value ?? "") == true
-                  ? "Please fill this field"
-                  : null,
-              decoration: const InputDecoration(hintText: "Enter the date")),
-          TextFormField(
-              controller: time,
-              validator: (value) => GetUtils.isBlank(value ?? "") == true
-                  ? "Please fill this field"
-                  : null,
-              decoration: const InputDecoration(hintText: "Enter the time")),
-          TextFormField(
-              controller: description,
-              validator: (value) => GetUtils.isBlank(value ?? "") == true
-                  ? "Please fill this field"
-                  : null,
-              decoration:
-                  const InputDecoration(hintText: "Enter a description")),
-          TextFormField(
-              controller: participants,
+      key: controller.formKey,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Enter the details of the event to be added",
+              style:
+                  DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.5),
+            ),
+            TextFormField(
+              controller: controller.title,
               validator: (value) => GetUtils.isBlank(value ?? "") == true
                   ? "Please fill this field"
                   : null,
               decoration: const InputDecoration(
-                  hintText: "Enter the other participants")),
-          const SizedBox(
-            height: 10,
-          ),
-          Align(
-            alignment: Alignment.centerRight,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+                hintText: "Enter the event title",
+                // focusColor: Color.fromARGB(255, 39, 92, 157),
+              ),
+            ),
+            TextFormField(
+                controller: controller.description,
+                validator: (value) => GetUtils.isBlank(value ?? "") == true
+                    ? "Please fill this field"
+                    : null,
+                decoration:
+                    const InputDecoration(hintText: "Enter a description")),
+            TextFormField(
+                controller: controller.participants,
+                validator: (value) => GetUtils.isBlank(value ?? "") == true
+                    ? "Please fill this field"
+                    : null,
+                decoration: const InputDecoration(
+                    hintText: "Enter the other participants")),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    controller.addingEvent = !controller.addingEvent;
-                    controller.update();
-                    title.dispose();
-                    date.dispose();
-                    description.dispose();
-                    participants.dispose();
-                    time.dispose();
-                  },
-                  style: const ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll(Colors.white)),
-                  child: const Text(
-                    "Cancel",
-                    style: TextStyle(color: Color.fromARGB(255, 39, 92, 157)),
+                // Text(
+                //   controller.selectedDateTime == null
+                //       ? "Pick a date and time"
+                //       : "Selected date and time: ${controller.selectedDate}, ${controller.selectedTime}",
+                //   overflow: TextOverflow.ellipsis,
+                // ),
+                Expanded(
+                  child: TextFormField(
+                    controller: controller.dateTime,
+                    validator: (value) => GetUtils.isBlank(value ?? "") == true
+                        ? "Please fill this field"
+                        : null,
+                    decoration: InputDecoration(
+                      hintText: controller.selectedDateTime == null
+                          ? "Pick a date and time"
+                          : "Selected date and time: ${controller.selectedDate}, ${controller.selectedTime}",
+                    ),
+                    readOnly: true,
                   ),
                 ),
-                const SizedBox(
-                  width: 12,
-                ),
                 ElevatedButton(
-                  onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                      controller.items.add(ScheduleItem(
-                          title: title.text,
-                          date: date.text,
-                          description: description.text,
-                          name: participants.text,
-                          time: time.text,
-                          colorCode: "0xffF34850"));
-                      controller.addingEvent = !controller.addingEvent;
-                      controller.update();
-                      title.dispose();
-                      date.dispose();
-                      description.dispose();
-                      participants.dispose();
-                      time.dispose();
+                  onPressed: () async {
+                    await controller.pickDateTime(context);
+                    if (controller.selectedDateTime != null) {
+                      controller.dateTime.text =
+                          "${controller.selectedDate}, ${controller.selectedTime}";
                     }
                   },
                   style: const ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll(
-                          Color.fromARGB(255, 39, 92, 157))),
+                    backgroundColor: WidgetStatePropertyAll(
+                      Color.fromARGB(255, 39, 92, 157),
+                    ),
+                  ),
                   child: const Text(
-                    "Add Event",
+                    "Pick",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
               ],
             ),
-          )
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+          ],
+        ),
       ),
     );
   }
