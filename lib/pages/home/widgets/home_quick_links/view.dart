@@ -137,7 +137,11 @@ class Ccard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                     color: const Color(0xff0095FF),
                   ),
-                  child: Center(child: CustomMaterialIcon(item.icon))),
+                  child: Center(
+                      child: CustomMaterialIcon(
+                    item.icon,
+                    color: Colors.white,
+                  ))),
               const SizedBox(width: 16.0),
               Expanded(
                 child: Column(

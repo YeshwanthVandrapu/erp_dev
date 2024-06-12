@@ -1,4 +1,5 @@
 import 'package:erp_dev/pages/home/widgets/calendar/controller.dart';
+import 'package:erp_dev/pages/home/widgets/faq_page/controller.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/controller.dart';
 import 'package:erp_dev/pages/home/widgets/home_student_buddy/controller.dart';
 import 'package:erp_dev/pages/home/widgets/menu/controller.dart';
@@ -18,7 +19,8 @@ void main() async {
   Get.put(ScheduleController());
   Get.put(QuickLinkController());
   Get.put(HomeMenuController());
-  Get.put(CalendarController());
+  Get.put(FaqController());
+
   await Hive.openBox('preferences', path: './');
   runApp(const MyApp());
 }
@@ -30,6 +32,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      color: const Color(0xfff8f9fb),
       title: 'Krea Erp',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
