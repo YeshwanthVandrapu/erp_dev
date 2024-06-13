@@ -59,7 +59,8 @@ class UpcomingSchedule extends GetView<ScheduleController> {
                                             addController.description.text,
                                         name: addController.participants.text,
                                         time: addController.selectedTime!,
-                                        colorCode: "0xffF34850"),
+                                        colorCode: "0xffF34850",
+                                        venue: "Online"),
                                   );
                                   controller.update();
                                   // addController.dispose();
@@ -125,7 +126,7 @@ class UpcomingSchedule extends GetView<ScheduleController> {
                   : Column(
                       mainAxisSize: MainAxisSize.min,
                       children: controller.items
-                          .map((item) => ScheduleItemCard(
+                          .map((item) => ScheduleItemCardMobile(
                                 item: item,
                               ))
                           .toList());
@@ -232,6 +233,138 @@ class ScheduleItemCard extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                           )
                         ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ScheduleItemCardMobile extends StatelessWidget {
+  const ScheduleItemCardMobile({
+    super.key,
+    required this.item,
+  });
+  final ScheduleItem item;
+
+  Widget idTicket(String data, context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(14),
+        color: const Color(0xffEEEEEE),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 8,
+          vertical: 2,
+        ),
+        child: Text(
+          data,
+          style: DefaultTextStyle.of(context)
+              .style
+              .apply(fontSizeFactor: 0.9)
+              .copyWith(
+                color: const Color(0xff727880),
+                fontWeight: FontWeight.w500,
+              ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 8, bottom: 8),
+      child: Card(
+        elevation: 3,
+        color: Colors.white,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.width < 400 ? 180 : 140,
+          child: Row(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    color: Color(int.parse(item.colorCode)),
+                    borderRadius: const BorderRadiusDirectional.only(
+                        topStart: Radius.circular(10),
+                        bottomStart: Radius.circular(10))),
+                width: 20,
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        item.title,
+                        style: DefaultTextStyle.of(context)
+                            .style
+                            .apply(
+                              fontSizeFactor: 1.2,
+                            )
+                            .copyWith(
+                              fontWeight: FontWeight.w600,
+                              color: const Color(
+                                0xff1B1D1F,
+                              ),
+                            ),
+                      ),
+                      Text(
+                        item.description,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Color(0xff727880),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8.0),
+                              child: idTicket(item.date, context),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xffC6C8CB),
+                              ),
+                              width: 4,
+                              height: 4,
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: idTicket(item.time, context),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xffC6C8CB),
+                              ),
+                              width: 4,
+                              height: 4,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8.0),
+                              child: idTicket(item.venue, context),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
