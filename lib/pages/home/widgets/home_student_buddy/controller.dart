@@ -1,10 +1,13 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'modal.dart';
 
 class StudentBuddyController extends GetxController {
   List<StudentBuddy> items = [];
+  ScrollController scrollController = ScrollController();
+
   @override
   void onInit() async {
     super.onInit();
@@ -14,5 +17,11 @@ class StudentBuddyController extends GetxController {
       items.add(StudentBuddy.fromJson(i));
     }
     update();
+  }
+
+  @override
+  void onClose() {
+    scrollController.dispose();
+    super.onClose();
   }
 }

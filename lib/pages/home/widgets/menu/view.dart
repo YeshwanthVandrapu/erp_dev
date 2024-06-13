@@ -31,6 +31,9 @@ class MenuView extends GetView<HomeMenuController> {
                             data.isSelected = true;
                             // data.clickIndex = index;
                             controller.cIndex = index;
+
+                            Navigator.pushNamed(context, data.route);
+
                             controller.update();
                           },
                           child: Container(

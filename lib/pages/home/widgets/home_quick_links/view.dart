@@ -16,7 +16,13 @@ class QuickLinks extends StatelessWidget {
       return Card(
         margin: EdgeInsets.zero,
         color: Colors.white,
-        elevation: 3,
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            side: const BorderSide(
+              color: Color(0xffe2e2ea),
+              width: 1,
+            )),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -25,14 +31,6 @@ class QuickLinks extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 constraints: const BoxConstraints(
                     minHeight: 60, minWidth: double.infinity),
-                decoration: const BoxDecoration(
-                    // border: Border(
-                    //   bottom: BorderSide(
-                    //     color: Color(0xff979797),
-                    //     width: 2,
-                    //   ),
-                    // ),
-                    ),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(

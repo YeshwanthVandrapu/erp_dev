@@ -136,6 +136,10 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 189, 226, 238),
                         borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: const Color(0xFFE2E2EA),
+                          width: 1,
+                        ),
                       ),
                       constraints: BoxConstraints(
                           maxHeight: sWidth > 540 ? 300 : 350, minHeight: 144),

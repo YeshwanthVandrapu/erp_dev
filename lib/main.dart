@@ -1,4 +1,5 @@
 import 'package:erp_dev/pages/home/widgets/faq_page/controller.dart';
+import 'package:erp_dev/pages/home/widgets/faq_page/test_page.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/controller.dart';
 import 'package:erp_dev/pages/home/widgets/home_student_buddy/controller.dart';
 import 'package:erp_dev/pages/home/widgets/menu/controller.dart';
@@ -38,7 +39,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.urbanistTextTheme(Theme.of(context).textTheme),
       ),
-      home: const Home(),
+      routes: {
+        '/': (context) => const Home(),
+        '/test': (context) => const FaqPage(),
+      },
+      // home: const Home(),
     );
   }
 }

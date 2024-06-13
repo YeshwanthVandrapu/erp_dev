@@ -11,10 +11,13 @@ class StudentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: Colors.white,
-      elevation: 4,
+      elevation: 2,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
-      ),
+          borderRadius: BorderRadius.circular(8.0),
+          side: const BorderSide(
+            color: Color(0xffe2e2ea),
+            width: 1,
+          )),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -70,14 +73,30 @@ class StudentCard extends StatelessWidget {
                 const Icon(Icons.email_outlined, color: Colors.grey),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
-                    item.mail,
-                    style: GoogleFonts.urbanist(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.grey,
+                  child: InkWell(
+                    onTap: () async {
+                      final Uri emailLaunchUri = Uri(
+                        scheme: 'mailto',
+                        path: item.mail,
+                      );
+                      if (await canLaunchUrl(emailLaunchUri)) {
+                        await launchUrl(emailLaunchUri);
+                      } else {
+                        throw 'Could not launch email';
+                      }
+                    },
+                    child: Tooltip(
+                      message: item.mail,
+                      child: Text(
+                        item.mail,
+                        style: GoogleFonts.urbanist(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.grey,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],
