@@ -6,7 +6,8 @@
         "description": "Virtual - Google Meet",
         "link": "",
         "name": "Wahiq",
-        "colorCode" : "0xffF34850"
+        "colorCode" : "0xffF34850",
+        "venue": "Online"
     },
     {
         "title": "Student Buddy Meeting",
@@ -15,7 +16,8 @@
         "description": "Virtual - Google Meet",
         "link": "",
         "name": "Wahiq",
-        "colorCode" : "0xff2EB0D5"
+        "colorCode" : "0xff2EB0D5",
+        "venue": "Canvas"
     },
     {
         "title": "Student Buddy Meeting",
@@ -24,6 +26,7 @@
         "description": "Virtual - Google Meet",
         "link": "",
         "name": "Wahiq",
-        "colorCode" : "0xff7F265B"
+        "colorCode" : "0xff7F265B",
+        "venue":"Online"
     }
 ]

@@ -5,6 +5,7 @@ class ScheduleItem {
   final String description;
   final String name;
   final String colorCode;
+  final String venue;
 
   const ScheduleItem({
     required this.title,
@@ -13,6 +14,7 @@ class ScheduleItem {
     required this.name,
     required this.time,
     required this.colorCode,
+    required this.venue,
   });
 
   // jsonCard.fromJson(Map<String, dynamic> json) {
@@ -30,6 +32,7 @@ class ScheduleItem {
         "description": String description,
         "name": String name,
         "colorCode": String colorCode,
+        "venue": String venue,
       } =>
         ScheduleItem(
           title: title,
@@ -38,6 +41,7 @@ class ScheduleItem {
           description: description,
           name: name,
           colorCode: colorCode,
+          venue: venue,
         ),
       _ => throw const FormatException(
           "Failed to load card due to invalid format."),

@@ -179,39 +179,47 @@ class PageIndicator extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          IconButton(
-            splashRadius: 16.0,
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              if (currentPageIndex == 0) {
-                onUpdateCurrentPageIndex(tabController.length - 1);
-              } else {
-                onUpdateCurrentPageIndex(currentPageIndex - 1);
-              }
-            },
-            icon: const Icon(
-              Icons.arrow_left_rounded,
-              size: 32.0,
-            ),
-          ),
+          currentPageIndex != 0
+              ? IconButton(
+                  splashRadius: 16.0,
+                  padding: EdgeInsets.zero,
+                  onPressed: () {
+                    if (currentPageIndex == 0) {
+                      onUpdateCurrentPageIndex(tabController.length - 1);
+                    } else {
+                      onUpdateCurrentPageIndex(currentPageIndex - 1);
+                    }
+                  },
+                  icon: const Icon(
+                    Icons.arrow_left_rounded,
+                    size: 32.0,
+                  ),
+                )
+              : const SizedBox(
+                  width: 32,
+                ),
           // TabPageSelector(
           //   controller: tabController,
           // ),
-          IconButton(
-            splashRadius: 16.0,
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              if (currentPageIndex == tabController.length - 1) {
-                onUpdateCurrentPageIndex(0);
-              } else {
-                onUpdateCurrentPageIndex(currentPageIndex + 1);
-              }
-            },
-            icon: const Icon(
-              Icons.arrow_right_rounded,
-              size: 32.0,
-            ),
-          ),
+          currentPageIndex != tabController.length - 1
+              ? IconButton(
+                  splashRadius: 16.0,
+                  padding: EdgeInsets.zero,
+                  onPressed: () {
+                    if (currentPageIndex == tabController.length - 1) {
+                      onUpdateCurrentPageIndex(0);
+                    } else {
+                      onUpdateCurrentPageIndex(currentPageIndex + 1);
+                    }
+                  },
+                  icon: const Icon(
+                    Icons.arrow_right_rounded,
+                    size: 32.0,
+                  ),
+                )
+              : const SizedBox(
+                  width: 32,
+                ),
         ],
       ),
     );
