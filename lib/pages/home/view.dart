@@ -1,3 +1,4 @@
+import 'package:erp_dev/pages/home/widgets/calendar/view.dart';
 import 'package:erp_dev/pages/home/widgets/faq_page/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
@@ -187,6 +188,13 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                 //       constraints: const BoxConstraints(maxHeight: 300),
                 //       child: const TaskListCard()),
                 // ),
+                Div(
+                  divison: const Division(colXL: 4, colL: 6, colM: 12),
+                  child: Container(
+                      constraints:
+                          const BoxConstraints(maxHeight: 500, maxWidth: 500),
+                      child: const CalenderCard()),
+                ),
                 const Div(
                   divison: Division(colL: 10),
                   child: Padding(
