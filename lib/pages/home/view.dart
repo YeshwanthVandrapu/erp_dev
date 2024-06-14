@@ -1,4 +1,3 @@
-import 'package:erp_dev/pages/home/widgets/faq_page/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
 import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
@@ -131,19 +130,23 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
-                    child: Container(
-                      // margin: const EdgeInsets.only(top: 40, bottom: 40),
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 189, 226, 238),
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: const Color(0xFFE2E2EA),
-                          width: 1,
+                    child: Card(
+                      elevation: 2,
+                      child: Container(
+                        // margin: const EdgeInsets.only(top: 40, bottom: 40),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 189, 226, 238),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: const Color(0xFFE2E2EA),
+                            width: 1,
+                          ),
                         ),
+                        constraints: BoxConstraints(
+                            maxHeight: sWidth > 540 ? 300 : 350,
+                            minHeight: 144),
+                        child: const WelcomeCard(),
                       ),
-                      constraints: BoxConstraints(
-                          maxHeight: sWidth > 540 ? 300 : 350, minHeight: 144),
-                      child: const WelcomeCard(),
                     ),
                   ),
                 ),
@@ -155,7 +158,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                     // colXS: 10,
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Container(
                       // margin: const EdgeInsets.only(bottom: 40),
                       constraints: const BoxConstraints(maxHeight: 300),
@@ -185,19 +188,20 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   ),
                   child: StudentBuddiesCard(),
                 ),
+
                 // Div(
                 //   divison: const Division(colXL: 3, colL: 5, colM: 12),
                 //   child: Container(
                 //       constraints: const BoxConstraints(maxHeight: 300),
                 //       child: const TaskListCard()),
                 // ),
-                const Div(
-                  divison: Division(colL: 10),
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 40.0),
-                    child: Faq(),
-                  ),
-                )
+                // const Div(
+                //   divison: Division(colL: 10),
+                //   child: Padding(
+                //     padding: EdgeInsets.only(top: 40.0),
+                //     child: Faq(),
+                //   ),
+                // )
               ],
             ),
           ),

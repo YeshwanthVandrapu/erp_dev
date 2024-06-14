@@ -19,6 +19,7 @@ class MenuView extends GetView<HomeMenuController> {
                   Container(
                     constraints: const BoxConstraints(maxWidth: 80),
                     child: ListView.builder(
+                      controller: ScrollController(),
                       itemCount: controller.menus.length,
                       itemBuilder: (context, index) {
                         final data = controller.menus[index];
@@ -108,6 +109,7 @@ Widget childSideMenu() {
         color: const Color(0xff275C9D),
         child: ListView.builder(
           key: Key('builder ${controller.selected.toString()}'),
+          controller: ScrollController(),
           itemCount: l2.length,
           itemBuilder: (context, index) {
             return ExpansionTile(

@@ -18,6 +18,7 @@ class StudentBuddiesCard extends StatelessWidget {
         return LayoutBuilder(
           builder: (context, constrain) {
             if (sWidth > 480) {
+              final scrollController = ScrollController();
               return Padding(
                 padding: const EdgeInsets.only(left: 12.0),
                 child: Column(
@@ -39,11 +40,11 @@ class StudentBuddiesCard extends StatelessWidget {
                     ),
                     Scrollbar(
                       thumbVisibility: true,
-                      controller: controller.scrollController,
+                      controller: scrollController,
                       thickness: 6,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
-                        controller: controller.scrollController,
+                        controller: scrollController,
                         primary: false,
                         child: Row(
                           children: controller.items.map((item) {

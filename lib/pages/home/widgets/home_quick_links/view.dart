@@ -113,8 +113,8 @@ class Ccard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(8.0),
-      padding: const EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(right: 4.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),

@@ -23,6 +23,17 @@
   {
     "bottom_nav": "0",
     "parent_id": "0",
+    "resource_description": "test2",
+    "resource_icon": "group",
+    "resource_id": "4",
+    "resource_name": "test2",
+    "resource_type": "service",
+    "route": "/"
+    
+  },
+  {
+    "bottom_nav": "0",
+    "parent_id": "0",
     "resource_description": "asa",
     "resource_icon": "abc",
     "resource_id": "3",

@@ -11,36 +11,41 @@ class FaqPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double sWidth = MediaQuery.of(context).size.width;
     return SafeArea(
-      child: Row(
-        children: <Widget>[
-          sWidth > 600 ? const MenuView() : const SizedBox.shrink(),
-          GetBuilder<HomeMenuController>(builder: (controller) {
-            return Expanded(
-              child: Stack(children: [
-                Scaffold(
-                  appBar: AppBar(
-                    title: const Text("AppBar"),
-                  ),
-                  body: const Responsive(children: [
+      child: Scaffold(
+        backgroundColor: const Color(0xfff8f9fb),
+        appBar: AppBar(
+          title: const Text("Faq"),
+          backgroundColor: const Color.fromARGB(255, 194, 197, 201),
+        ),
+        body: Row(
+          children: <Widget>[
+            GetBuilder<HomeMenuController>(builder: (controller) {
+              return Expanded(
+                child: Stack(children: [
+                  const Responsive(children: [
                     Div(
-                      divison: Division(colL: 10),
+                      divison: Division(
+                          colL: 10,
+                          offsetXL: 1,
+                          offsetL: 1,
+                          offsetM: 1,
+                          offsetS: 1),
                       child: Padding(
                         padding: EdgeInsets.only(top: 40.0),
                         child: Faq(),
                       ),
                     )
                   ]),
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: childSideMenu(),
-                )
-              ]),
-            );
-          }),
-        ],
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: childSideMenu(),
+                  )
+                ]),
+              );
+            }),
+          ],
+        ),
       ),
     );
   }
