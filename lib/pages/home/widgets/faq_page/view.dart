@@ -18,6 +18,8 @@ class Faq extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double catTextSize = 20;
+    double sWidth = MediaQuery.of(context).size.width;
     return GetBuilder<FaqController>(builder: (controller) {
       if (controller.items.isEmpty) {
         return const CircularProgressIndicator();
@@ -27,7 +29,7 @@ class Faq extends StatelessWidget {
             return Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(0.0),
                   child: ExpansionTile(
                     collapsedShape: const RoundedRectangleBorder(
                       side: BorderSide.none,
@@ -40,17 +42,19 @@ class Faq extends StatelessWidget {
                       style: GoogleFonts.urbanist(
                         color: const Color(0xff275c9d),
                         fontWeight: FontWeight.w500,
-                        fontSize: 20,
+                        fontSize: sWidth > 480 ? catTextSize : catTextSize - 4,
                       ),
                     ),
                     trailing: item.isExpanded
-                        ? const Icon(
+                        ? Icon(
                             Icons.remove,
-                            color: Color(0xff275c9d),
+                            color: const Color(0xff275c9d),
+                            size: sWidth > 480 ? catTextSize + 4 : catTextSize,
                           )
-                        : const Icon(
+                        : Icon(
                             Icons.add,
-                            color: Color(0xff275c9d),
+                            color: const Color(0xff275c9d),
+                            size: sWidth > 480 ? catTextSize + 4 : catTextSize,
                           ),
                     onExpansionChanged: (bool expanded) {
                       item.isExpanded = !item.isExpanded;
@@ -68,7 +72,9 @@ class Faq extends StatelessWidget {
                           child.question,
                           style: GoogleFonts.urbanist(
                             fontWeight: FontWeight.w400,
-                            fontSize: 18,
+                            fontSize: sWidth > 480
+                                ? catTextSize - 2
+                                : catTextSize - 6,
                             color: Colors.black,
                           ),
                         ),
@@ -82,7 +88,9 @@ class Faq extends StatelessWidget {
                                 child.answer,
                                 style: GoogleFonts.urbanist(
                                   fontWeight: FontWeight.w300,
-                                  fontSize: 14,
+                                  fontSize: sWidth > 480
+                                      ? catTextSize - 4
+                                      : catTextSize - 8,
                                 ),
                               ),
                             ),
@@ -93,8 +101,8 @@ class Faq extends StatelessWidget {
                   ),
                 ),
                 const Divider(
-                  indent: 24,
-                  endIndent: 24,
+                  indent: 12,
+                  endIndent: 12,
                 ),
               ],
             );

@@ -1,8 +1,10 @@
 import 'package:erp_dev/pages/home/widgets/calendar/controller.dart';
 import 'package:erp_dev/pages/home/widgets/faq_page/controller.dart';
+import 'package:erp_dev/pages/home/widgets/faq_page/test_page.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/controller.dart';
 import 'package:erp_dev/pages/home/widgets/home_student_buddy/controller.dart';
 import 'package:erp_dev/pages/home/widgets/menu/controller.dart';
+import 'package:erp_dev/pages/layout/main_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,7 +42,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.urbanistTextTheme(Theme.of(context).textTheme),
       ),
-      home: const Home(),
+      routes: {
+        '/': (context) => const MainLayout(child: NewHomeBody()),
+        '/test': (context) => const MainLayout(child: FaqPage()),
+      },
+      // home: const Home(),
     );
   }
 }

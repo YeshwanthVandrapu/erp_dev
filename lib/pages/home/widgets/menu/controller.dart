@@ -43,10 +43,12 @@ class HomeMenuController extends GetxController {
       // rmenus.remove(rmenu);
       if (pid == rmenu.parentId) {
         menus.add(MenuModal(
-            resourceIcon: rmenu.resourceIcon,
-            resourceId: rmenu.resourceId,
-            resourceName: rmenu.resourceName,
-            children: getMenu(rmenu.resourceId, rmenuss)));
+          resourceIcon: rmenu.resourceIcon,
+          resourceId: rmenu.resourceId,
+          resourceName: rmenu.resourceName,
+          route: rmenu.route,
+          children: getMenu(rmenu.resourceId, rmenuss),
+        ));
       }
     }
     return menus;

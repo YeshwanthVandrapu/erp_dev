@@ -115,7 +115,7 @@ class UpcomingSchedule extends GetView<ScheduleController> {
               controller.sWidth = Get.width;
               return controller.sWidth > 1200
                   ? SizedBox(
-                      height: 300,
+                      height: 340,
                       child: ListView(
                           children: controller.items
                               .map((item) => ScheduleItemCard(

@@ -12,10 +12,8 @@ class WelcomeCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 400) {
-          // Large screen layout
           return _buildLargeScreenLayout(context);
         } else {
-          // Small screen layout
           return _buildSmallScreenLayout();
         }
       },
@@ -137,7 +135,7 @@ class WelcomeCard extends StatelessWidget {
 
   Widget _buildSmallScreenLayout() {
     return Container(
-      constraints: const BoxConstraints(maxHeight: 144),
+      constraints: const BoxConstraints(maxHeight: 156),
       child: Padding(
         padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16),
         child: Row(
@@ -172,8 +170,8 @@ class WelcomeCard extends StatelessWidget {
                           child: RichText(
                             text: TextSpan(
                               style: GoogleFonts.urbanist(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w500,
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600,
                                 fontStyle: FontStyle.normal,
                                 color: const Color(0xff307178),
                               ),
@@ -185,7 +183,6 @@ class WelcomeCard extends StatelessWidget {
                                 TextSpan(
                                   text: controller.user!.date,
                                   style: GoogleFonts.urbanist(
-                                      fontSize: 10,
                                       fontWeight: FontWeight.w700,
                                       fontStyle: FontStyle.italic),
                                 ),
@@ -201,23 +198,23 @@ class WelcomeCard extends StatelessWidget {
                           },
                           child: RichText(
                             textAlign: TextAlign.center,
-                            text: const TextSpan(
+                            text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: "Learn More",
-                                  style: TextStyle(
-                                    fontSize: 10,
+                                  text: "Learn More ",
+                                  style: GoogleFonts.urbanist(
+                                    fontSize: 11,
                                     fontStyle: FontStyle.normal,
                                     fontWeight: FontWeight.w500,
-                                    color: Color(0xff2585c4),
+                                    color: const Color(0xff2585c4),
                                     decoration: TextDecoration.underline,
                                   ),
                                 ),
-                                WidgetSpan(
+                                const WidgetSpan(
                                   child: Icon(
                                     Icons.open_in_new,
                                     color: Color(0xff2585c4),
-                                    size: 10,
+                                    size: 11,
                                   ),
                                 ),
                               ],
