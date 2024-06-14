@@ -38,6 +38,7 @@ class AddScheduleItemController extends GetxController {
   final TextEditingController description = TextEditingController();
   final TextEditingController participants = TextEditingController();
   final TextEditingController dateTime = TextEditingController();
+  final TextEditingController venue = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   Future<void> pickDateTime(BuildContext context) async {

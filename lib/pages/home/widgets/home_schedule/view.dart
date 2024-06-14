@@ -60,7 +60,7 @@ class UpcomingSchedule extends GetView<ScheduleController> {
                                         name: addController.participants.text,
                                         time: addController.selectedTime!,
                                         colorCode: "0xffF34850",
-                                        venue: "Online"),
+                                        venue: addController.venue.text),
                                   );
                                   controller.update();
                                   // addController.dispose();
@@ -420,6 +420,16 @@ class AddScheduleItem extends StatelessWidget {
                     : null,
                 decoration: const InputDecoration(
                     hintText: "Enter the other participants")),
+            TextFormField(
+              controller: controller.venue,
+              validator: (value) => GetUtils.isBlank(value ?? "") == true
+                  ? "Please fill this field"
+                  : null,
+              decoration: const InputDecoration(
+                hintText: "Enter the event venue",
+                // focusColor: Color.fromARGB(255, 39, 92, 157),
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,

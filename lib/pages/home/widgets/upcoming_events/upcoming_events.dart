@@ -89,7 +89,6 @@ class UpcomingEventsCard extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
-                            fontFamily: 'Urbanist',
                             // height: 0.09,
                           ),
                         ),
@@ -111,7 +110,6 @@ class UpcomingEventsCard extends StatelessWidget {
                                     color: Colors.black,
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
-                                    fontFamily: 'Urbanist',
                                     // height: 0.15,
                                   ),
                                 ),
@@ -121,7 +119,6 @@ class UpcomingEventsCard extends StatelessWidget {
                                   style: const TextStyle(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w700,
-                                    fontFamily: 'Urbanist',
                                     // height: 0.15,
                                     color: Colors.black,
                                   ),
@@ -132,7 +129,6 @@ class UpcomingEventsCard extends StatelessWidget {
                                   style: const TextStyle(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w700,
-                                    fontFamily: 'Urbanist',
                                     // height: 0.15,
                                     color: Colors.black,
                                   ),
@@ -144,7 +140,6 @@ class UpcomingEventsCard extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
-                                    fontFamily: 'Urbanist',
                                   ),
                                 ),
                                 const SizedBox(height: 10),
