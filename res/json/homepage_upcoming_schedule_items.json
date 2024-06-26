@@ -1,26 +1,32 @@
 [
     {
         "title": "Student Buddy Meeting",
-        "date": "24th July 2024",
+        "date": "24 July 2024",
         "time": "9:00 AM to 12:00 PM",
         "description": "Virtual - Google Meet",
         "link": "",
-        "name": "Wahiq"
+        "name": "Wahiq",
+        "colorCode" : "0xffF34850",
+        "venue": "Online"
     },
     {
         "title": "Student Buddy Meeting",
-        "date": "24th July 2024",
+        "date": "24 July 2024",
         "time": "9:00 AM to 12:00 PM",
         "description": "Virtual - Google Meet",
         "link": "",
-        "name": "Wahiq"
+        "name": "Wahiq",
+        "colorCode" : "0xff2EB0D5",
+        "venue": "Canvas"
     },
     {
         "title": "Student Buddy Meeting",
-        "date": "24th July 2024",
+        "date": "24 July 2024",
         "time": "9:00 AM to 12:00 PM",
         "description": "Virtual - Google Meet",
         "link": "",
-        "name": "Wahiq"
+        "name": "Wahiq",
+        "colorCode" : "0xff7F265B",
+        "venue":"Online"
     }
 ]

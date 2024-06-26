@@ -1,12 +1,14 @@
+import 'package:erp_dev/pages/home/widgets/calendar/view.dart';
+import 'package:erp_dev/pages/home/widgets/faq_page/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_quick_links/view.dart';
 import 'package:erp_dev/pages/home/widgets/home_schedule/view.dart';
 import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
-import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../utils/icons.dart';
 import 'widgets/home_student_buddy/view.dart';
@@ -37,7 +39,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
       jsonData.add(e);
     }
     setState(() {});
-    dPrint(jsonData);
+    // dPrint(jsonData);
   }
 
   @override
@@ -46,7 +48,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
 
     //showDialogIfFirstLoaded(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xfff8f9fb),
       appBar: AppBar(
         elevation: 10,
         backgroundColor: Colors.white,
@@ -137,7 +139,7 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       constraints: BoxConstraints(
-                          maxHeight: sWidth > 540 ? 300 : 350, minHeight: 270),
+                          maxHeight: sWidth > 540 ? 300 : 350, minHeight: 144),
                       child: const WelcomeCard(),
                     ),
                   ),
@@ -180,6 +182,26 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                   ),
                   child: StudentBuddiesCard(),
                 ),
+                // Div(
+                //   divison: const Division(colXL: 3, colL: 5, colM: 12),
+                //   child: Container(
+                //       constraints: const BoxConstraints(maxHeight: 300),
+                //       child: const TaskListCard()),
+                // ),
+                Div(
+                  divison: const Division(colXL: 4, colL: 6, colM: 12),
+                  child: Container(
+                      constraints:
+                          const BoxConstraints(maxHeight: 500, maxWidth: 500),
+                      child: const CalenderCard()),
+                ),
+                const Div(
+                  divison: Division(colL: 10),
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 40.0),
+                    child: Faq(),
+                  ),
+                )
               ],
             ),
           ),
@@ -189,11 +211,12 @@ class _NewHomeBodyState extends State<NewHomeBody> {
   }
 
   showDialogIfFirstLoaded() async {
-    //TODO add Hive for the pop up to only come the first time
-    //SharedPreferences prefs = await SharedPreferences.getInstance();
-    //bool? isFirstLoaded = prefs.getBool(keyIsFirstLoaded);
+    var box = Hive.box('preferences');
+    String firstLoadedKey = 'isFirstLoaded';
+    // box.put(firstLoadedKey, true);
     await Future.delayed(const Duration(seconds: 1));
-    if (true) {
+    if (box.get(firstLoadedKey) ?? false) {
+      box.put(firstLoadedKey, false);
       showDialog(
         // ignore: use_build_context_synchronously
         context: context,
@@ -209,23 +232,21 @@ class _NewHomeBodyState extends State<NewHomeBody> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Get.width < 10
-                        ? const SizedBox.shrink()
-                        : ClipRRect(
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              topRight: Radius.circular(20),
-                            ),
-                            child: SizedBox(
-                              height: 360,
-                              child: Image.asset(
-                                "res/images/homepagePopup.png",
-                                height: 672,
-                                width: 1344,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                      child: SizedBox(
+                        height: 360,
+                        child: Image.asset(
+                          "res/images/homepagePopup.png",
+                          height: 672,
+                          width: 1344,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                     // const Image(image: AssetImage("res/images/homepagePopup.png")),
                     Padding(
                       padding: const EdgeInsets.all(16.0),

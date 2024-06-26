@@ -6,7 +6,8 @@
     "resource_icon": "emoji_people",
     "resource_id": "1",
     "resource_name": "Onboarding",
-    "resource_type": "service"
+    "resource_type": "service",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -15,7 +16,20 @@
     "resource_icon": "admin",
     "resource_id": "2",
     "resource_name": "Admin",
-    "resource_type": "service"
+    "resource_type": "service",
+    "route": "/"
+    
+  },
+  {
+    "bottom_nav": "0",
+    "parent_id": "0",
+    "resource_description": "test2",
+    "resource_icon": "group",
+    "resource_id": "4",
+    "resource_name": "test2",
+    "resource_type": "service",
+    "route": "/"
+    
   },
   {
     "bottom_nav": "0",
@@ -24,7 +38,8 @@
     "resource_icon": "abc",
     "resource_id": "3",
     "resource_name": "Testing",
-    "resource_type": "service"
+    "resource_type": "service",
+    "route": "/test"
   },
   {
     "bottom_nav": "0",
@@ -33,7 +48,18 @@
     "resource_icon": "emoji_people",
     "resource_id": "f1",
     "resource_name": "Onboarding Form Filling",
-    "resource_type": "form"
+    "resource_type": "form",
+    "route": "/"
+  },
+  {
+    "bottom_nav": "0",
+    "parent_id": "f1",
+    "resource_description": "Student Onboarding V1 dtss",
+    "resource_icon": "emoji_people",
+    "resource_id": "f11",
+    "resource_name": "Onboarding Form Filling - Test L3",
+    "resource_type": "form",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -42,7 +68,8 @@
     "resource_icon": "link",
     "resource_id": "f2",
     "resource_name": "Onboarding Form FAQ",
-    "resource_type": "form"
+    "resource_type": "form",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -51,7 +78,8 @@
     "resource_icon": "link",
     "resource_id": "f3",
     "resource_name": "Send Onboarding Form",
-    "resource_type": "form"
+    "resource_type": "form",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -60,7 +88,8 @@
     "resource_icon": "link",
     "resource_id": "f4",
     "resource_name": "Hide Onboarding Form",
-    "resource_type": "form"
+    "resource_type": "form",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -69,7 +98,8 @@
     "resource_icon": "link",
     "resource_id": "f5",
     "resource_name": "Documents Verification",
-    "resource_type": "form"
+    "resource_type": "form",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -78,7 +108,8 @@
     "resource_icon": "link",
     "resource_id": "f6",
     "resource_name": "Photo Capture",
-    "resource_type": "form"
+    "resource_type": "form",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -87,7 +118,8 @@
     "resource_icon": "link",
     "resource_id": "f7",
     "resource_name": "Biometric Capture",
-    "resource_type": "form"
+    "resource_type": "form",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -96,7 +128,8 @@
     "resource_icon": "fa fa-cogs",
     "resource_id": "form_customization",
     "resource_name": "Form Customization",
-    "resource_type": "form_customization"
+    "resource_type": "form_customization",
+    "route": "/"
   },
   {
     "bottom_nav": "0",
@@ -105,6 +138,7 @@
     "resource_icon": "fa fa-cogs",
     "resource_id": "service_customization",
     "resource_name": "Service Customization",
-    "resource_type": "service_customization"
+    "resource_type": "service_customization",
+    "route": "/"
   }
 ]

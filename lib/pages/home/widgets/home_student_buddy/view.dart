@@ -17,9 +17,10 @@ class StudentBuddiesCard extends StatelessWidget {
       } else {
         return LayoutBuilder(
           builder: (context, constrain) {
-            if (sWidth > 400) {
+            if (sWidth > 480) {
+              final scrollController = ScrollController();
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                padding: const EdgeInsets.only(left: 12.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -37,13 +38,31 @@ class StudentBuddiesCard extends StatelessWidget {
                             color: const Color(0xff6c6c6c)),
                       ),
                     ),
-                    Row(
-                        children: controller.items.map((item) {
-                      return Expanded(
-                          child: StudentCard(
-                        item: item,
-                      ));
-                    }).toList())
+                    Scrollbar(
+                      thumbVisibility: true,
+                      controller: scrollController,
+                      thickness: 6,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        controller: scrollController,
+                        primary: false,
+                        child: Row(
+                          children: controller.items.map((item) {
+                            return Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Container(
+                                constraints:
+                                    const BoxConstraints(maxWidth: 240),
+                                child: StudentCard(
+                                  item: item,
+                                ),
+                              ),
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               );
@@ -72,7 +91,7 @@ class StudentBuddiesCard extends StatelessWidget {
                     child: Center(
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(
-                          maxWidth: 400,
+                          maxWidth: 270,
                         ),
                         child: StudentCard(
                           item: item,

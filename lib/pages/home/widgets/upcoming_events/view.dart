@@ -21,7 +21,7 @@ class _CustomCarouselState extends State<CustomCarousel>
   final PageController _pageController = PageController();
   late TabController _tabController;
   Timer? _timer;
-  int _currentPage = 0;
+  // final int _currentPage = 0;
   int cp = 0;
 
   @override
@@ -55,22 +55,21 @@ class _CustomCarouselState extends State<CustomCarousel>
     }
   }
 
-  // ignore: unused_element
-  Future<void> _startAutoSlide() async {
-    await loadEvents();
-    _timer = Timer.periodic(const Duration(seconds: 0), (Timer timer) {
-      if (_currentPage < events.length - 1) {
-        _currentPage++;
-      } else {
-        _currentPage = 0;
-      }
-      _pageController.animateToPage(
-        _currentPage,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeIn,
-      );
-    });
-  }
+  // Future<void> _startAutoSlide() async {
+  //   await loadEvents();
+  //   _timer = Timer.periodic(const Duration(seconds: 0), (Timer timer) {
+  //     if (_currentPage < events.length - 1) {
+  //       _currentPage++;
+  //     } else {
+  //       _currentPage = 0;
+  //     }
+  //     _pageController.animateToPage(
+  //       _currentPage,
+  //       duration: const Duration(milliseconds: 300),
+  //       curve: Curves.easeIn,
+  //     );
+  //   });
+  // }
 
   void _handlePageViewChanged(int currentPageIndex) {
     _tabController.index = currentPageIndex;
@@ -96,54 +95,65 @@ class _CustomCarouselState extends State<CustomCarousel>
     if (events.isEmpty) {
       return const Center(child: CircularProgressIndicator());
     } else {
-      return Container(
-        constraints: const BoxConstraints(maxHeight: 500, maxWidth: 500),
-        child: Column(
-          children: [
-            ListTile(
-              contentPadding: const EdgeInsets.only(left: 4),
-              title: Text(
-                "Upcoming Events",
-                style: GoogleFonts.urbanist(
-                    fontSize: 18, fontWeight: FontWeight.w600),
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+        child: Container(
+          constraints: const BoxConstraints(maxHeight: 500, maxWidth: 500),
+          child: Column(
+            children: [
+              ListTile(
+                contentPadding: const EdgeInsets.only(left: 4),
+                title: Text(
+                  "Upcoming Events",
+                  style: GoogleFonts.urbanist(
+                      fontSize: 18, fontWeight: FontWeight.w600),
+                ),
+                subtitle: Text(
+                  formattedDate,
+                  style: GoogleFonts.urbanist(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w700,
+                      color: const Color(0xff6c6c6c)),
+                ),
               ),
-              subtitle: Text(
-                formattedDate,
-                style: GoogleFonts.urbanist(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w700,
-                    color: const Color(0xff6c6c6c)),
+              Expanded(
+                child: Stack(
+                  children: [
+                    PageView.builder(
+                      controller: _pageController,
+                      onPageChanged: _handlePageViewChanged,
+                      itemCount: events.length,
+                      itemBuilder: (context, index) {
+                        final event = events[index];
+                        return UpcomingEventsCard(
+                          imageUrl: event.image,
+                          date: event.day,
+                          timing: event.timing,
+                          header: event.header,
+                          title: event.title,
+                          description: event.description,
+                          viewers: event.viewers,
+                          venue: event.venue,
+                        );
+                      },
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Container(
+                        constraints:
+                            const BoxConstraints(maxHeight: 45, maxWidth: 120),
+                        child: PageIndicator(
+                          currentPageIndex: cp,
+                          tabController: _tabController,
+                          onUpdateCurrentPageIndex: _updateCurrentPageIndex,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              constraints: const BoxConstraints(maxHeight: 100, maxWidth: 500),
-              child: PageIndicator(
-                currentPageIndex: cp,
-                tabController: _tabController,
-                onUpdateCurrentPageIndex: _updateCurrentPageIndex,
-              ),
-            ),
-            Expanded(
-              child: PageView.builder(
-                controller: _pageController,
-                onPageChanged: _handlePageViewChanged,
-                itemCount: events.length,
-                itemBuilder: (context, index) {
-                  final event = events[index];
-                  return UpcomingEventsCard(
-                    imageUrl: event.image,
-                    date: event.day,
-                    timing: event.timing,
-                    header: event.header,
-                    title: event.title,
-                    description: event.description,
-                    viewers: event.viewers,
-                    venue: event.venue,
-                  );
-                },
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
     }
@@ -169,37 +179,47 @@ class PageIndicator extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          IconButton(
-            splashRadius: 16.0,
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              if (currentPageIndex == 0) {
-                onUpdateCurrentPageIndex(tabController.length - 1);
-              }
-              onUpdateCurrentPageIndex(currentPageIndex - 1);
-            },
-            icon: const Icon(
-              Icons.arrow_left_rounded,
-              size: 32.0,
-            ),
-          ),
-          TabPageSelector(
-            controller: tabController,
-          ),
-          IconButton(
-            splashRadius: 16.0,
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              if (currentPageIndex == tabController.length - 1) {
-                onUpdateCurrentPageIndex(0);
-              }
-              onUpdateCurrentPageIndex(currentPageIndex + 1);
-            },
-            icon: const Icon(
-              Icons.arrow_right_rounded,
-              size: 32.0,
-            ),
-          ),
+          currentPageIndex != 0
+              ? IconButton(
+                  splashRadius: 16.0,
+                  padding: EdgeInsets.zero,
+                  onPressed: () {
+                    if (currentPageIndex == 0) {
+                      onUpdateCurrentPageIndex(tabController.length - 1);
+                    } else {
+                      onUpdateCurrentPageIndex(currentPageIndex - 1);
+                    }
+                  },
+                  icon: const Icon(
+                    Icons.arrow_left_rounded,
+                    size: 32.0,
+                  ),
+                )
+              : const SizedBox(
+                  width: 32,
+                ),
+          // TabPageSelector(
+          //   controller: tabController,
+          // ),
+          currentPageIndex != tabController.length - 1
+              ? IconButton(
+                  splashRadius: 16.0,
+                  padding: EdgeInsets.zero,
+                  onPressed: () {
+                    if (currentPageIndex == tabController.length - 1) {
+                      onUpdateCurrentPageIndex(0);
+                    } else {
+                      onUpdateCurrentPageIndex(currentPageIndex + 1);
+                    }
+                  },
+                  icon: const Icon(
+                    Icons.arrow_right_rounded,
+                    size: 32.0,
+                  ),
+                )
+              : const SizedBox(
+                  width: 32,
+                ),
         ],
       ),
     );
