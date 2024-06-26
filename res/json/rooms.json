@@ -1,1002 +1,877 @@
 [
- {
-   "Room Number": 304,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 161,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 371,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 231,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 934,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 870,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 634,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 798,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 206,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 592,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 315,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 201,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 617,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 625,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 368,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 310,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 220,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 685,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 245,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 120,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 485,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 846,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 649,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 333,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 245,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 394,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 335,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 741,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 770,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 962,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 361,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 837,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 201,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 704,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 218,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 873,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 955,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 109,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 940,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 313,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 409,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 226,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 378,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 320,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 979,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 605,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 239,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 943,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 302,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 247,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 780,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 521,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 507,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 324,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 208,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 896,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 746,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 799,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 584,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 615,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 687,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 371,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 660,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 833,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 272,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 185,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 112,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 567,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 228,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 526,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 440,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 299,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 326,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 579,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 674,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 408,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 921,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 381,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 814,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 647,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 569,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 824,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 544,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 211,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 415,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 868,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 393,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 531,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 306,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 334,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 856,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 177,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 713,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 983,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 952,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 690,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 926,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 170,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 223,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 922,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 145,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 114,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 919,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 214,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 577,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 564,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 583,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 892,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 877,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 166,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 466,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 569,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 757,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 610,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 650,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 117,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 883,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 254,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 339,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 724,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 628,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 156,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 992,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 222,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 239,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 497,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 950,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 877,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 162,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 655,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 243,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 529,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 937,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 697,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 390,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 170,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 564,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 155,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 458,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 131,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 491,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 699,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 823,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 202,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 858,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 463,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 795,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 678,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 919,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 288,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 592,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 786,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 137,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 932,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 361,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 878,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 538,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 802,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 924,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 740,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 814,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 645,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 234,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 401,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 889,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 127,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 182,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 124,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 466,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 904,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 481,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 461,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 390,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 168,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 388,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 424,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 688,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 205,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 658,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 528,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 678,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 246,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 586,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 968,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 297,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 145,
-   "Category": "Female",
-   "School": "GSB"
- },
- {
-   "Room Number": 685,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 804,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 193,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 440,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 577,
-   "Category": "Female",
-   "School": "SIAS"
- },
- {
-   "Room Number": 288,
-   "Category": "Male",
-   "School": "SIAS"
- },
- {
-   "Room Number": 144,
-   "Category": "Male",
-   "School": "GSB"
- },
- {
-   "Room Number": 169,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 345,
-   "Category": "Male",
-   "School": "IFMR"
- },
- {
-   "Room Number": 936,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 952,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 729,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 503,
-   "Category": "Female",
-   "School": "IFMR"
- },
- {
-   "Room Number": 979,
-   "Category": "Male",
-   "School": "GSB"
- }
+  {
+    "Room Number": "304",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "161",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "371",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "231",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "934",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "870",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "634",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "798",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "206",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "592",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "315",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "201",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "617",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "625",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "368",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "310",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "220",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "685",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "245",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "120",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "485",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "846",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "649",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "333",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "245",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "394",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "335",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "741",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "770",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "962",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "361",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "837",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "201",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "704",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "218",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "873",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "955",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "109",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "940",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "313",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "409",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "226",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "378",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "320",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "979",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "605",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "239",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "943",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "302",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "247",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "780",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "521",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "507",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "324",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "208",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "896",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "746",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "799",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "584",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "615",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "687",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "371",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "660",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "833",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "272",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "185",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "112",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "567",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "228",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "526",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "440",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "299",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "326",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "579",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "674",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "408",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "921",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "381",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "814",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "647",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "569",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "824",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "544",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "211",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "415",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "868",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "393",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "531",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "306",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "334",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "856",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "177",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "713",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "983",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "952",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "690",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "926",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "170",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "223",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "922",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "145",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "114",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "919",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "214",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "577",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "564",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "583",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "892",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "877",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "166",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "466",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "569",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "757",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "610",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "650",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "117",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "883",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "254",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "339",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "724",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "628",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "156",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "992",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "222",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "239",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "497",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "950",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "877",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "162",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "655",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "243",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "529",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "937",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "697",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "390",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "170",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "564",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "155",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "458",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "131",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "491",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "699",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "823",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "202",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "858",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "463",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "795",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "678",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "919",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "288",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "592",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "786",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "137",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "932",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "361",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "878",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "538",
+    "Category": "Female",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "802",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "924",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "740",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "814",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "645",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "234",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "401",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "889",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "127",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "182",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "124",
+    "Category": "Female",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "466",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "904",
+    "Category": "Male",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "481",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "461",
+    "Category": "Male",
+    "School": "GSB"
+  },
+  {
+    "Room Number": "390",
+    "Category": "Male",
+    "School": "IFMR"
+  },
+  {
+    "Room Number": "168",
+    "Category": "Female",
+    "School": "SIAS"
+  },
+  {
+    "Room Number": "388",
+    "Category": "Female",
+    "School": "SIAS"
+  }
 ]
