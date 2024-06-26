@@ -3,23 +3,23 @@ import 'dart:convert';
 import 'package:erp_dev/rooms/roommate.dart';
 import 'package:flutter/services.dart';
 
-void split() async {
+Future<Map<String, Map<String, List<Roommate>>>> split() async {
   List<Roommate> items = [];
   String jsonString =
       await rootBundle.loadString("res/json/roommate_student_list.json");
   for (Map<String, dynamic> i in jsonDecode(jsonString)) {
     items.add(Roommate.fromJson(i));
   }
-  print(items[0]);
 
-  Map<String, List<Roommate>> studentsBySchool = {};
-
-  for (Roommate r in items) {
-    if (!studentsBySchool.containsKey(r.school)) {
-      studentsBySchool[r.school] = [];
+  Map<String, Map<String, List<Roommate>>> roommatesBySchoolAndSex = {};
+  for (var roommate in items) {
+    if (!roommatesBySchoolAndSex.containsKey(roommate.school)) {
+      roommatesBySchoolAndSex[roommate.school] = {
+        'Male': [],
+        'Female': [],
+      };
     }
-    studentsBySchool[r.school]!.add(r);
+    roommatesBySchoolAndSex[roommate.school]![roommate.sex]!.add(roommate);
   }
-  List<String> schoolKeys = ["SIAS", "IFMR", "GSB"];
-  for ()
+  return roommatesBySchoolAndSex;
 }

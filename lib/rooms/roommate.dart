@@ -10,7 +10,7 @@ class Roommate {
   final int batch;
   final String program;
   final String city;
-  // final String prevSchool;
+  final String prevSchool;
   final String temp;
   final String clean;
   final String bedtime;
@@ -25,7 +25,7 @@ class Roommate {
     required this.batch,
     required this.program,
     required this.city,
-    // required this.prevSchool,
+    required this.prevSchool,
     required this.temp,
     required this.clean,
     required this.bedtime,
@@ -43,7 +43,7 @@ class Roommate {
 
   @override
   String toString() {
-    return 'Roommate(id: $id, sex: $sex, school: $school, batch: $batch, program: $program, city: $city, prevSchool: prevSchool, temp: $temp, clean: $clean, bedtime: $bedtime, lightsOn: $lightsOn, noise: $noise, guests: $guests)';
+    return 'Roommate(id: $id, sex: $sex, school: $school, batch: $batch, program: $program, city: $city, prevSchool: $prevSchool, temp: $temp, clean: $clean, bedtime: $bedtime, lightsOn: $lightsOn, noise: $noise, guests: $guests)';
   }
 
   factory Roommate.fromJson(Map<String, dynamic> json) {
@@ -54,7 +54,7 @@ class Roommate {
       batch: json["batch"],
       program: json["program"],
       city: json["city"],
-      // prevSchool: json["prevSchool"],
+      prevSchool: json["prev_school"],
       temp: json["temp"],
       clean: json["clean"],
       bedtime: json["bedtime"],

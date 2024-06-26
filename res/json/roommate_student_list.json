@@ -1,465 +1,498 @@
 [
     {
-      "id": "Student 1",
-      "sex": "Male",
-      "school": "GSB",
-      "batch": 2020,
-      "program": "Arts",
-      "city": "City 16",
-      "temp": "Warm",
-      "clean": "Clean",
-      "bedtime": "Late to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Silent",
-      "guests": "Not OK"
+        "id": "Student 1",
+        "sex": "Male",
+        "school": "GSB",
+        "batch": 2020,
+        "program": "Arts",
+        "city": "City 16",
+        "temp": "Warm",
+        "clean": "Clean",
+        "bedtime": "Late to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Silent",
+        "guests": "Not OK",
+        "prev_school": "school8"
     },
     {
-      "id": "Student 2",
-      "sex": "Female",
-      "school": "IFMR",
-      "batch": 2022,
-      "program": "Business",
-      "city": "City 17",
-      "temp": "Warm",
-      "clean": "Doesn't matter",
-      "bedtime": "Late to bed",
-      "lights_on": "Yes",
-      "noise": "Doesn't matter",
-      "guests": "Not OK"
+        "id": "Student 2",
+        "sex": "Female",
+        "school": "IFMR",
+        "batch": 2022,
+        "program": "Business",
+        "city": "City 17",
+        "temp": "Warm",
+        "clean": "Doesn't matter",
+        "bedtime": "Late to bed",
+        "lights_on": "Yes",
+        "noise": "Doesn't matter",
+        "guests": "Not OK",
+        "prev_school": "school14"
     },
     {
-      "id": "Student 3",
-      "sex": "Male",
-      "school": "GSB",
-      "batch": 2024,
-      "program": "Arts",
-      "city": "City 17",
-      "temp": "Doesn't matter",
-      "clean": "Clean",
-      "bedtime": "Early to bed",
-      "lights_on": "No",
-      "noise": "Doesn't matter",
-      "guests": "Not OK"
+        "id": "Student 3",
+        "sex": "Male",
+        "school": "GSB",
+        "batch": 2024,
+        "program": "Arts",
+        "city": "City 17",
+        "temp": "Doesn't matter",
+        "clean": "Clean",
+        "bedtime": "Early to bed",
+        "lights_on": "No",
+        "noise": "Doesn't matter",
+        "guests": "Not OK",
+        "prev_school": "school25"
     },
     {
-      "id": "Student 4",
-      "sex": "Male",
-      "school": "SIAS",
-      "batch": 2019,
-      "program": "Engineering",
-      "city": "City 15",
-      "temp": "Warm",
-      "clean": "Moderate",
-      "bedtime": "Early to bed",
-      "lights_on": "Yes",
-      "noise": "Silent",
-      "guests": "Not OK"
+        "id": "Student 4",
+        "sex": "Male",
+        "school": "SIAS",
+        "batch": 2019,
+        "program": "Engineering",
+        "city": "City 15",
+        "temp": "Warm",
+        "clean": "Moderate",
+        "bedtime": "Early to bed",
+        "lights_on": "Yes",
+        "noise": "Silent",
+        "guests": "Not OK",
+        "prev_school": "school25"
     },
     {
-      "id": "Student 5",
-      "sex": "Female",
-      "school": "IFMR",
-      "batch": 2022,
-      "program": "Engineering",
-      "city": "City 12",
-      "temp": "Doesn't matter",
-      "clean": "Clean",
-      "bedtime": "Doesn't matter",
-      "lights_on": "Doesn't matter",
-      "noise": "Silent",
-      "guests": "Not OK"
+        "id": "Student 5",
+        "sex": "Female",
+        "school": "IFMR",
+        "batch": 2022,
+        "program": "Engineering",
+        "city": "City 12",
+        "temp": "Doesn't matter",
+        "clean": "Clean",
+        "bedtime": "Doesn't matter",
+        "lights_on": "Doesn't matter",
+        "noise": "Silent",
+        "guests": "Not OK",
+        "prev_school": "school15"
     },
     {
-      "id": "Student 6",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2019,
-      "program": "Computer Science",
-      "city": "City 3",
-      "temp": "Doesn't matter",
-      "clean": "Doesn't matter",
-      "bedtime": "Normal (10pm)",
-      "lights_on": "Yes",
-      "noise": "Silent",
-      "guests": "OK"
+        "id": "Student 6",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2019,
+        "program": "Computer Science",
+        "city": "City 3",
+        "temp": "Doesn't matter",
+        "clean": "Doesn't matter",
+        "bedtime": "Normal (10pm)",
+        "lights_on": "Yes",
+        "noise": "Silent",
+        "guests": "OK",
+        "prev_school": "school7"
     },
     {
-      "id": "Student 7",
-      "sex": "Female",
-      "school": "SIAS",
-      "batch": 2022,
-      "program": "Business",
-      "city": "City 3",
-      "temp": "Cold",
-      "clean": "Moderate",
-      "bedtime": "Early to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Silent",
-      "guests": "Not OK"
+        "id": "Student 7",
+        "sex": "Female",
+        "school": "SIAS",
+        "batch": 2022,
+        "program": "Business",
+        "city": "City 3",
+        "temp": "Cold",
+        "clean": "Moderate",
+        "bedtime": "Early to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Silent",
+        "guests": "Not OK",
+        "prev_school": "school25"
     },
     {
-      "id": "Student 8",
-      "sex": "Female",
-      "school": "IFMR",
-      "batch": 2022,
-      "program": "Computer Science",
-      "city": "City 13",
-      "temp": "Cold",
-      "clean": "Clean",
-      "bedtime": "Early to bed",
-      "lights_on": "Yes",
-      "noise": "Noisy",
-      "guests": "OK"
+        "id": "Student 8",
+        "sex": "Female",
+        "school": "IFMR",
+        "batch": 2022,
+        "program": "Computer Science",
+        "city": "City 13",
+        "temp": "Cold",
+        "clean": "Clean",
+        "bedtime": "Early to bed",
+        "lights_on": "Yes",
+        "noise": "Noisy",
+        "guests": "OK",
+        "prev_school": "school15"
     },
     {
-      "id": "Student 9",
-      "sex": "Female",
-      "school": "IFMR",
-      "batch": 2024,
-      "program": "Computer Science",
-      "city": "City 2",
-      "temp": "Warm",
-      "clean": "Doesn't matter",
-      "bedtime": "Early to bed",
-      "lights_on": "Yes",
-      "noise": "Doesn't matter",
-      "guests": "OK"
+        "id": "Student 9",
+        "sex": "Female",
+        "school": "IFMR",
+        "batch": 2024,
+        "program": "Computer Science",
+        "city": "City 2",
+        "temp": "Warm",
+        "clean": "Doesn't matter",
+        "bedtime": "Early to bed",
+        "lights_on": "Yes",
+        "noise": "Doesn't matter",
+        "guests": "OK",
+        "prev_school": "school9"
     },
     {
-      "id": "Student 10",
-      "sex": "Female",
-      "school": "SIAS",
-      "batch": 2019,
-      "program": "Arts",
-      "city": "City 14",
-      "temp": "Moderate",
-      "clean": "Doesn't matter",
-      "bedtime": "Normal (10pm)",
-      "lights_on": "Doesn't matter",
-      "noise": "Doesn't matter",
-      "guests": "Not OK"
+        "id": "Student 10",
+        "sex": "Female",
+        "school": "SIAS",
+        "batch": 2019,
+        "program": "Arts",
+        "city": "City 14",
+        "temp": "Moderate",
+        "clean": "Doesn't matter",
+        "bedtime": "Normal (10pm)",
+        "lights_on": "Doesn't matter",
+        "noise": "Doesn't matter",
+        "guests": "Not OK",
+        "prev_school": "school9"
     },
     {
-      "id": "Student 11",
-      "sex": "Female",
-      "school": "IFMR",
-      "batch": 2020,
-      "program": "Engineering",
-      "city": "City 2",
-      "temp": "Warm",
-      "clean": "Clean",
-      "bedtime": "Doesn't matter",
-      "lights_on": "Yes",
-      "noise": "Silent",
-      "guests": "Not OK"
+        "id": "Student 11",
+        "sex": "Female",
+        "school": "IFMR",
+        "batch": 2020,
+        "program": "Engineering",
+        "city": "City 2",
+        "temp": "Warm",
+        "clean": "Clean",
+        "bedtime": "Doesn't matter",
+        "lights_on": "Yes",
+        "noise": "Silent",
+        "guests": "Not OK",
+        "prev_school": "school13"
     },
     {
-      "id": "Student 12",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2022,
-      "program": "Computer Science",
-      "city": "City 10",
-      "temp": "Moderate",
-      "clean": "Clean",
-      "bedtime": "Early to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Noisy",
-      "guests": "Not OK"
+        "id": "Student 12",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2022,
+        "program": "Computer Science",
+        "city": "City 10",
+        "temp": "Moderate",
+        "clean": "Clean",
+        "bedtime": "Early to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Noisy",
+        "guests": "Not OK",
+        "prev_school": "school18"
     },
     {
-      "id": "Student 13",
-      "sex": "Male",
-      "school": "SIAS",
-      "batch": 2023,
-      "program": "Computer Science",
-      "city": "City 20",
-      "temp": "Warm",
-      "clean": "Moderate",
-      "bedtime": "Normal (10pm)",
-      "lights_on": "No",
-      "noise": "Noisy",
-      "guests": "Doesn't matter"
+        "id": "Student 13",
+        "sex": "Male",
+        "school": "SIAS",
+        "batch": 2023,
+        "program": "Computer Science",
+        "city": "City 20",
+        "temp": "Warm",
+        "clean": "Moderate",
+        "bedtime": "Normal (10pm)",
+        "lights_on": "No",
+        "noise": "Noisy",
+        "guests": "Doesn't matter",
+        "prev_school": "school9"
     },
     {
-      "id": "Student 14",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2023,
-      "program": "Engineering",
-      "city": "City 17",
-      "temp": "Doesn't matter",
-      "clean": "Doesn't matter",
-      "bedtime": "Late to bed",
-      "lights_on": "Yes",
-      "noise": "Doesn't matter",
-      "guests": "OK"
+        "id": "Student 14",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2023,
+        "program": "Engineering",
+        "city": "City 17",
+        "temp": "Doesn't matter",
+        "clean": "Doesn't matter",
+        "bedtime": "Late to bed",
+        "lights_on": "Yes",
+        "noise": "Doesn't matter",
+        "guests": "OK",
+        "prev_school": "school5"
     },
     {
-      "id": "Student 15",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2023,
-      "program": "Engineering",
-      "city": "City 15",
-      "temp": "Cold",
-      "clean": "Clean",
-      "bedtime": "Early to bed",
-      "lights_on": "Yes",
-      "noise": "Doesn't matter",
-      "guests": "OK"
+        "id": "Student 15",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2023,
+        "program": "Engineering",
+        "city": "City 15",
+        "temp": "Cold",
+        "clean": "Clean",
+        "bedtime": "Early to bed",
+        "lights_on": "Yes",
+        "noise": "Doesn't matter",
+        "guests": "OK",
+        "prev_school": "school6"
     },
     {
-      "id": "Student 16",
-      "sex": "Male",
-      "school": "IFMR",
-      "batch": 2022,
-      "program": "Engineering",
-      "city": "City 15",
-      "temp": "Doesn't matter",
-      "clean": "Doesn't matter",
-      "bedtime": "Early to bed",
-      "lights_on": "No",
-      "noise": "Doesn't matter",
-      "guests": "OK"
+        "id": "Student 16",
+        "sex": "Male",
+        "school": "IFMR",
+        "batch": 2022,
+        "program": "Engineering",
+        "city": "City 15",
+        "temp": "Doesn't matter",
+        "clean": "Doesn't matter",
+        "bedtime": "Early to bed",
+        "lights_on": "No",
+        "noise": "Doesn't matter",
+        "guests": "OK",
+        "prev_school": "school25"
     },
     {
-      "id": "Student 17",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2022,
-      "program": "Computer Science",
-      "city": "City 18",
-      "temp": "Warm",
-      "clean": "Doesn't matter",
-      "bedtime": "Early to bed",
-      "lights_on": "No",
-      "noise": "Noisy",
-      "guests": "Doesn't matter"
+        "id": "Student 17",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2022,
+        "program": "Computer Science",
+        "city": "City 18",
+        "temp": "Warm",
+        "clean": "Doesn't matter",
+        "bedtime": "Early to bed",
+        "lights_on": "No",
+        "noise": "Noisy",
+        "guests": "Doesn't matter",
+        "prev_school": "school6"
     },
     {
-      "id": "Student 18",
-      "sex": "Female",
-      "school": "SIAS",
-      "batch": 2020,
-      "program": "Business",
-      "city": "City 4",
-      "temp": "Warm",
-      "clean": "Moderate",
-      "bedtime": "Doesn't matter",
-      "lights_on": "Yes",
-      "noise": "Doesn't matter",
-      "guests": "OK"
+        "id": "Student 18",
+        "sex": "Female",
+        "school": "SIAS",
+        "batch": 2020,
+        "program": "Business",
+        "city": "City 4",
+        "temp": "Warm",
+        "clean": "Moderate",
+        "bedtime": "Doesn't matter",
+        "lights_on": "Yes",
+        "noise": "Doesn't matter",
+        "guests": "OK",
+        "prev_school": "school2"
     },
     {
-      "id": "Student 19",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2022,
-      "program": "Engineering",
-      "city": "City 15",
-      "temp": "Moderate",
-      "clean": "Clean",
-      "bedtime": "Doesn't matter",
-      "lights_on": "Yes",
-      "noise": "Silent",
-      "guests": "Not OK"
+        "id": "Student 19",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2022,
+        "program": "Engineering",
+        "city": "City 15",
+        "temp": "Moderate",
+        "clean": "Clean",
+        "bedtime": "Doesn't matter",
+        "lights_on": "Yes",
+        "noise": "Silent",
+        "guests": "Not OK",
+        "prev_school": "school1"
     },
     {
-      "id": "Student 20",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2022,
-      "program": "Engineering",
-      "city": "City 9",
-      "temp": "Moderate",
-      "clean": "Clean",
-      "bedtime": "Doesn't matter",
-      "lights_on": "Yes",
-      "noise": "Doesn't matter",
-      "guests": "Not OK"
+        "id": "Student 20",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2022,
+        "program": "Engineering",
+        "city": "City 9",
+        "temp": "Moderate",
+        "clean": "Clean",
+        "bedtime": "Doesn't matter",
+        "lights_on": "Yes",
+        "noise": "Doesn't matter",
+        "guests": "Not OK",
+        "prev_school": "school16"
     },
     {
-      "id": "Student 21",
-      "sex": "Male",
-      "school": "IFMR",
-      "batch": 2020,
-      "program": "Business",
-      "city": "City 19",
-      "temp": "Cold",
-      "clean": "Doesn't matter",
-      "bedtime": "Late to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Silent",
-      "guests": "OK"
+        "id": "Student 21",
+        "sex": "Male",
+        "school": "IFMR",
+        "batch": 2020,
+        "program": "Business",
+        "city": "City 19",
+        "temp": "Cold",
+        "clean": "Doesn't matter",
+        "bedtime": "Late to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Silent",
+        "guests": "OK",
+        "prev_school": "school3"
     },
     {
-      "id": "Student 22",
-      "sex": "Male",
-      "school": "SIAS",
-      "batch": 2020,
-      "program": "Business",
-      "city": "City 3",
-      "temp": "Moderate",
-      "clean": "Doesn't matter",
-      "bedtime": "Doesn't matter",
-      "lights_on": "No",
-      "noise": "Silent",
-      "guests": "OK"
+        "id": "Student 22",
+        "sex": "Male",
+        "school": "SIAS",
+        "batch": 2020,
+        "program": "Business",
+        "city": "City 3",
+        "temp": "Moderate",
+        "clean": "Doesn't matter",
+        "bedtime": "Doesn't matter",
+        "lights_on": "No",
+        "noise": "Silent",
+        "guests": "OK",
+        "prev_school": "school21"
     },
     {
-      "id": "Student 23",
-      "sex": "Female",
-      "school": "SIAS",
-      "batch": 2022,
-      "program": "Computer Science",
-      "city": "City 2",
-      "temp": "Cold",
-      "clean": "Doesn't matter",
-      "bedtime": "Doesn't matter",
-      "lights_on": "Doesn't matter",
-      "noise": "Noisy",
-      "guests": "OK"
+        "id": "Student 23",
+        "sex": "Female",
+        "school": "SIAS",
+        "batch": 2022,
+        "program": "Computer Science",
+        "city": "City 2",
+        "temp": "Cold",
+        "clean": "Doesn't matter",
+        "bedtime": "Doesn't matter",
+        "lights_on": "Doesn't matter",
+        "noise": "Noisy",
+        "guests": "OK",
+        "prev_school": "school1"
     },
     {
-      "id": "Student 24",
-      "sex": "Male",
-      "school": "SIAS",
-      "batch": 2020,
-      "program": "Business",
-      "city": "City 1",
-      "temp": "Cold",
-      "clean": "Moderate",
-      "bedtime": "Early to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Silent",
-      "guests": "OK"
+        "id": "Student 24",
+        "sex": "Male",
+        "school": "SIAS",
+        "batch": 2020,
+        "program": "Business",
+        "city": "City 1",
+        "temp": "Cold",
+        "clean": "Moderate",
+        "bedtime": "Early to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Silent",
+        "guests": "OK",
+        "prev_school": "school14"
     },
     {
-      "id": "Student 25",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2020,
-      "program": "Engineering",
-      "city": "City 4",
-      "temp": "Cold",
-      "clean": "Doesn't matter",
-      "bedtime": "Normal (10pm)",
-      "lights_on": "Yes",
-      "noise": "Silent",
-      "guests": "Doesn't matter"
+        "id": "Student 25",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2020,
+        "program": "Engineering",
+        "city": "City 4",
+        "temp": "Cold",
+        "clean": "Doesn't matter",
+        "bedtime": "Normal (10pm)",
+        "lights_on": "Yes",
+        "noise": "Silent",
+        "guests": "Doesn't matter",
+        "prev_school": "school22"
     },
     {
-      "id": "Student 26",
-      "sex": "Female",
-      "school": "GSB",
-      "batch": 2020,
-      "program": "Engineering",
-      "city": "City 17",
-      "temp": "Warm",
-      "clean": "Clean",
-      "bedtime": "Late to bed",
-      "lights_on": "Yes",
-      "noise": "Silent",
-      "guests": "OK"
+        "id": "Student 26",
+        "sex": "Female",
+        "school": "GSB",
+        "batch": 2020,
+        "program": "Engineering",
+        "city": "City 17",
+        "temp": "Warm",
+        "clean": "Clean",
+        "bedtime": "Late to bed",
+        "lights_on": "Yes",
+        "noise": "Silent",
+        "guests": "OK",
+        "prev_school": "school25"
     },
     {
-      "id": "Student 27",
-      "sex": "Female",
-      "school": "IFMR",
-      "batch": 2021,
-      "program": "Engineering",
-      "city": "City 13",
-      "temp": "Doesn't matter",
-      "clean": "Moderate",
-      "bedtime": "Doesn't matter",
-      "lights_on": "Yes",
-      "noise": "Noisy",
-      "guests": "Not OK"
+        "id": "Student 27",
+        "sex": "Female",
+        "school": "IFMR",
+        "batch": 2021,
+        "program": "Engineering",
+        "city": "City 13",
+        "temp": "Doesn't matter",
+        "clean": "Moderate",
+        "bedtime": "Doesn't matter",
+        "lights_on": "Yes",
+        "noise": "Noisy",
+        "guests": "Not OK",
+        "prev_school": "school6"
     },
     {
-      "id": "Student 28",
-      "sex": "Male",
-      "school": "IFMR",
-      "batch": 2024,
-      "program": "Engineering",
-      "city": "City 20",
-      "temp": "Warm",
-      "clean": "Doesn't matter",
-      "bedtime": "Early to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Silent",
-      "guests": "Doesn't matter"
+        "id": "Student 28",
+        "sex": "Male",
+        "school": "IFMR",
+        "batch": 2024,
+        "program": "Engineering",
+        "city": "City 20",
+        "temp": "Warm",
+        "clean": "Doesn't matter",
+        "bedtime": "Early to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Silent",
+        "guests": "Doesn't matter",
+        "prev_school": "school9"
     },
     {
-      "id": "Student 29",
-      "sex": "Female",
-      "school": "IFMR",
-      "batch": 2023,
-      "program": "Computer Science",
-      "city": "City 6",
-      "temp": "Moderate",
-      "clean": "Moderate",
-      "bedtime": "Early to bed",
-      "lights_on": "No",
-      "noise": "Noisy",
-      "guests": "Doesn't matter"
+        "id": "Student 29",
+        "sex": "Female",
+        "school": "IFMR",
+        "batch": 2023,
+        "program": "Computer Science",
+        "city": "City 6",
+        "temp": "Moderate",
+        "clean": "Moderate",
+        "bedtime": "Early to bed",
+        "lights_on": "No",
+        "noise": "Noisy",
+        "guests": "Doesn't matter",
+        "prev_school": "school14"
     },
     {
-      "id": "Student 30",
-      "sex": "Male",
-      "school": "GSB",
-      "batch": 2024,
-      "program": "Computer Science",
-      "city": "City 1",
-      "temp": "Warm",
-      "clean": "Clean",
-      "bedtime": "Early to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Noisy",
-      "guests": "OK"
+        "id": "Student 30",
+        "sex": "Male",
+        "school": "GSB",
+        "batch": 2024,
+        "program": "Computer Science",
+        "city": "City 1",
+        "temp": "Warm",
+        "clean": "Clean",
+        "bedtime": "Early to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Noisy",
+        "guests": "OK",
+        "prev_school": "school6"
     },
     {
-      "id": "Student 31",
-      "sex": "Male",
-      "school": "GSB",
-      "batch": 2022,
-      "program": "Computer Science",
-      "city": "City 14",
-      "temp": "Warm",
-      "clean": "Clean",
-      "bedtime": "Early to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Doesn't matter",
-      "guests": "Doesn't matter"
+        "id": "Student 31",
+        "sex": "Male",
+        "school": "GSB",
+        "batch": 2022,
+        "program": "Computer Science",
+        "city": "City 14",
+        "temp": "Warm",
+        "clean": "Clean",
+        "bedtime": "Early to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Doesn't matter",
+        "guests": "Doesn't matter",
+        "prev_school": "school24"
     },
     {
-      "id": "Student 32",
-      "sex": "Male",
-      "school": "SIAS",
-      "batch": 2021,
-      "program": "Arts",
-      "city": "City 11",
-      "temp": "Warm",
-      "clean": "Clean",
-      "bedtime": "Doesn't matter",
-      "lights_on": "No",
-      "noise": "Doesn't matter",
-      "guests": "OK"
+        "id": "Student 32",
+        "sex": "Male",
+        "school": "SIAS",
+        "batch": 2021,
+        "program": "Arts",
+        "city": "City 11",
+        "temp": "Warm",
+        "clean": "Clean",
+        "bedtime": "Doesn't matter",
+        "lights_on": "No",
+        "noise": "Doesn't matter",
+        "guests": "OK",
+        "prev_school": "school22"
     },
     {
-      "id": "Student 33",
-      "sex": "Male",
-      "school": "IFMR",
-      "batch": 2024,
-      "program": "Arts",
-      "city": "City 2",
-      "temp": "Warm",
-      "clean": "Doesn't matter",
-      "bedtime": "Late to bed",
-      "lights_on": "Doesn't matter",
-      "noise": "Doesn't matter",
-      "guests": "OK"
+        "id": "Student 33",
+        "sex": "Male",
+        "school": "IFMR",
+        "batch": 2024,
+        "program": "Arts",
+        "city": "City 2",
+        "temp": "Warm",
+        "clean": "Doesn't matter",
+        "bedtime": "Late to bed",
+        "lights_on": "Doesn't matter",
+        "noise": "Doesn't matter",
+        "guests": "OK",
+        "prev_school": "school22"
     },
     {
         "id": "Student 34",
@@ -473,9 +506,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school21"
+    },
+    {
         "id": "Student 35",
         "sex": "Female",
         "school": "IFMR",
@@ -487,9 +521,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Yes",
         "noise": "Noisy",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school3"
+    },
+    {
         "id": "Student 36",
         "sex": "Female",
         "school": "SIAS",
@@ -501,9 +536,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school5"
+    },
+    {
         "id": "Student 37",
         "sex": "Male",
         "school": "GSB",
@@ -515,9 +551,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school10"
+    },
+    {
         "id": "Student 38",
         "sex": "Male",
         "school": "IFMR",
@@ -529,9 +566,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school5"
+    },
+    {
         "id": "Student 39",
         "sex": "Female",
         "school": "IFMR",
@@ -543,9 +581,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school15"
+    },
+    {
         "id": "Student 40",
         "sex": "Male",
         "school": "SIAS",
@@ -557,9 +596,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school9"
+    },
+    {
         "id": "Student 41",
         "sex": "Female",
         "school": "GSB",
@@ -571,9 +611,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Yes",
         "noise": "Noisy",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school16"
+    },
+    {
         "id": "Student 42",
         "sex": "Male",
         "school": "IFMR",
@@ -585,9 +626,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Doesn't matter",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school7"
+    },
+    {
         "id": "Student 43",
         "sex": "Female",
         "school": "IFMR",
@@ -599,9 +641,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school17"
+    },
+    {
         "id": "Student 44",
         "sex": "Female",
         "school": "GSB",
@@ -613,9 +656,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Doesn't matter",
         "noise": "Doesn't matter",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school11"
+    },
+    {
         "id": "Student 45",
         "sex": "Female",
         "school": "IFMR",
@@ -627,9 +671,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Doesn't matter",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school22"
+    },
+    {
         "id": "Student 46",
         "sex": "Male",
         "school": "IFMR",
@@ -641,9 +686,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Doesn't matter",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school15"
+    },
+    {
         "id": "Student 47",
         "sex": "Male",
         "school": "SIAS",
@@ -655,9 +701,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Yes",
         "noise": "Noisy",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school15"
+    },
+    {
         "id": "Student 48",
         "sex": "Female",
         "school": "IFMR",
@@ -669,9 +716,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school12"
+    },
+    {
         "id": "Student 49",
         "sex": "Male",
         "school": "GSB",
@@ -683,9 +731,10 @@
         "bedtime": "Late to bed",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school14"
+    },
+    {
         "id": "Student 50",
         "sex": "Female",
         "school": "GSB",
@@ -697,9 +746,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school4"
+    },
+    {
         "id": "Student 51",
         "sex": "Female",
         "school": "GSB",
@@ -711,9 +761,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school17"
+    },
+    {
         "id": "Student 52",
         "sex": "Female",
         "school": "GSB",
@@ -725,9 +776,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school10"
+    },
+    {
         "id": "Student 53",
         "sex": "Male",
         "school": "IFMR",
@@ -739,9 +791,10 @@
         "bedtime": "Early to bed",
         "lights_on": "No",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school17"
+    },
+    {
         "id": "Student 54",
         "sex": "Female",
         "school": "IFMR",
@@ -753,9 +806,10 @@
         "bedtime": "Early to bed",
         "lights_on": "No",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school20"
+    },
+    {
         "id": "Student 55",
         "sex": "Female",
         "school": "IFMR",
@@ -767,9 +821,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school2"
+    },
+    {
         "id": "Student 56",
         "sex": "Female",
         "school": "GSB",
@@ -781,9 +836,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school24"
+    },
+    {
         "id": "Student 57",
         "sex": "Male",
         "school": "GSB",
@@ -795,9 +851,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school16"
+    },
+    {
         "id": "Student 58",
         "sex": "Male",
         "school": "IFMR",
@@ -809,9 +866,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school21"
+    },
+    {
         "id": "Student 59",
         "sex": "Male",
         "school": "GSB",
@@ -823,9 +881,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school15"
+    },
+    {
         "id": "Student 60",
         "sex": "Male",
         "school": "GSB",
@@ -837,9 +896,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school4"
+    },
+    {
         "id": "Student 61",
         "sex": "Female",
         "school": "IFMR",
@@ -851,9 +911,10 @@
         "bedtime": "Early to bed",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school20"
+    },
+    {
         "id": "Student 62",
         "sex": "Male",
         "school": "IFMR",
@@ -865,9 +926,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school9"
+    },
+    {
         "id": "Student 63",
         "sex": "Female",
         "school": "GSB",
@@ -879,9 +941,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school5"
+    },
+    {
         "id": "Student 64",
         "sex": "Female",
         "school": "SIAS",
@@ -893,9 +956,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school14"
+    },
+    {
         "id": "Student 65",
         "sex": "Male",
         "school": "IFMR",
@@ -907,9 +971,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Doesn't matter",
         "noise": "Silent",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school25"
+    },
+    {
         "id": "Student 66",
         "sex": "Female",
         "school": "IFMR",
@@ -921,9 +986,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school22"
+    },
+    {
         "id": "Student 67",
         "sex": "Male",
         "school": "GSB",
@@ -935,9 +1001,10 @@
         "bedtime": "Late to bed",
         "lights_on": "No",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school7"
+    },
+    {
         "id": "Student 68",
         "sex": "Male",
         "school": "IFMR",
@@ -949,9 +1016,10 @@
         "bedtime": "Early to bed",
         "lights_on": "No",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school16"
+    },
+    {
         "id": "Student 69",
         "sex": "Female",
         "school": "SIAS",
@@ -963,9 +1031,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "No",
         "noise": "Doesn't matter",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school22"
+    },
+    {
         "id": "Student 70",
         "sex": "Male",
         "school": "SIAS",
@@ -977,9 +1046,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "No",
         "noise": "Doesn't matter",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school6"
+    },
+    {
         "id": "Student 71",
         "sex": "Female",
         "school": "GSB",
@@ -991,9 +1061,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school10"
+    },
+    {
         "id": "Student 72",
         "sex": "Female",
         "school": "IFMR",
@@ -1005,9 +1076,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school2"
+    },
+    {
         "id": "Student 73",
         "sex": "Female",
         "school": "IFMR",
@@ -1019,9 +1091,10 @@
         "bedtime": "Early to bed",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school23"
+    },
+    {
         "id": "Student 74",
         "sex": "Female",
         "school": "GSB",
@@ -1033,9 +1106,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Doesn't matter",
         "noise": "Doesn't matter",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school21"
+    },
+    {
         "id": "Student 75",
         "sex": "Male",
         "school": "GSB",
@@ -1047,9 +1121,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "No",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school19"
+    },
+    {
         "id": "Student 76",
         "sex": "Female",
         "school": "IFMR",
@@ -1061,9 +1136,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school10"
+    },
+    {
         "id": "Student 77",
         "sex": "Female",
         "school": "SIAS",
@@ -1075,9 +1151,10 @@
         "bedtime": "Early to bed",
         "lights_on": "No",
         "noise": "Noisy",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school3"
+    },
+    {
         "id": "Student 78",
         "sex": "Female",
         "school": "GSB",
@@ -1089,9 +1166,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school9"
+    },
+    {
         "id": "Student 79",
         "sex": "Female",
         "school": "GSB",
@@ -1103,9 +1181,10 @@
         "bedtime": "Late to bed",
         "lights_on": "No",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school20"
+    },
+    {
         "id": "Student 80",
         "sex": "Male",
         "school": "GSB",
@@ -1117,9 +1196,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Doesn't matter",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school21"
+    },
+    {
         "id": "Student 81",
         "sex": "Male",
         "school": "SIAS",
@@ -1131,9 +1211,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school4"
+    },
+    {
         "id": "Student 82",
         "sex": "Male",
         "school": "SIAS",
@@ -1145,9 +1226,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school15"
+    },
+    {
         "id": "Student 83",
         "sex": "Female",
         "school": "SIAS",
@@ -1159,9 +1241,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school9"
+    },
+    {
         "id": "Student 84",
         "sex": "Male",
         "school": "IFMR",
@@ -1173,9 +1256,10 @@
         "bedtime": "Late to bed",
         "lights_on": "Yes",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school22"
+    },
+    {
         "id": "Student 85",
         "sex": "Male",
         "school": "GSB",
@@ -1187,9 +1271,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Yes",
         "noise": "Noisy",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school7"
+    },
+    {
         "id": "Student 86",
         "sex": "Female",
         "school": "IFMR",
@@ -1201,9 +1286,10 @@
         "bedtime": "Early to bed",
         "lights_on": "No",
         "noise": "Noisy",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school11"
+    },
+    {
         "id": "Student 87",
         "sex": "Female",
         "school": "IFMR",
@@ -1215,9 +1301,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Yes",
         "noise": "Noisy",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school12"
+    },
+    {
         "id": "Student 88",
         "sex": "Female",
         "school": "IFMR",
@@ -1229,9 +1316,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school12"
+    },
+    {
         "id": "Student 89",
         "sex": "Female",
         "school": "IFMR",
@@ -1243,9 +1331,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school19"
+    },
+    {
         "id": "Student 90",
         "sex": "Female",
         "school": "GSB",
@@ -1257,9 +1346,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school11"
+    },
+    {
         "id": "Student 91",
         "sex": "Female",
         "school": "GSB",
@@ -1271,9 +1361,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school20"
+    },
+    {
         "id": "Student 92",
         "sex": "Male",
         "school": "GSB",
@@ -1285,9 +1376,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school13"
+    },
+    {
         "id": "Student 93",
         "sex": "Female",
         "school": "SIAS",
@@ -1299,9 +1391,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Doesn't matter",
         "noise": "Noisy",
-        "guests": "Doesn't matter"
-      },
-      {
+        "guests": "Doesn't matter",
+        "prev_school": "school16"
+    },
+    {
         "id": "Student 94",
         "sex": "Female",
         "school": "IFMR",
@@ -1313,9 +1406,10 @@
         "bedtime": "Normal (10pm)",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school25"
+    },
+    {
         "id": "Student 95",
         "sex": "Female",
         "school": "SIAS",
@@ -1327,9 +1421,10 @@
         "bedtime": "Late to bed",
         "lights_on": "No",
         "noise": "Noisy",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school1"
+    },
+    {
         "id": "Student 96",
         "sex": "Female",
         "school": "IFMR",
@@ -1341,9 +1436,10 @@
         "bedtime": "Early to bed",
         "lights_on": "Doesn't matter",
         "noise": "Doesn't matter",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school13"
+    },
+    {
         "id": "Student 97",
         "sex": "Male",
         "school": "IFMR",
@@ -1355,9 +1451,10 @@
         "bedtime": "Doesn't matter",
         "lights_on": "Yes",
         "noise": "Doesn't matter",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school6"
+    },
+    {
         "id": "Student 98",
         "sex": "Male",
         "school": "GSB",
@@ -1369,9 +1466,10 @@
         "bedtime": "Late to bed",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "OK"
-      },
-      {
+        "guests": "OK",
+        "prev_school": "school22"
+    },
+    {
         "id": "Student 99",
         "sex": "Female",
         "school": "SIAS",
@@ -1383,9 +1481,10 @@
         "bedtime": "Late to bed",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "Not OK"
-      },
-      {
+        "guests": "Not OK",
+        "prev_school": "school23"
+    },
+    {
         "id": "Student 100",
         "sex": "Male",
         "school": "IFMR",
@@ -1397,6 +1496,7 @@
         "bedtime": "Late to bed",
         "lights_on": "No",
         "noise": "Silent",
-        "guests": "Not OK"
-      }
-    ]
+        "guests": "Not OK",
+        "prev_school": "school10"
+    }
+]
