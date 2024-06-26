@@ -41,6 +41,25 @@ class Roommate {
     }
   }
 
+  String getProperty(String property) {
+    switch (property) {
+      case 'temp':
+        return temp;
+      case 'clean':
+        return clean;
+      case 'bedtime':
+        return bedtime;
+      case 'lights_on':
+        return lightsOn;
+      case 'noise':
+        return noise;
+      case 'guests':
+        return guests;
+      default:
+        throw ArgumentError('Invalid property name: $property');
+    }
+  }
+
   @override
   String toString() {
     return 'Roommate(id: $id, sex: $sex, school: $school, batch: $batch, program: $program, city: $city, prev_school: $prevSchool, temp: $temp, clean: $clean, bedtime: $bedtime, lights_on: $lightsOn, noise: $noise, guests: $guests)';
