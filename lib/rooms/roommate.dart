@@ -11,12 +11,12 @@ class Roommate {
   final String program;
   final String city;
   final String prevSchool;
-  final int temp;
-  final int clean;
-  final int bedtime;
-  final int lightsOn;
-  final int noise;
-  final int guests;
+  final String temp;
+  final String clean;
+  final String bedtime;
+  final String lightsOn;
+  final String noise;
+  final String guests;
 
   Roommate({
     required this.id,
@@ -38,6 +38,25 @@ class Roommate {
     }
     if (!SCHOOL_OPTIONS.contains(school)) {
       throw ArgumentError('school must be one of $SCHOOL_OPTIONS');
+    }
+  }
+
+  String getProperty(String property) {
+    switch (property) {
+      case 'temp':
+        return temp;
+      case 'clean':
+        return clean;
+      case 'bedtime':
+        return bedtime;
+      case 'lights_on':
+        return lightsOn;
+      case 'noise':
+        return noise;
+      case 'guests':
+        return guests;
+      default:
+        throw ArgumentError('Invalid property name: $property');
     }
   }
 
