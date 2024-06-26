@@ -53,7 +53,7 @@ double customScore(Roommate student1, Roommate student2) {
   if (student1.program != student2.program) {
     score -= 50;
   }
-  if (student1.city== student2.city) {
+  if (student1.city == student2.city) {
     score -= 20;
   }
 
@@ -76,8 +76,8 @@ double customScore(Roommate student1, Roommate student2) {
   ];
 
   for (String param in params) {
-    score += preferenceScore(encodedPrefs[student1{param}]!,
-        encodedPrefs[student2[param]]!, priority[param]!);
+    score += preferenceScore(encodedPrefs[student1.getProperty(param)]!,
+        encodedPrefs[student2.getProperty(param)]!, priority[param]!);
   }
 
   return score;
