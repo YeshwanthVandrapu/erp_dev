@@ -3,9 +3,8 @@ import 'dart:convert';
 // Roommate Class
 
 class Roommate {
-  static const List<String> SEX_OPTIONS = ['Male', 'Female', 'Other'];
-  static const List<String> SCHOOL_OPTIONS = ['SIAS', 'IFMR', 'GSB'];
-  static const List<int> OPTIONS = [1, 2, 3];
+  static const List<String> sexOptions = ['Male', 'Female', 'Other'];
+  static const List<String> schoolOptions = ['SIAS', 'IFMR', 'GSB'];
 
   final String id;
   final String sex;
@@ -36,11 +35,11 @@ class Roommate {
     required this.noise,
     required this.guests,
   }) {
-    if (!SEX_OPTIONS.contains(sex)) {
-      throw ArgumentError('sex must be one of $SEX_OPTIONS');
+    if (!sexOptions.contains(sex)) {
+      throw ArgumentError('sex must be one of $sexOptions');
     }
-    if (!SCHOOL_OPTIONS.contains(school)) {
-      throw ArgumentError('school must be one of $SCHOOL_OPTIONS');
+    if (!schoolOptions.contains(school)) {
+      throw ArgumentError('school must be one of $schoolOptions');
     }
   }
 
@@ -98,29 +97,29 @@ class Roommate {
   }
 }
 
-PairedStudents pairedStudentsFromJson(String str) =>
-    PairedStudents.fromJson(json.decode(str));
+// PairedStudents pairedStudentsFromJson(String str) =>
+//     PairedStudents.fromJson(json.decode(str));
 
 String pairedStudentsToJson(PairedStudents data) => json.encode(data.toJson());
 
 class PairedStudents {
   String roomNumber;
-  List<Student> students;
+  List<String?> students;
 
   PairedStudents({
     required this.roomNumber,
     required this.students,
   });
 
-  factory PairedStudents.fromJson(Map<String, dynamic> json) => PairedStudents(
-        roomNumber: json["roomNumber"],
-        students: List<Student>.from(
-            json["students"].map((x) => Student.fromJson(x))),
-      );
+  // factory PairedStudents.fromJson(Map<String, dynamic> json) => PairedStudents(
+  //       roomNumber: json["roomNumber"],
+  //       students: List<Student>.from(
+  //           json["students"].map((x) => Student.fromJson(x))),
+  //     );
 
   Map<String, dynamic> toJson() => {
         "roomNumber": roomNumber,
-        "students": List<dynamic>.from(students.map((x) => x.toJson())),
+        "students": students,
       };
 }
 
@@ -138,8 +137,36 @@ class Student {
         student2: json["student2"],
       );
 
-  Map<String, dynamic> toJson() => {
+  Map<String, String?> toJson() => {
         "student1": student1,
         "student2": student2,
+      };
+}
+
+Rooms roomsFromJson(String str) => Rooms.fromJson(json.decode(str));
+
+String roomsToJson(Rooms data) => json.encode(data.toJson());
+
+class Rooms {
+  String roomNumber;
+  String category;
+  String school;
+
+  Rooms({
+    required this.roomNumber,
+    required this.category,
+    required this.school,
+  });
+
+  factory Rooms.fromJson(Map<String, dynamic> json) => Rooms(
+        roomNumber: json["Room Number"],
+        category: json["Category"],
+        school: json["School"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "Room Number": roomNumber,
+        "Category": category,
+        "School": school,
       };
 }
