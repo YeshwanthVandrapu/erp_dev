@@ -1,20 +1,20 @@
 // Roommate Class
 class Roommate {
   static const List<String> SEX_OPTIONS = ['Male', 'Female', 'Other'];
-  static const List<String> SCHOOL_OPTIONS = ['SIAS', 'IFMR'];
+  static const List<String> SCHOOL_OPTIONS = ['SIAS', 'IFMR', 'GSB'];
   static const List<int> OPTIONS = [1, 2, 3];
 
-  final int id;
+  final String id;
   final String sex;
   final String school;
   final int batch;
   final String program;
   final String city;
-  final String prev_school;
+  final String prevSchool;
   final int temp;
   final int clean;
   final int bedtime;
-  final int lights_on;
+  final int lightsOn;
   final int noise;
   final int guests;
 
@@ -25,11 +25,11 @@ class Roommate {
     required this.batch,
     required this.program,
     required this.city,
-    required this.prev_school,
+    required this.prevSchool,
     required this.temp,
     required this.clean,
     required this.bedtime,
-    required this.lights_on,
+    required this.lightsOn,
     required this.noise,
     required this.guests,
   }) {
@@ -43,6 +43,24 @@ class Roommate {
 
   @override
   String toString() {
-    return 'Roommate(id: $id, sex: $sex, school: $school, batch: $batch, program: $program, city: $city, prev_school: $prev_school, temp: $temp, clean: $clean, bedtime: $bedtime, lights_on: $lights_on, noise: $noise, guests: $guests)';
+    return 'Roommate(id: $id, sex: $sex, school: $school, batch: $batch, program: $program, city: $city, prev_school: $prevSchool, temp: $temp, clean: $clean, bedtime: $bedtime, lights_on: $lightsOn, noise: $noise, guests: $guests)';
+  }
+
+  factory Roommate.fromJson(Map<String, dynamic> json) {
+    return Roommate(
+      id: json["id"],
+      sex: json["sex"],
+      school: json["school"],
+      batch: json["batch"],
+      program: json["program"],
+      city: json["city"],
+      prevSchool: json["prev_school"],
+      temp: json["temp"],
+      clean: json["clean"],
+      bedtime: json["bedtime"],
+      lightsOn: json["lights_on"],
+      noise: json["noise"],
+      guests: json["guests"],
+    );
   }
 }
