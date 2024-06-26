@@ -10,11 +10,11 @@ class Roommate {
   final int batch;
   final String program;
   final String city;
-  final String prevSchool;
+  final String prev_school;
   final int temp;
   final int clean;
   final int bedtime;
-  final int lightsOn;
+  final int lights_on;
   final int noise;
   final int guests;
 
@@ -25,11 +25,11 @@ class Roommate {
     required this.batch,
     required this.program,
     required this.city,
-    required this.prevSchool,
+    required this.prev_school,
     required this.temp,
     required this.clean,
     required this.bedtime,
-    required this.lightsOn,
+    required this.lights_on,
     required this.noise,
     required this.guests,
   }) {
@@ -43,6 +43,6 @@ class Roommate {
 
   @override
   String toString() {
-    return 'Roommate(id: $id, sex: $sex, school: $school, batch: $batch, program: $program, city: $city, prevSchool: $prevSchool, temp: $temp, clean: $clean, bedtime: $bedtime, lightsOn: $lightsOn, noise: $noise, guests: $guests)';
+    return 'Roommate(id: $id, sex: $sex, school: $school, batch: $batch, program: $program, city: $city, prev_school: $prev_school, temp: $temp, clean: $clean, bedtime: $bedtime, lights_on: $lights_on, noise: $noise, guests: $guests)';
   }
 }

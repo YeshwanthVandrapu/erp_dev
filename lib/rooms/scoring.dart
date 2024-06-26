@@ -1,3 +1,5 @@
+import 'package:erp_dev/rooms/roommate.dart';
+
 final Map<String, int> encodedPrefs = {
   "Cold": 1,
   "Moderate": 2,
@@ -42,16 +44,16 @@ int preferenceScore(int givenPref, int checkPref, int paramPriority) {
   }
 }
 
-int customScore(Map<String, dynamic> student1, Map<String, dynamic> student2) {
-  int score = 0;
+double customScore(Roommate student1, Roommate student2) {
+  double score = 0;
 
-  if (student1['batch'] != student2['batch']) {
+  if (student1.batch != student2.batch) {
     score -= 50;
   }
-  if (student1['program'] != student2['program']) {
+  if (student1.program != student2.program) {
     score -= 50;
   }
-  if (student1['city'] == student2['city']) {
+  if (student1.city== student2.city) {
     score -= 20;
   }
 
@@ -74,7 +76,7 @@ int customScore(Map<String, dynamic> student1, Map<String, dynamic> student2) {
   ];
 
   for (String param in params) {
-    score += preferenceScore(encodedPrefs[student1[param]]!,
+    score += preferenceScore(encodedPrefs[student1{param}]!,
         encodedPrefs[student2[param]]!, priority[param]!);
   }
 
