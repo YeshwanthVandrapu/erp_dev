@@ -28,7 +28,7 @@ void split() async {
     }
     roommatesBySchoolAndSex[roommate.school]![roommate.sex]!.add(roommate);
   }
-  // var matches = matchAll(roommatesBySchoolAndSex, rooms);
+  matchAll(roommatesBySchoolAndSex, rooms);
 }
 
 final Map<String, int> encodedPrefs = {
@@ -79,17 +79,17 @@ double customScore(Roommate student1, Roommate student2) {
   double score = 0;
 
   if (student1.batch != student2.batch) {
-    score -= 50;
+    score -= 500;
   }
   if (student1.program != student2.program) {
-    score -= 50;
+    score -= 350;
   }
   if (student1.city == student2.city) {
-    score -= 20;
+    score -= 200;
     if (student1.prevSchool == student2.prevSchool) {
-      score -= 60;
+      score -= 150;
     } else {
-      score += 10;
+      score += 100;
     }
   }
 
@@ -117,24 +117,6 @@ double customScore(Roommate student1, Roommate student2) {
   }
 
   return score;
-}
-
-List<dynamic> matchAll(
-    Map<String, Map<String, List<Roommate>>> roommates, List<Rooms> rooms) {
-  var allMatches = [];
-  var assignedRooms = [];
-
-  List<String> schoolKeys = ["SIAS", "IFMR", "GSB"];
-  List<String> sexKeys = ["Male", "Female", "Other"];
-  for (String key1 in schoolKeys) {
-    for (String key2 in sexKeys) {
-      allMatches.add(matchRoommates1(roommates[key1]![key2]!));
-      assignedRooms
-          .add(assignRooms(rooms, matchRoommates1(roommates[key1]![key2]!)));
-    }
-  }
-  // List<dynamic> flattenedList = assignedRooms.expand((list) => list).toList();
-  return allMatches;
 }
 
 List<List<Roommate?>> matchRoommates1(List<Roommate> roommates) {
@@ -213,4 +195,23 @@ List<Map<String, dynamic>> assignRooms(
   }
 
   return finalRooms;
+}
+
+List<dynamic> matchAll(
+    Map<String, Map<String, List<Roommate>>> roommates, List<Rooms> rooms) {
+  var allMatches = [];
+  var assignedRooms = [];
+
+  List<String> schoolKeys = ["SIAS", "IFMR", "GSB"];
+  List<String> sexKeys = ["Male", "Female", "Other"];
+  for (String key1 in schoolKeys) {
+    for (String key2 in sexKeys) {
+      allMatches.add(matchRoommates1(roommates[key1]![key2]!));
+      assignedRooms
+          .add(assignRooms(rooms, matchRoommates1(roommates[key1]![key2]!)));
+    }
+  }
+  List<dynamic> flattenedList = assignedRooms.expand((list) => list).toList();
+  print(flattenedList[0]);
+  return allMatches;
 }
