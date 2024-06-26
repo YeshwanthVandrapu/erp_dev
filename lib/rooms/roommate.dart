@@ -11,12 +11,12 @@ class Roommate {
   final String program;
   final String city;
   final String prevSchool;
-  final int temp;
-  final int clean;
-  final int bedtime;
-  final int lightsOn;
-  final int noise;
-  final int guests;
+  final String temp;
+  final String clean;
+  final String bedtime;
+  final String lightsOn;
+  final String noise;
+  final String guests;
 
   Roommate({
     required this.id,
@@ -62,5 +62,16 @@ class Roommate {
       noise: json["noise"],
       guests: json["guests"],
     );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'temp': temp,
+      'clean': clean,
+      'bedtime': bedtime,
+      'lightsOn': lightsOn,
+      'noise': noise,
+      'guests': guests,
+    };
   }
 }
