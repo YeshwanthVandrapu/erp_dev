@@ -1,9 +1,10 @@
 import 'dart:convert';
 
+import 'package:erp_dev/rooms/matching2.dart';
 import 'package:erp_dev/rooms/roommate.dart';
 import 'package:flutter/services.dart';
 
-Future<Map<String, Map<String, List<Roommate>>>> split() async {
+void split() async {
   List<Roommate> items = [];
   String jsonString =
       await rootBundle.loadString("res/json/roommate_student_list.json");
@@ -21,5 +22,5 @@ Future<Map<String, Map<String, List<Roommate>>>> split() async {
     }
     roommatesBySchoolAndSex[roommate.school]![roommate.sex]!.add(roommate);
   }
-  return roommatesBySchoolAndSex;
+  matchAll(roommatesBySchoolAndSex);
 }

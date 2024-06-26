@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 // Roommate Class
+
 class Roommate {
   static const List<String> SEX_OPTIONS = ['Male', 'Female', 'Other'];
   static const List<String> SCHOOL_OPTIONS = ['SIAS', 'IFMR', 'GSB'];
@@ -93,4 +96,50 @@ class Roommate {
       'guests': guests,
     };
   }
+}
+
+PairedStudents pairedStudentsFromJson(String str) =>
+    PairedStudents.fromJson(json.decode(str));
+
+String pairedStudentsToJson(PairedStudents data) => json.encode(data.toJson());
+
+class PairedStudents {
+  String roomNumber;
+  List<Student> students;
+
+  PairedStudents({
+    required this.roomNumber,
+    required this.students,
+  });
+
+  factory PairedStudents.fromJson(Map<String, dynamic> json) => PairedStudents(
+        roomNumber: json["roomNumber"],
+        students: List<Student>.from(
+            json["students"].map((x) => Student.fromJson(x))),
+      );
+
+  Map<String, dynamic> toJson() => {
+        "roomNumber": roomNumber,
+        "students": List<dynamic>.from(students.map((x) => x.toJson())),
+      };
+}
+
+class Student {
+  String? student1;
+  String? student2;
+
+  Student({
+    this.student1,
+    this.student2,
+  });
+
+  factory Student.fromJson(Map<String, dynamic> json) => Student(
+        student1: json["student1"],
+        student2: json["student2"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "student1": student1,
+        "student2": student2,
+      };
 }
