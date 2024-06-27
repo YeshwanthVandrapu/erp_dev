@@ -43,6 +43,16 @@
   },
   {
     "bottom_nav": "0",
+    "parent_id": "0",
+    "resource_description": "asa",
+    "resource_icon": "join_left",
+    "resource_id": "4",
+    "resource_name": "Room Matching",
+    "resource_type": "service",
+    "route": "/room_matching"
+  },
+  {
+    "bottom_nav": "0",
     "parent_id": "1",
     "resource_description": "Student Onboarding V1",
     "resource_icon": "emoji_people",
