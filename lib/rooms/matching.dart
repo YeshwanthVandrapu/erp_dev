@@ -218,7 +218,7 @@ List<dynamic> matchAll(
   return allMatches;
 }
 
-Future<void> makeGetRequest(String filePath) async {
+Future<List<dynamic>> makeGetRequest(String filePath) async {
   // Encode the file path
   String encodedPath = Uri.encodeComponent(filePath);
 
@@ -228,9 +228,22 @@ Future<void> makeGetRequest(String filePath) async {
   );
 
   if (response.statusCode == 200) {
-    print('GET request successful.');
-    print('Response data: ${response.body}');
+    final decodedResponse = jsonDecode(response.body);
+    if (decodedResponse.containsKey('Result') &&
+        decodedResponse['Result'].isNotEmpty) {
+      List<dynamic> pairings = decodedResponse["Result"];
+
+      for (var pairing in pairings) {
+        print(
+            "For school: ${pairing["school"]} and sex: ${pairing["sex"]}, these are the matches: ");
+        pairing["matches"].forEach((key, value) {
+          print('$key is paired with $value');
+        });
+      }
+      return pairings;
+    }
   } else {
     print('GET request failed with status: ${response.statusCode}');
   }
+  return [];
 }
