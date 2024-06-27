@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../pages/home/widgets/menu/controller.dart';
-import 'test_table.dart';
+import 'test_table2.dart';
 
 class MatchPage extends StatelessWidget {
   const MatchPage({super.key});

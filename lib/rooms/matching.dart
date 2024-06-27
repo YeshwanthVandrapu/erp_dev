@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/services.dart';
 
 import 'modals.dart';
@@ -193,6 +194,7 @@ List<Map<String, dynamic>> assignRooms(
       }
     }
   }
+  dPrint(finalRooms);
 
   return finalRooms;
 }
@@ -212,6 +214,6 @@ List<dynamic> matchAll(
     }
   }
   List<dynamic> flattenedList = assignedRooms.expand((list) => list).toList();
-  print(flattenedList[0]);
+  dPrint(flattenedList[1]);
   return allMatches;
 }
