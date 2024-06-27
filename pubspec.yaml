@@ -41,6 +41,7 @@ dependencies:
   url_launcher: ^6.3.0
   hive: ^2.2.3
   table_calendar: ^3.1.2
+  http: ^1.2.1
 
 dev_dependencies:
   flutter_test:

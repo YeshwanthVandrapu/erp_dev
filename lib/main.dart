@@ -29,7 +29,8 @@ void main() async {
   await Hive.openBox('preferences', path: './');
   runApp(const MyApp());
 
-  split();
+  // split();
+  makeGetRequest("C:\\Users\\ADMIN\\roommate_student_list.json");
 }
 
 class MyApp extends StatelessWidget {

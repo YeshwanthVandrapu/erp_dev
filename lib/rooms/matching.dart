@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/services.dart';
-
+import 'package:http/http.dart' as http;
 import 'modals.dart';
 
 void split() async {
@@ -216,4 +216,21 @@ List<dynamic> matchAll(
   List<dynamic> flattenedList = assignedRooms.expand((list) => list).toList();
   dPrint(flattenedList[1]);
   return allMatches;
+}
+
+Future<void> makeGetRequest(String filePath) async {
+  // Encode the file path
+  String encodedPath = Uri.encodeComponent(filePath);
+
+  // Make the GET request
+  final response = await http.get(
+    Uri.parse('http://127.0.0.1:5000/$encodedPath'),
+  );
+
+  if (response.statusCode == 200) {
+    print('GET request successful.');
+    print('Response data: ${response.body}');
+  } else {
+    print('GET request failed with status: ${response.statusCode}');
+  }
 }
