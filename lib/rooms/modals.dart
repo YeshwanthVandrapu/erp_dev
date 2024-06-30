@@ -51,7 +51,7 @@ class Roommate {
         return clean;
       case 'bedtime':
         return bedtime;
-      case 'lights_on':
+      case 'lightsOn':
         return lightsOn;
       case 'noise':
         return noise;
@@ -74,8 +74,8 @@ class Roommate {
       school: json["school"],
       batch: json["batch"],
       program: json["program"],
-      city: json["city"],
-      prevSchool: json["prev_school"],
+      city: json["city"] ?? "",
+      prevSchool: json["prev_school"] ?? "",
       temp: json["temp"],
       clean: json["clean"],
       bedtime: json["bedtime"],

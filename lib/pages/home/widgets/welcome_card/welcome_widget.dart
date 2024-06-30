@@ -1,4 +1,6 @@
 import 'package:erp_dev/pages/home/widgets/welcome_card/controller.dart';
+import 'package:erp_dev/rooms/match.dart';
+import 'package:erp_dev/rooms/matching_old.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -90,8 +92,9 @@ class WelcomeCard extends StatelessWidget {
                               const Color.fromARGB(255, 189, 226, 238)),
                         ),
                         onPressed: () async {
-                          launchUrl(Uri.parse(
-                              'https://oneerp.krea.edu.in/u/0/onboarding-1'));
+                          splitNew();
+                          // launchUrl(Uri.parse(
+                          //     'https://oneerp.krea.edu.in/u/0/onboarding-1'));
                         },
                         child: RichText(
                           textAlign: TextAlign.center,
