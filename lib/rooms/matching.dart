@@ -32,20 +32,28 @@ void split() async {
 }
 
 final Map<String, int> encodedPrefs = {
-  "Cold": 1,
-  "Moderate": 2,
-  "Doesn't matter": 3,
-  "Warm": 4,
-  "Clean": 1,
-  "Early to bed": 1,
+  "colder": 1,
+  "moderate": 2,
+  "doesnt_matter": 3,
+  "warmer": 4,
+  "orderly": 1,
+  "early": 1,
   "Normal (10pm)": 2,
-  "Late to bed": 4,
+  "late": 4,
   "Yes": 1,
   "No": 4,
-  "Silent": 1,
-  "Noisy": 4,
+  "quiet": 1,
+  "loud": 4,
   "OK": 1,
-  "Not OK": 4
+  "Not OK": 4,
+  "somewhat_orderly":2,
+  "very_disorderly":4,
+  "somewhat_disorderly":3,
+  "night_light":1,
+  "dark": 2,
+  "privacy": 1,
+  "open_sometimes":2,
+  "open_247":3
 };
 
 int preferenceScore(int givenPref, int checkPref, int paramPriority) {
@@ -197,8 +205,7 @@ List<Map<String, dynamic>> assignRooms(
   return finalRooms;
 }
 
-List<dynamic> matchAll(
-    Map<String, Map<String, List<Roommate>>> roommates, List<Rooms> rooms) {
+List<dynamic> matchAll(Map<String, Map<String, List<Roommate>>> roommates, List<Rooms> rooms) {
   var allMatches = [];
   var assignedRooms = [];
 
@@ -207,8 +214,7 @@ List<dynamic> matchAll(
   for (String key1 in schoolKeys) {
     for (String key2 in sexKeys) {
       allMatches.add(matchRoommates1(roommates[key1]![key2]!));
-      assignedRooms
-          .add(assignRooms(rooms, matchRoommates1(roommates[key1]![key2]!)));
+      assignedRooms.add(assignRooms(rooms, matchRoommates1(roommates[key1]![key2]!)));
     }
   }
   List<dynamic> flattenedList = assignedRooms.expand((list) => list).toList();
