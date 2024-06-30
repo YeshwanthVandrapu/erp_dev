@@ -6,6 +6,7 @@ import 'package:erp_dev/pages/home/widgets/home_student_buddy/controller.dart';
 import 'package:erp_dev/pages/home/widgets/menu/controller.dart';
 import 'package:erp_dev/pages/layout/main_layout.dart';
 import 'package:erp_dev/rooms/matching.dart';
+import 'package:erp_dev/rooms/matching_widgets/match_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +29,8 @@ void main() async {
   await Hive.openBox('preferences', path: './');
   runApp(const MyApp());
 
-  split();
+  // split();
+  makeGetRequest("C:\\Users\\ADMIN\\roommate_student_list.json");
 }
 
 class MyApp extends StatelessWidget {
@@ -48,6 +50,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const MainLayout(child: NewHomeBody()),
         '/test': (context) => const MainLayout(child: FaqPage()),
+        '/room_matching': (context) => const MainLayout(child: MatchPage())
       },
       // home: const Home(),
     );

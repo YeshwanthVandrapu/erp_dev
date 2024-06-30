@@ -1,7 +1,8 @@
 import 'dart:convert';
 
+import 'package:erp_dev/utils/print.dart';
 import 'package:flutter/services.dart';
-
+import 'package:http/http.dart' as http;
 import 'modals.dart';
 
 void split() async {
@@ -201,6 +202,7 @@ List<Map<String, dynamic>> assignRooms(
       }
     }
   }
+  dPrint(finalRooms);
 
   return finalRooms;
 }
@@ -218,6 +220,36 @@ List<dynamic> matchAll(Map<String, Map<String, List<Roommate>>> roommates, List<
     }
   }
   List<dynamic> flattenedList = assignedRooms.expand((list) => list).toList();
-  print(flattenedList[0]);
+  dPrint(flattenedList[1]);
   return allMatches;
+}
+
+Future<List<dynamic>> makeGetRequest(String filePath) async {
+  // Encode the file path
+  String encodedPath = Uri.encodeComponent(filePath);
+
+  // Make the GET request
+  final response = await http.get(
+    Uri.parse('http://127.0.0.1:5000/$encodedPath'),
+  );
+
+  if (response.statusCode == 200) {
+    final decodedResponse = jsonDecode(response.body);
+    if (decodedResponse.containsKey('Result') &&
+        decodedResponse['Result'].isNotEmpty) {
+      List<dynamic> pairings = decodedResponse["Result"];
+
+      for (var pairing in pairings) {
+        print(
+            "For school: ${pairing["school"]} and sex: ${pairing["sex"]}, these are the matches: ");
+        pairing["matches"].forEach((key, value) {
+          print('$key is paired with $value');
+        });
+      }
+      return pairings;
+    }
+  } else {
+    print('GET request failed with status: ${response.statusCode}');
+  }
+  return [];
 }
