@@ -1,12 +1,21 @@
+import 'package:erp_dev/rooms/irving_matching/table.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_ui/responsive_ui.dart';
 import '../../pages/home/widgets/menu/controller.dart';
 import '../match.dart';
-import 'test_table2.dart';
 
-class MatchPage extends StatelessWidget {
+class MatchPage extends StatefulWidget {
   const MatchPage({super.key});
+
+  @override
+  State<MatchPage> createState() => _MatchPageState();
+}
+
+class _MatchPageState extends State<MatchPage> {
+  // List<List<Roommate?>> matches = [];
+
+  bool isMatched = false;
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +67,16 @@ class MatchPage extends StatelessWidget {
                       child: DataTableExample(),
                     ),
                   ),
+                  if (isMatched)
+                    const Div(
+                      divison: Division(
+                        colL: 10,
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40.0),
+                        child: DataTableExample(),
+                      ),
+                    )
                 ]),
               );
             }),
